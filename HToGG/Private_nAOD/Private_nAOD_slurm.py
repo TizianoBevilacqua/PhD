@@ -7,6 +7,11 @@ import re
 import multiprocessing
 from commands import getstatusoutput
 
+# This script is used to produce private nAODs starting from a python configuration file obtained from cdmDriver
+# It submit jobs to slurm dividing the input file in groups of job_dim files (default = 5), the input are:
+# -p) the python executable, -t) the tag that will be used as output sub-directory name, -o) main path of the output directory
+
+
 # execute program
 def runCommand(cmd):
   cmd_exitcode, cmd_out = getstatusoutput(cmd)
@@ -165,8 +170,8 @@ def main():
     parser.add_argument('-b', '--batch-partition', dest='batch_part', action='store', type=str, default='standard',
                       help='batch-partition to use (default: long)')
 
-    parser.add_argument('-m', '--max-processes', dest='max_processes', action='store', type=int, default=30,
-                      help='maximum number of processes to run in parallel')
+    parser.add_argument('-m', '--max-processes', dest='max_processes', action='store', type=int, default=5,
+                      help='maximum number of files per job')
 
     parser.add_argument('-p', '--plugin', dest='py_exec', action='store', default='',
                       help='name of the python scrip to execute')
@@ -206,7 +211,7 @@ def main():
     commandTags = []
     count = []
 
-    job_dim = 5
+    job_dim = opts.max_processes
     with open(opts.py_exec) as fp:
         Lines = fp.readlines()
 
@@ -249,19 +254,13 @@ def main():
             else:
                 count.append(runCommand(commands[idx]))
 
-        #pool = multiprocessing.Pool(processes=min(opts.max_processes, len(commands)))
-        #count = pool.map(showCommand if opts.dry_run else runCommand, commands)
-#
         maxTagLength = max([len(tmp) for tmp in commandTags])
         maxExitCodeLength = max([len(str(tmp)) for tmp in count])
-#
+
         reportLineFormat = '{: <'+str(maxTagLength)+'} : {: '+str(maxExitCodeLength)+'d}'
 
         for sampleTagIdx in range(len(commandTags)):
             print reportLineFormat.format(commandTags[sampleTagIdx], count[sampleTagIdx])
-
-
-
 
 ###
 ### main
