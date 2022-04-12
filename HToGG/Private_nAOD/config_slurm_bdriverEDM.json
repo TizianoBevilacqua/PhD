@@ -1,0 +1,25 @@
+{
+  "__default__": {
+    "step": "NANOAOD",
+    "SCRAM_ARCH": "slc7_amd64_gcc700",
+    "CMSSW_RELEASE": "CMSSW_10_6_26",
+    "cmssw_setup_commands": [
+      "git cms-merge-topic maxgalli:lindsey_hgg_nanoaod",
+      "git cms-merge-topic missirol:devel_nAOD_10626_fixNANOConfigDump"
+    ],
+    "maxEvents": -1,
+    "eventsPerJob": 300000,
+    "cmsDriver_args": "--nThreads 1 -n -1 --no_exec --step NANO",
+    "cmsDriver_extraArgs": ""
+  },
+
+  "DoubleEG_Run2017C": {
+    "datasets" : [
+      "/DoubleEG/Run2017C-09Aug2019_UL2017-v1/MINIAOD"
+    ],
+    "maxEvents": -1,
+    "eventsPerJob": 300000
+    ,
+    "cmsDriver_extraArgs": "--data --eventcontent NANOAOD --datatier NANOAOD --conditions 106X_dataRun2_v32 --era Run2_2017,run2_nanoAOD_106Xv1"
+  }
+}
