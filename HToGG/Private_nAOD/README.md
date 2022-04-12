@@ -46,6 +46,23 @@ To submit jobs on Slurm on the T3 use the script `Private_nAOD_slurm.py`, it sub
 * -o) main path of the output directory,
 * -m) number of files per job.
 
+## SLURM (smarter way)
+To make job monitoring and resubmission way easier another workflow that is built inside the [XPlusCharm](https://github.com/missirol/XPlusCharmAnalysis) package is available (credits to M. Missiroli).
+A recipe is provided here:
+```
+cmsrel CMSSW_10_6_18
+cd CMSSW_10_6_18/src
+cmsenv
+git clone git@github.com:missirol/XPlusCharmAnalysis.git
+scram b
+mkdir Out_nAODs
+cd Out_nAODs
+bdriverEDM -o {out_dir} -d /work/"${USER}"/tmp_cmssw -w {config.json} -q long -t 24:00:00
+bmonitor -i /path/to/{out_dir} -r 
+```
+where `config.json` is a file containing informations about CMSSW release settings, datasets, jobs specifications. 
+An example file is provided in this directory (config_slurm_bdriverEDM.json)
+
 ## CRAB
 
 To be fixed
