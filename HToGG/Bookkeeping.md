@@ -21,9 +21,20 @@
 * GJets_HT-400To600_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer19UL17MiniAODv2-106X_mc2017_realistic_v9-v1_MINIAODSIM :              Xsec (273)
 * GJets_HT-600ToInf_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer19UL17MiniAODv2-106X_mc2017_realistic_v9-v1_MINIAODSIM :              Xsec (94.5)
 * DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM :                Xsec (6225.42)
+* QCD_Pt-40ToInf_DoubleEMEnriched_MGG-80ToInf_TuneCP5_13TeV-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM: Xsec (118100)
 ### Data
 * DoubleEG_Run2017B-UL2017_MiniAODv2-v1_MINIAOD
 * DoubleEG_Run2017C-UL2017_MiniAODv2-v1_MINIAOD
 * DoubleEG_Run2017D-UL2017_MiniAODv2-v1_MINIAOD
 * DoubleEG_Run2017E-UL2017_MiniAODv2-v1_MINIAOD
 * DoubleEG_Run2017F-UL2017_MiniAODv2-v1_MINIAOD
+
+## Completely converted samples:
+### Data 2017:
+* DoubleEG_Run2017C-UL2017
+### BG 2017
+* GJets_HT-100To200
+* GJets_HT-200To400
+* GJets_HT-400To600
+* GJets_HT-600ToInf
+* QCD
