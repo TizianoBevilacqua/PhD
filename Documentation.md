@@ -78,7 +78,15 @@ To determine the size of different branches in the data file:
 ```
 edmEventSize -v `edmFileUtil -d /store/relval/CMSSW_10_6_14/RelValZMM_13/MINIAODSIM/106X_mc2017_realistic_v7-v1/10000/0EB976F4-F84B-814D-88DA-CB2C29A52D72.root` > EdmEventSize.txt 
 ```
+### Luminosity
 
+To calculate luminosity of Datasets one must use brilcalc tool. I installed it on `lxplus` under: `/afs/cern.ch/user/t/tbevilac/.local/bin`.
+To check the good section of runs the Golden json can be found here: `/afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/`
+
+To run brilcalc use for example
+```
+brilcalc lumi -c web -i Runs_2017B_brilcalc.json -u /fb
+```
 ### FWLite ANALYSIS
 Adding FWLite to CMSSW:
 ```
