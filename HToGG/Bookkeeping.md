@@ -31,7 +31,8 @@
 
 ## Completely converted samples:
 ### Data 2017:
-* DoubleEG_Run2017C-UL2017
+* DoubleEG_Run2017C-UL2017 Delivered lumi (5.107925250 /fb) Recorded lumi (4.802294592 /fb)
+* DoubleEG_Run2017C-UL2017 Delivered lumi (10.57034756 /fb) Recorded lumi (9.695726055 /fb)
 ### BG 2017
 * GJets_HT-100To200
 * GJets_HT-200To400
