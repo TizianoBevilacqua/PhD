@@ -1,0 +1,411 @@
+{
+    "batch_system": "condor",
+    "config": {
+        "branches": [
+            "Photon_pt",
+            "Photon_eta",
+            "Photon_phi",
+            "Photon_theta",
+            "Photon_mass",
+            "Photon_energyErr",
+            "Photon_energyRaw",
+            "Photon_x_calo",
+            "Photon_y_calo",
+            "Photon_z_calo",
+            "Photon_pixelSeed",
+            "Photon_mvaID",
+            "Photon_electronVeto",
+            "Photon_sieie",
+            "Photon_r9",
+            "Photon_hoe",
+            "Photon_pfRelIso03_chg",
+            "Photon_pfRelIso03_all",
+            "Photon_isScEtaEB",
+            "Photon_isScEtaEE",
+            "Photon_trkSumPtHollowConeDR03",
+            "Photon_photonIso",
+            "Photon_chargedHadronIso",
+            "Photon_genPartFlav",
+            "GenPart_eta",
+            "GenPart_genPartIdxMother",
+            "GenPart_mass",
+            "GenPart_pdgId",
+            "GenPart_phi",
+            "GenPart_pt",
+            "GenPart_status",
+            "GenPart_statusFlags",
+            "GenJet_pt",
+            "GenJet_eta",
+            "GenJet_phi",
+            "GenJet_mass",
+            "GenJet_btagDeepFlavB",
+            "GenJet_btagDeepFlavC",
+            "GenJet_btagDeepFlavCvB",
+            "GenJet_btagDeepFlavCvL",
+            "GenJet_btagDeepFlavQG",
+            "GenJet_jetId",
+            "GenJet_hadronFlavour",
+            "nGenJet",
+            "Jet_pt",
+            "Jet_eta",
+            "Jet_phi",
+            "Jet_mass",
+            "Jet_btagDeepFlavB",
+            "Jet_btagDeepFlavC",
+            "Jet_btagDeepFlavCvB",
+            "Jet_btagDeepFlavCvL",
+            "Jet_btagDeepFlavQG",
+            "Jet_jetId",
+            "Jet_hadronFlavour",
+            "nJet",
+            "Muon_pt",
+            "Muon_eta",
+            "Muon_phi",
+            "Muon_mass",
+            "Muon_charge",
+            "Muon_pfRelIso03_all",
+            "Muon_dxy",
+            "Muon_dz",
+            "Muon_tightId",
+            "Muon_isGlobal",
+            "Muon_mediumId",
+            "Electron_pt",
+            "Electron_eta",
+            "Electron_phi",
+            "Electron_mass",
+            "Electron_charge",
+            "Electron_mvaFall17V2Iso_WP90",
+            "Electron_mvaFall17V2noIso_WP90",
+            "Electron_pfRelIso03_all",
+            "Electron_dxy",
+            "Electron_dz",
+            "Electron_mvaFall17V2Iso_WP80",
+            "BeamSpot_z",
+            "BeamSpot_sigmaZ",
+            "genWeight",
+            "run",
+            "event",
+            "fixedGridRhoAll",
+            "PV_x",
+            "PV_y",
+            "PV_z",
+            "PV_chi2",
+            "PV_score",
+            "PV_npvs",
+            "OtherPV_z",
+            "Electron_photonIdx",
+            "Electron_convVeto"
+        ],
+        "function": {
+            "function_name": "run_analysis",
+            "module_name": "higgs_dna.analysis"
+        },
+        "name": "diphoton_preselection",
+        "samples": {
+            "catalog": "metadata/samples/HPlusCharm_samples_OLDcatalog.json",
+            "sample_list": [
+                "Data",
+                "ggH_M125",
+                "VH_M125",
+                "ttH_M125",
+                "VBFH_M125",
+                "DiPhoton_M40_80",
+                "DiPhoton_MGG-80-inf",
+                "QCD",
+                "GJets_HT-40To100",
+                "GJets_HT-100To200",
+                "GJets_HT-200To400",
+                "GJets_HT-400To600",
+                "GJets_HT-600ToInf"
+            ],
+            "years": [
+                "2017"
+            ]
+        },
+        "systematics": {
+            "independent_collections": {
+                "fnuf": {
+                    "branch_modified": [
+                        "Photon",
+                        "pt"
+                    ],
+                    "function": {
+                        "module_name": "higgs_dna.systematics.photon_systematics",
+                        "name": "fnuf_unc"
+                    },
+                    "method": "from_function"
+                },
+                "material": {
+                    "branch_modified": [
+                        "Photon",
+                        "pt"
+                    ],
+                    "function": {
+                        "module_name": "higgs_dna.systematics.photon_systematics",
+                        "name": "material_unc"
+                    },
+                    "method": "from_function"
+                }
+            },
+            "weights": {
+                "btag_deepjet_sf": {
+                    "function": {
+                        "module_name": "higgs_dna.systematics.jet_systematics",
+                        "name": "btag_deepjet_reshape_sf"
+                    },
+                    "input_collection": "Jet",
+                    "method": "from_function",
+                    "modify_central_weight": true,
+                    "target_collections": [
+                        "SelectedJet"
+                    ],
+                    "type": "object"
+                },
+                "electron_id_sf": {
+                    "function": {
+                        "module_name": "higgs_dna.systematics.lepton_systematics",
+                        "name": "electron_id_sf"
+                    },
+                    "input_collection": "Electron",
+                    "kwargs": {
+                        "working_point": "wp90iso"
+                    },
+                    "method": "from_function",
+                    "modify_central_weight": true,
+                    "target_collections": [
+                        "SelectedElectron"
+                    ],
+                    "type": "object"
+                },
+                "electron_veto_sf": {
+                    "function": {
+                        "module_name": "higgs_dna.systematics.photon_systematics",
+                        "name": "photon_electron_veto_sf"
+                    },
+                    "input_collection": "Photon",
+                    "method": "from_function",
+                    "modify_central_weight": true,
+                    "target_collections": [
+                        [
+                            "Diphoton",
+                            "Photon"
+                        ]
+                    ],
+                    "type": "object"
+                },
+                "trigger_sf": {
+                    "function": {
+                        "module_name": "higgs_dna.systematics.photon_systematics",
+                        "name": "trigger_sf"
+                    },
+                    "method": "from_function",
+                    "modify_central_weight": true,
+                    "requires_branches": [
+                        "Diphoton",
+                        "LeadPhoton",
+                        "SubleadPhoton"
+                    ],
+                    "type": "event"
+                }
+            }
+        },
+        "tag_sequence": [
+            {
+                "kwargs": {
+                    "name": "diphoton_tagger",
+                    "options": {
+                        "gen_info": {
+                            "calculate": true
+                        },
+                        "use_central_nano": false
+                    }
+                },
+                "module_name": "higgs_dna.taggers.diphoton_tagger",
+                "tagger": "DiphotonTagger"
+            },
+            {
+                "module_name": "higgs_dna.taggers.HPlusCharm_tagger",
+                "tagger": "HpC_tagger"
+            },
+            {
+                "module_name": "higgs_dna.taggers.diphoton_mva_tagger",
+                "tagger": "diphoton_mva_tagger"
+            },
+            {
+                "module_name": "higgs_dna.taggers.ggh_STXS_split_tagger",
+                "tagger": "ggH_STXS_split_tagger"
+            }
+        ],
+        "variables_of_interest": [
+            [
+                "Diphoton",
+                "mass"
+            ],
+            [
+                "Diphoton",
+                "pt"
+            ],
+            [
+                "Diphoton",
+                "eta"
+            ],
+            [
+                "Diphoton",
+                "phi"
+            ],
+            [
+                "Diphoton",
+                "dR"
+            ],
+            [
+                "Diphoton",
+                "pt_mgg"
+            ],
+            [
+                "Diphoton",
+                "cos_dPhi"
+            ],
+            [
+                "LeadPhoton",
+                "pt"
+            ],
+            [
+                "LeadPhoton",
+                "eta"
+            ],
+            [
+                "LeadPhoton",
+                "phi"
+            ],
+            [
+                "LeadPhoton",
+                "mass"
+            ],
+            [
+                "LeadPhoton",
+                "mvaID"
+            ],
+            [
+                "LeadPhoton",
+                "genPartFlav"
+            ],
+            [
+                "LeadPhoton",
+                "pixelSeed"
+            ],
+            [
+                "LeadPhoton",
+                "pt_mgg"
+            ],
+            [
+                "SubleadPhoton",
+                "pt"
+            ],
+            [
+                "SubleadPhoton",
+                "eta"
+            ],
+            [
+                "SubleadPhoton",
+                "phi"
+            ],
+            [
+                "SubleadPhoton",
+                "mass"
+            ],
+            [
+                "SubleadPhoton",
+                "mvaID"
+            ],
+            [
+                "SubleadPhoton",
+                "genPartFlav"
+            ],
+            [
+                "SubleadPhoton",
+                "pixelSeed"
+            ],
+            [
+                "SubleadPhoton",
+                "pt_mgg"
+            ],
+            "sigmaMrv",
+            "sigmaMwv",
+            "vtxProb",
+            "bdt_score",
+            "PV_score",
+            "PV_chi2",
+            "nPV",
+            "dZ_1",
+            "dZ_2",
+            "dZ_3",
+            "gen_jet_1_pt",
+            "gen_jet_1_eta",
+            "gen_jet_1_phi",
+            "gen_jet_1_mass",
+            "gen_jet_1_hadronFlavour",
+            "jet_1_pt",
+            "jet_1_eta",
+            "jet_1_phi",
+            "jet_1_mass",
+            "jet_1_btagDeepFlavB",
+            "jet_1_btagDeepFlavCvB",
+            "jet_1_btagDeepFlavCvL",
+            "jet_1_hadronFlavour",
+            "jet_2_pt",
+            "jet_2_eta",
+            "jet_2_phi",
+            "jet_2_mass",
+            "jet_2_btagDeepFlavB",
+            "jet_2_btagDeepFlavCvB",
+            "jet_2_btagDeepFlavCvL",
+            "jet_2_hadronFlavour",
+            "n_jets",
+            "n_gen_jets",
+            "is_ggH_BSM",
+            "is_ggH_Zerojets_lowPt",
+            "is_ggH_Zerojets_highPt",
+            "is_ggH_Onejets_lowPt",
+            "is_ggH_Onejets_medPt",
+            "is_ggH_Onejets_highPt",
+            "is_ggH_GETwojets_lowmjj_lowPt",
+            "is_ggH_GETwojets_lowmjj_medPt",
+            "is_ggH_GETwojets_lowmjj_highPt",
+            "is_ggH_VBF_Twojets_lowmjj",
+            "is_ggH_VBF_Twojets_highmjj",
+            "is_ggH_VBF_Threejets_lowmjj",
+            "is_ggH_VBF_Threejets_highmjj",
+            "weight_central",
+            "event",
+            "run"
+        ]
+    },
+    "fpo": null,
+    "log_level": "DEBUG",
+    "merge_outputs": true,
+    "n_cores": 6,
+    "no_systematics": false,
+    "output_dir": "/eos/user/t/tbevilac/SWAN_projects/H_DNA/test_Data_2017_photon_cleaning",
+    "pickle_file": "/eos/user/t/tbevilac/SWAN_projects/H_DNA/test_Data_2017_photon_cleaning/analysis_manager.pkl",
+    "prepared_analysis": true,
+    "reconfigure_jobs": false,
+    "retire_jobs": false,
+    "sample_id_map": {
+        "Data": 0,
+        "DiPhoton_M40_80": 5,
+        "DiPhoton_MGG-80-inf": 6,
+        "GJets_HT-100To200": 9,
+        "GJets_HT-200To400": 10,
+        "GJets_HT-400To600": 11,
+        "GJets_HT-40To100": 8,
+        "GJets_HT-600ToInf": 12,
+        "QCD": 7,
+        "VBFH_M125": 4,
+        "VH_M125": 2,
+        "ggH_M125": 1,
+        "ttH_M125": 3
+    },
+    "short": false,
+    "summary_file": "/eos/user/t/tbevilac/SWAN_projects/H_DNA/test_Data_2017_photon_cleaning/summary.json",
+    "unretire_jobs": false
+}
