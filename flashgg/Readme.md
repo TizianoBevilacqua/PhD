@@ -95,3 +95,5 @@ an example command line to produce NTuples for the private samples with what "sh
 fggRunJobs.py --load jsons/cH/cH_privateMC_2018.json -d out_test --stage-to /eos/user/t/tbevilac/H+c/flashgg/out_test_020822 workspaceStd.py -n 10 -q workday --no-copy-proxy
 ```
 the output directory to stage the files must exist prior the execution of the program.
+
+The 0th vertex should be selected [here](https://github.com/higgs-charm/flashgg/blob/58e151b1836a8fb1b691b317fc26d65c29078cd1/Systematics/test/workspaceStd.py#L239)
