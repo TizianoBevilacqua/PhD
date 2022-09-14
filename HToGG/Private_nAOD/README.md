@@ -64,8 +64,8 @@ where `config.json` is a file containing informations about CMSSW release settin
 An example file is provided in this directory (config_slurm_bdriverEDM.json)
 
 ## SLURM (nAOD v10, used for private MC production 09/2022)
-A new set of scripts for the conversion of miniAODs to nAODs v10 with slurm is stored in the `slurm_pkg` directory.
-There is a main python script that takes care of creating the task, submitting the jobs to slurm, babysit them by querying `squeue`, and, if needed, resubmit the failed ones. 
+A new set of scripts for the conversion of miniAODs to nAODs v10 with slurm is stored in the `slurm_pkg` directory. \n
+There is a main python script that takes care of creating the task, submitting the jobs to slurm, babysit them by querying `squeue`, and, if needed, resubmit the failed ones. \n
 The configuration for the job have to be fed to the script via a `.json` config file, an example is stored in the `slurm_pkg/configs` directory. the usage of the scripts is quite simple and shoud work out of the box on PSI tier3.
 ```
 #- USAGE: -------------------------------------------------------------------------------------------------#
@@ -77,7 +77,7 @@ The configuration for the job have to be fed to the script via a `.json` config 
 #- python my_batch_sub_script.py --input [config json file, example in the configs dir] --hadd ------------#
 #----------------------------------------------------------------------------------------------------------#
 ```
-Informations about the **GlobalTag** to place in the `conditions` entry of the json can be found [here](https://github.com/cms-sw/cmssw/blob/CMSSW_12_4_8/Configuration/AlCa/python/autoCond.py), the nAOD v10 page instead can be found [here](https://gitlab.cern.ch/cms-nanoAOD/nanoaod-doc/-/wikis/Releases/NanoAODv10).
+Informations about the **GlobalTag** to place in the `conditions` entry of the json can be found [here](https://github.com/cms-sw/cmssw/blob/CMSSW_12_4_8/Configuration/AlCa/python/autoCond.py), the nAOD v10 page instead can be found [here](https://gitlab.cern.ch/cms-nanoAOD/nanoaod-doc/-/wikis/Releases/NanoAODv10). \n
 To select the proper customisation of the cmsDriver.py script in order to include the pdf variations one can refer to [this](https://cms-talk.web.cern.ch/t/validate-requests-with-store-rwgt-info-false-in-gridpacks/12417/15?u=tbevilac) cmsTalk discussion. 
 ## CRAB
 
