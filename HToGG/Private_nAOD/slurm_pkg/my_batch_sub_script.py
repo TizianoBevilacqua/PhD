@@ -148,7 +148,7 @@ if opt.create:
     # Create filelist dir and filelists files to divide input files to jobs
     with open("all_input.txt") as fl:
         files = fl.readlines()
-        njobs = len(files)/metadata["nfile"]
+        njobs = int(len(files)/metadata["nfile"])
         print ("-"*80)
         print ("number of jobs: "+str(njobs))
         print ("total input files: "+str(len(files)))
