@@ -25,7 +25,10 @@ color_dict = {
     "red": '\033[91m',
     "yellow": '\33[33m',
     "blue": '\33[34m',
+    "white": '\033[37m',
+    "bold": '\033[01m',
     "end": '\033[0m'
+    
 }
 
 def KILL(log):
@@ -224,12 +227,12 @@ elif opt.status:
     os.system("sort -u Completed > Comp")
     os.system("mv Comp Completed")
     os.system("ls -l "+OUT_PATH+"/"+TASKNAME+"/logs | grep -v test | grep .out > Done")
-    os.system("echo \"Status of Task "+TASKNAME+": ("+str(njobs)+" Jobs)\"")
+    os.system("echo "+color_dict["bold"]+"\"Status of Task "+TASKNAME+": ("+str(njobs)+" Jobs)\""+color_dict["end"])
     os.system("echo \"Jobs - Pending                : `wc -l Pending | awk '{ print $1}'`\"")
     os.system("echo \"     - Running                : `wc -l Running | awk '{ print $1}'`\"")
     os.system("echo \"     - Done (with STDOUT)     : `wc -l Done | awk '{ print $1}'`\"")
     os.system("echo \"------------------------------------\"")
-    os.system("echo \"     - Completed (has output) : `wc -l Completed | awk '{ print $1}'`\"")
+    os.system("echo \"     - "+color_dict["green"]+"Completed (has output) : `wc -l Completed | awk '{ print $1}'`\""+color_dict["end"])
     os.system("rm taskjobs Pending Running Completed Done")
     print ("-"*80)
     
