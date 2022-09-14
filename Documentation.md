@@ -16,6 +16,19 @@ cmsrel CMSSW_10_6_18
 cmsenv
 git cms-init
 ```
+the last command synch also all the tags from the central remore directory that contains the "official" CMSSW, it also create a personal directory under the name `my-cmssw`. To make changes and eventually propose modifications to the central code one has to create a new branch, connect it to his own fork and commit the changhes. All this can be done with the following commands:
+```
+git checkout -b <new-branch>
+git push my-cmssw <new-branch> 
+```
+now git knows that the new branch and your fork are connected, so you can directly commit and push changes to your private area.
+```
+git add new-stuff
+git commit -m "adding new-stuff"
+git push my-cmssw
+```
+Further info can be found [here](http://cms-sw.github.io/tutorial.html)
+
 To know which CMSSW releases are available: 
 ```
 scram list CMSSW
@@ -53,6 +66,7 @@ dasgoclient --query="dataset=/DoubleMuon/Run2018A-12Nov2019_UL2018-v2/MINIAOD" -
 * [CDS](https://cds.cern.ch/) find CMS thesis and documents
 * [iCMS](https://cms.cern.ch/iCMS/analysisadmin/cadilines?awg=HIG&awgyear=2015) find AN and papers
 * [CADi](https://cms.cern.ch/iCMS/analysisadmin/cadilines?id=2293&ancode=HIG-19-016&tp=an&line=HIG-19-016) find AN and papers 
+* [GlobalTags](https://github.com/cms-sw/cmssw/blob/CMSSW_12_4_8/Configuration/AlCa/python/autoCond.py), this is for CMSSW_12_4_8, changing branch one can look for what he/she needs.
 
 To access files with XRootD the prefix is:
 ```
