@@ -81,7 +81,7 @@ The configuration for the job have to be fed to the script via a `.json` config 
 ```
 Informations about the **GlobalTag** to place in the `conditions` entry of the json can be found [here](https://github.com/cms-sw/cmssw/blob/CMSSW_12_4_8/Configuration/AlCa/python/autoCond.py), the nAOD v10 page instead can be found [here](https://gitlab.cern.ch/cms-nanoAOD/nanoaod-doc/-/wikis/Releases/NanoAODv10). 
 
-To select the proper customisation of the cmsDriver.py script in order to include the pdf variations one can refer to [this](https://cms-talk.web.cern.ch/t/validate-requests-with-store-rwgt-info-false-in-gridpacks/12417/15?u=tbevilac) cmsTalk discussion. 
+To select the proper customisation of the cmsDriver.py script in order to include the pdf variations one can refer to [this](https://cms-talk.web.cern.ch/t/validate-requests-with-store-rwgt-info-false-in-gridpacks/12417/15?u=tbevilac) cmsTalk discussion. **N.B.** when copying the string in the `customise_commands` entry of the json a few trick have to be kept in mind: 1) the `'` charchters have to be switched to `*` (not fancy but works), 2) additional `\\` has to be added before `\n` and `\"` 
 ## CRAB
 
 To be fixed
