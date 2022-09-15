@@ -142,7 +142,7 @@ if opt.create:
 
     # Summary file
     os.system("echo \"nanoAOD conversion process for "+metadata["taskname"]+" summary\" > "+EXEC_PATH+"/summary.txt")
-    os.system("echo \"\\n\" >> "+EXEC_PATH+"/summary.txt")
+    os.system("echo \"\" >> "+EXEC_PATH+"/summary.txt")
     os.system("echo \"Task name: "+metadata["taskname"]+"\" >> "+EXEC_PATH+"/summary.txt")
     os.system("echo \"Output dir: "+metadata["outdir"]+"\" >> "+EXEC_PATH+"/summary.txt")
     os.system("echo \"Input filelist: all_input.txt\" >> "+EXEC_PATH+"/summary.txt")
@@ -277,18 +277,21 @@ elif opt.resubmit:
     os.system("cat output | sort -u | sed 's;_; ;g;s;\.; ;g' | awk '{ printf \"%d\\n\", $(NF-1) }' > jobnums")
     os.system("seq 1 "+str(njobs)+" > Seq")
     os.system("diff Seq jobnums | grep \"<\" | awk '{ printf \"%.4d,\", $2 }' | sed 's;,$;\\n;' > resubmit ")
-    os.system("rm "+EXEC_PATH+"/resubmit.sh")
+    if os.path.exists(EXEC_PATH+"/resubmit.sh"): os.system("rm "+EXEC_PATH+"/resubmit.sh")
     with open("resubmit") as fl:
         files = fl.readlines()
-        files = re.split(',|\n',files[0])
+        if len(files) > 0:
+            files = re.split(',|\n',files[0])
         for i,job in enumerate(files):
             if job == '': break
-            idx = int(i/(float(len(files))/100))
-            print ("preparing resubmission jobs list ["+"#"*idx+" "*(100-idx)+"]"+"  \r",
-            sys.stdout.flush())
+            idx = (int((i/(float(len(files))/100)) // 1) if (len(files) > 2) else 100)
+            print ("preparing resubmission jobs list "+color_dict["cyan"]+"|"+"#"*idx+" "*(100-idx)+"|"+color_dict["end"], end="\r")
             os.system("grep "+TASKNAME+"_"+job+" "+EXEC_PATH+"/alljobs.sh >> "+EXEC_PATH+"/resubmit.sh")
     os.system("rm Seq jobnums output resubmit")
-    print("\nDone: resubmit.sh file created at "+EXEC_PATH+"/resubmit.sh")
+    if len(files) > 0:
+        print("\nDone: "+color_dict["blue"]+"resubmit.sh"+color_dict["end"]+" file created at "+color_dict["blue"]+EXEC_PATH+"/resubmit.sh"+color_dict["end"])
+    else:    
+        print("No jobs to resubmit")
     print ("-"*80) 
 
 # Submit hadd job for files in the output directory !!! TO BE FIXED, old version, in principle should not be needed !!! FIXME !!!
