@@ -8,6 +8,26 @@ voms-proxy-init --valid 192:00 --voms cms
 voms-proxy-info -all | grep -Ei "role|subject"
 ```
 
+To use the Grid access one needs a Grid Certificate granted by CERN to users with a computing account. 
+
+To request a new Grid Certificate one has to go to [this page](https://ca.cern.ch/ca/) and click on `New Grid User Certificate` option.
+After that a password have to be decided and the certificate can be downloaded.
+
+To install and use the certificate:
+
+* Copy the new Grid Certificate on the machine with which you want to access the grid: **PSI tier3** -> `/t3home/bevila_t/.globus`, **lxplus** -> `/afs/cern.ch/user/t/tbevilac/.globus`, **private mac** -> `/Users/tiziano-bevilacqua/.globus`
+* Extrack the public and private keys with (assuming your certificate is calle `myCert.p12`):
+```
+openssl pkcs12 -in myCert.p12 -clcerts -nokeys -out $HOME/.globus/usercert.pem
+openssl pkcs12 -in myCert.p12 -nocerts -out $HOME/.globus/userkey.pem
+```
+* You must set the mode on your `userkey.pem` file to read/write only by the owner, otherwise `voms-proxy-init` will not use it:
+```
+chmod 600 $HOME/.globus/userkey.pem
+chmod 600 $HOME/.globus/usercert.pem
+```
+and then delete `myCert.p12`, further informations on this matter, including how to import the certificate on Browsers can be found [here](https://ca.cern.ch/ca/Help/?kbid=021001)
+
 ### CMSSW
 To build:
 ```
