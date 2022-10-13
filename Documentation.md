@@ -121,6 +121,12 @@ To run brilcalc use for example
 ```
 brilcalc lumi -c web -i Runs_2017B_brilcalc.json -u /fb
 ```
+or 
+```
+brilcalc lumi --normtag /cvmfs/cms-bril.cern.ch/cms-lumi-pog/Normtags/normtag_BRIL.json -u /fb  --begin 7920 --end  8210 
+```
+where `begin` and `end` are fill numbers
+
 ### FWLite ANALYSIS
 Adding FWLite to CMSSW:
 ```
