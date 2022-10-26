@@ -116,8 +116,11 @@ if [ ! -f ${step}_cfg.py ]; then
 
     files=`cat tmp.sh | grep .root | awk '{print $NF}' | sed "s;^;file:;" | tr "\n" "," | sed "s:,:\", \":g" | sed 's/.\{3\}$//' | sed 's:^:\":' | sed 's:\":\":g'`
     sed -e "s;'file:NANO_PAT.root';${files};g" ${step}_cfg.py > tmp
-    sed -e "s;\# Other statements;\# Other statements \\nimport FWCore.PythonUtilities.LumiList as LumiList\\nprocess.source.lumisToProcess = LumiList.LumiList(filename = 'Cert_294927-306462_13TeV_UL2017_Collisions17_GoldenJSON.json').getVLuminosityBlockRange()\\n;g" tmp > ${step}_cfg.py
-    #mv tmp ${step}_cfg.py
+    if [ ${sample_type} == "--data" ]; then
+        sed -e "s;\# Other statements;\# Other statements \\nimport FWCore.PythonUtilities.LumiList as LumiList\\nprocess.source.lumisToProcess = LumiList.LumiList(filename = 'Cert_294927-306462_13TeV_UL2017_Collisions17_GoldenJSON.json').getVLuminosityBlockRange()\\n;g" tmp > ${step}_cfg.py
+    else
+        mv tmp ${step}_cfg.py
+    fi
 
     chmod 755 ${step}_cfg.py
     cp ${step}_cfg.py /work/bevila_t
