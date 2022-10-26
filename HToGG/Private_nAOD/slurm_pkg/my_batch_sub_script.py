@@ -1,9 +1,8 @@
 # Author Tiziano Bevilacqua (05/13/2022) 
-# Script to submit Phase1PixelHistoMaker jobs to slurm, tested on PSI tier3 
-# The script that is run in the jobs require a consistent amount of memory, a small number of input files per job is suggested
+# Script to submit nAODomisation jobs to slurm, tested on PSI tier3 
 
 from importlib.metadata import metadata
-import re, os, sys, glob, time, logging, multiprocessing, socket, subprocess, shlex, getpass, math, shutil, ROOT
+import re, os, sys, glob, time, logging, multiprocessing, socket, subprocess, shlex, getpass, math, shutil
 from optparse import OptionParser
 import json
 from importlib import resources
@@ -83,6 +82,8 @@ parser.add_option("--status",      dest="status",      action="store_true", defa
 parser.add_option("--missing",     dest="missing",     action="store_true", default=False, help="look for missing jobs")
 parser.add_option("--hadd",        dest="hadd",        action="store_true", default=False, help="Submit hadding job")
 parser.add_option("--step_two",    dest="step_2",      action="store_true", default=False, help="Option to merge merged outputs")
+parser.add_option("--queue",       dest="queue",       type="string",       default="standard", help="slurm queue to submit jobs to, default: standard, if this needs to be changed one should also have a look at the --time option")
+parser.add_option("--time",        dest="time",        type="string",       default="12:00:00", help="slurm job time limit, default: 12:00:00, make sure not to exceed time limit for each partition (for limits ref to https://wiki.chipp.ch/twiki/bin/view/CmsTier3/SlurmUsage) ")
 parser.add_option("--debug",       dest="debug",       action="store_true", default=False, help="Debug verbosity and skip removing of some intermediate files")
 (opt,args) = parser.parse_args()
 
@@ -139,6 +140,13 @@ if opt.create:
 
     os.system("dasgoclient -query=\"file dataset="+metadata["sample"]+"\" > all_input.txt")
     os.system("cp "+metadata["job_template"]+" "+EXEC_PATH+"/slurm_jobscript.sh")
+    if opt.queue != "standard":
+        os.system("sed \"s;\#SBATCH --partition=standard;\#SBATCH --partition="+opt.queue+";g\" slurm_jobscript.sh > tmp")
+        os.system("mv tmp slurm_jobscript.sh")
+    if opt.time != "12:00:00":
+        os.system("sed \"s;\#SBATCH --time=12:00:00;\#SBATCH --time="+opt.time+";g\" slurm_jobscript.sh > tmp")
+        os.system("mv tmp slurm_jobscript.sh")
+    os.system("cp ../Cert*.json "+EXEC_PATH+"/")
 
     # Summary file
     os.system("echo \"nanoAOD conversion process for "+metadata["taskname"]+" summary\" > "+EXEC_PATH+"/summary.txt")
@@ -164,15 +172,16 @@ if opt.create:
             idx = int((i/metadata["nfile"]) // 1)
             ash = int((100.0/(njobs)*idx) // 1 )
             space = int((100.0/(njobs)*(njobs-idx)) // 1)-1
-            print ("preparing file lists "+color_dict["cyan"]+"||"+"#"*ash+" "*space+"|"+color_dict["end"], end="\r")
+            print ("preparing file lists "+color_dict["cyan"]+"|"+"#"*ash+" "*space+"|"+color_dict["end"], end="\r")
             EXE("echo "+filename[:-1]+" | awk '{ print $1 }'"+' >> filelists/filelist_{:04d}.txt'.format(idx))
         print ("\nprepared "+str(njobs)+" temporary filelists at: ", os.getcwd()+"/filelists")
     
-    # Prepare submission script with "sbatch [job name] [out-log] [out-err] slurm_jobscript.sh [stringa inutile] [job_label] [input_files_list] [output dir] [other self explanatory options for cmsDriver]  
+    # Prepare submission script with "sbatch [job name] [out-log] [out-err] slurm_jobscript.sh [GoodLumi.json path] [job_label] [input_files_list] [output dir] [other self explanatory options for cmsDriver]  
     print ("")
     print ("Job Script file: "+color_dict["blue"]+metadata["job_template"]+color_dict["end"])
     os.system("ls -l filelists | awk '{ print $NF }' | tail -n +2 | head -n -1 > filelists/job_list.txt")
-    os.system("cat -n filelists/job_list.txt | awk '{ printf \"%.4d %s\\n\", $1, $2 }' | awk '{ print \"sbatch --job-name="+metadata["taskname"]+"_\"$1\" -o /work/%u/test/.slurm/%x_%A_\"$1\".out -e /work/%u/test/.slurm/%x_%A_\"$1\".err slurm_jobscript.sh "+metadata["taskname"]+"_JOB\"$1\" \"$1\" "+EXEC_PATH+"/filelists/\"$2\" "+OUT_PATH+"/"+metadata["taskname"]+" "+metadata["customise"]+" "+metadata["customise_commands"]+" "+metadata["era"]+" "+metadata["conditions"]+" "+metadata["type"]+" "+metadata["step"]+"\"}' > alljobs.sh")
+    if metadata["customise_commands"] == "": metadata["customise_commands"] = "skip"
+    os.system("cat -n filelists/job_list.txt | awk '{ printf \"%.4d %s\\n\", $1, $2 }' | awk '{ print \"sbatch --job-name="+metadata["taskname"]+"_\"$1\" -o /work/%u/test/.slurm/%x_%A_\"$1\".out -e /work/%u/test/.slurm/%x_%A_\"$1\".err slurm_jobscript.sh "+EXEC_PATH+"/Cert_294927-306462_13TeV_UL2017_Collisions17_GoldenJSON.json \"$1\" "+EXEC_PATH+"/filelists/\"$2\" "+OUT_PATH+"/"+metadata["taskname"]+" "+metadata["customise"]+" "+metadata["customise_commands"]+" "+metadata["era"]+" "+metadata["conditions"]+" "+metadata["type"]+" "+metadata["step"]+"\"}' > alljobs.sh")
     os.system("head -1 alljobs.sh | sed \"s;0001;test;g;\" > test.sh")
 
     print ("Jobs prepared at:", color_dict["blue"]+os.getcwd()+color_dict["end"], "as: "+color_dict["blue"]+"alljobs.sh"+color_dict["end"]) 

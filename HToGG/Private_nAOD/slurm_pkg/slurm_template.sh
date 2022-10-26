@@ -29,7 +29,7 @@ if [ -z ${SLURM_ARRAY_TASK_ID} ]; then
 fi
 
 # define SLURM_JOB_NAME and SLURM_ARRAY_JOB_ID, if they are not defined already (e.g. if script is executed locally)
-[ ! -z ${SLURM_JOB_NAME} ] || SLURM_JOB_NAME=$1
+[ ! -z ${SLURM_JOB_NAME} ] || SLURM_JOB_NAME=${HOSTNAME}
 [ ! -z ${SLURM_ARRAY_JOB_ID} ] || SLURM_ARRAY_JOB_ID=local$(date +%y%m%d%H%M%S)
 
 #SLURM_JOB_NAME=$1
@@ -87,6 +87,7 @@ eval `scram runtime -sh`
 cd src
 
 git cms-addpkg PhysicsTools/NanoAOD
+git cms-addpkg FWCore
 git cms-merge-topic TizianoBevilacqua:devel-privat-nAOD-routine
 
 output="nAOD_"$2".root"
@@ -100,16 +101,23 @@ echo
 #scramv1 b
 scram b -j 4
 if [ ! -f ${step}_cfg.py ]; then
-    echo cmsDriver.py NANO -s NANO --python_filename ${step}_cfg.py --eventcontent $step --datatier $step --era $era --conditions $conditions --customise \"$customise\" --customise_commands \"$customise_commands\" $sample_type --no_exec
-    cmsDriver.py NANO -s NANO --python_filename ${step}_cfg.py --eventcontent $step --datatier $step --era $era --conditions $conditions --customise "$customise" --customise_commands "$customise_commands" $sample_type --no_exec -n -1
+    if [ ${customise_commands} == "skip" ]; then
+        echo cmsDriver.py NANO -s NANO --python_filename ${step}_cfg.py --eventcontent $step --datatier $step --era $era --conditions $conditions --customise \"$customise\"  $sample_type --no_exec
+        cmsDriver.py NANO -s NANO --python_filename ${step}_cfg.py --eventcontent $step --datatier $step --era $era --conditions $conditions --customise "$customise"  $sample_type --no_exec -n -1
+    else
+        echo cmsDriver.py NANO -s NANO --python_filename ${step}_cfg.py --eventcontent $step --datatier $step --era $era --conditions $conditions --customise \"$customise\" --customise_commands \"$customise_commands\" $sample_type --no_exec
+        cmsDriver.py NANO -s NANO --python_filename ${step}_cfg.py --eventcontent $step --datatier $step --era $era --conditions $conditions --customise "$customise" --customise_commands "$customise_commands" $sample_type --no_exec -n -1
+    fi
 
+    cp $1 .      #copy the GoodLumi.json list to working directory
     cat $3 | sed "s;^;root://cms-xrd-global.cern.ch:/;" > tmp.sh
     cat tmp.sh
     chmod 755 tmp.sh  
 
     files=`cat tmp.sh | grep .root | awk '{print $NF}' | sed "s;^;file:;" | tr "\n" "," | sed "s:,:\", \":g" | sed 's/.\{3\}$//' | sed 's:^:\":' | sed 's:\":\":g'`
     sed -e "s;'file:NANO_PAT.root';${files};g" ${step}_cfg.py > tmp
-    mv tmp ${step}_cfg.py
+    sed -e "s;\# Other statements;\# Other statements \\nimport FWCore.PythonUtilities.LumiList as LumiList\\nprocess.source.lumisToProcess = LumiList.LumiList(filename = 'Cert_294927-306462_13TeV_UL2017_Collisions17_GoldenJSON.json').getVLuminosityBlockRange()\\n;g" tmp > ${step}_cfg.py
+    #mv tmp ${step}_cfg.py
 
     chmod 755 ${step}_cfg.py
     cp ${step}_cfg.py /work/bevila_t
