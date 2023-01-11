@@ -102,7 +102,7 @@ The Bad ROCs for the event are instead excluded at [line 1677](https://github.co
 
 ### Hands on
 
-Now that we have had a look at the basic concepts we can try to reproduce the results for the September 2022 MiniTimingScan. Firs of all we have to recover informations about the delays set in each run by looking at the [elog](https://cmsonline.cern.ch/webcenter/portal/cmsonline/Common/Elog?_piref683379043.strutsAction=/viewMessageDetails.do?msgId=1157556) of the scan.
+Now that we have had a look at the basic concepts we can try to reproduce the results for the September 2022 MiniTimingScan. First of all we have to recover informations about the delays set in each run by looking at the [elog](https://cmsonline.cern.ch/webcenter/portal/cmsonline/Common/Elog?_piref683379043.strutsAction=/viewMessageDetails.do?msgId=1157556) of the scan.
 
 Once we know the setting of the scan we can update the `interface/scan_points.h` file with the new values for our scan, making sure to link the run numbers with both the scan number and delays (hint: add new entries to both `delay_scan_number()` and `delay()` functions).
 
@@ -112,7 +112,7 @@ Now we can run the code at last, first we compile our changes
 ```
 make -j8 Phase1ScanHistoMaker
 ```
-then we can run the Timing Scan on the NTuples starting with run ##RUN Number##, we run it twice (first with the `-b` flag to speed up) to update the BadROCs list. 
+then we can run the Timing Scan on the NTuples starting with run 359576, we run it twice (first with the `-b` flag to speed up) to update the BadROCs list. 
 ``` 
 #root://t3dcachedb03.psi.ch:1094/pnfs/psi.ch/cms/trivcat should be an alternative to root://cms-xrd-global.cern.ch/
 ./Phase1ScanHistoMaker -b -o PHM_PHASE1_out/Histo_TimingScan_Sep2022_run359576_badrocrun.root root://cms-xrd-global.cern.ch//store/user/bevila_t/TrackerTutorial/input_files/NTuple_run359576.root
