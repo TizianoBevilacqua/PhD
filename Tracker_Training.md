@@ -114,16 +114,26 @@ make -j8 Phase1ScanHistoMaker
 ```
 then we can run the Timing Scan on the NTuples starting with run ##RUN Number##, we run it twice (first with the `-b` flag to speed up) to update the BadROCs list. 
 ``` 
-./Phase1ScanHistoMaker -b -o PHM_PHASE1_out/Histo_TimingScan_Sep2022_runRunNumber_badrocrun.root root://t3dcachedb03.psi.ch:1094/pnfs/psi.ch/cms/trivcat/store/user/bevila_t/path_to_tutorial/NTuple_runRunNumber.root
+./Phase1ScanHistoMaker -b -o PHM_PHASE1_out/Histo_TimingScan_Sep2022_run359576_badrocrun.root root://t3dcachedb03.psi.ch:1094/pnfs/psi.ch/cms/trivcat/store/user/bevila_t/TrackerTutorial/input_files/NTuple_run359576.root
 
-./Phase1ScanHistoMaker -o PHM_PHASE1_out/Histo_TimingScan_Sep2022_runRunNumber.root root://t3dcachedb03.psi.ch:1094/pnfs/psi.ch/cms/trivcat/store/user/bevila_t/path_to_tutorial/NTuple_runRunNumber.root
+./Phase1ScanHistoMaker -o PHM_PHASE1_out/Histo_TimingScan_Sep2022_run359576.root root://t3dcachedb03.psi.ch:1094/pnfs/psi.ch/cms/trivcat/store/user/bevila_t/TrackerTutorial/input_files/NTuple_run359576.root
 ``` 
 in principle each run should be processed but for the sake of time we already provide you with the outputs for the other runs, that can be downloaded from [here](). 
 Once we have all the outputs for the different runs we have to combine them, so we run the `Phase1ScanHistoMaker` once more with the `-a` flag, providing the script with all the paths to the other files (two in this case)
 ```
-./Phase1ScanHistoMaker -o PHM_PHASE1_out/Histo_TimingScan_Sep2022_merged.root -a PHM_PHASE1_out/Histo_TimingScan_Sep2022_runRunNumber.root PHM_PHASE1_out/Histo_TimingScan_Sep2022_runRunNumbers.root
+./Phase1ScanHistoMaker -o PHM_PHASE1_out/Histo_TimingScan_Sep2022_merged.root -a PHM_PHASE1_out/Histo_TimingScan_Sep2022_run359576.root root://t3dcachedb03.psi.ch:1094/pnfs/psi.ch/cms/trivcat/store/user/bevila_t/TrackerTutorial/input_files/merged_Histos_SepTS_runs359577_359584.root
 ```
-now if everything proceeded smoothly our output file will contain a ton of histograms of whom a few are interesting to our pourposes, to select them and save them nicely to `.png`s we can use the `MakeTimingScanTutorialPlots.py` script placed in [place]()
+
+### Plotting
+
+Now if everything proceeded smoothly our output file will contain a ton of histograms of whom a few are interesting to our pourposes, to select them and save them nicely to `.png`s we can use the `MakeTimingScanTutorialPlots.py` script
+```
+xrdcp root://t3dcachedb03.psi.ch:1094/pnfs/psi.ch/cms/trivcat/store/user/bevila_t/TrackerTutorial/scripts/MakeTimingScanTutorialPlots.py .
+
+python MakeTimingScanTutorialPlots.py PHM_PHASE1_out/Histo_TimingScan_Sep2022_merged.root
+```
 
 ### Running on the cluster
+
+ 
 
