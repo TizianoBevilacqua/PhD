@@ -1,5 +1,5 @@
-# Tracker Training - PhaseIPixelHistoMaker
-This file contains instruction to run a simple example that (hopefully) will make clearer hot to run an analysis using the [CMSTrackerDPG/SiPixelTools-PixelHistoMaker](https://github.com/CMSTrackerDPG/SiPixelTools-PixelHistoMaker). The two main use cases of the script in this directory are the measurement of the performance of the CMS Pixel Tracker via the Hit Efficiency and Cluster Properties monitoring, and performing the Timing Scans, needed to study the performances of the detector as a function of the delay applied to different parts of the  Pixel Tracker. These tasks are performed running two scripts: `PhaseIPixelHistoMaker` and `PhaseIScanHistoMaker`.
+# Tracker Training - Phase1PixelHistoMaker
+This file contains instruction to run a simple example that (hopefully) will make clearer hot to run an analysis using the [CMSTrackerDPG/SiPixelTools-PixelHistoMaker](https://github.com/CMSTrackerDPG/SiPixelTools-PixelHistoMaker). The two main use cases of the script in this directory are the measurement of the performance of the CMS Pixel Tracker via the Hit Efficiency and Cluster Properties monitoring, and performing the Timing Scans, needed to study the performances of the detector as a function of the delay applied to different parts of the  Pixel Tracker. These tasks are performed running two scripts: `Phase1PixelHistoMaker` and `Phase1ScanHistoMaker`.
 
 For the sake of this demonstration we will try to provide instrusctions to run a MiniTiming scan using data from Run3 (September 2022).
 
@@ -34,11 +34,11 @@ voms-proxy-init --voms cms:/cms --valid 168:00 --rfc
 ```
 ## Run the Mini-Timing-Scan
 
-To run an analysis with the scripts in this directory, input NTuples containing flat trees produced with [CMSTrackerDPG/SiPixelTools-PixelHistoMaker](https://github.com/CMSTrackerDPG/SiPixelTools-PhaseIPixelNtuplizer) have to be provided. For the sake of time this step has already been performed, and the files can be accessed [here]()
+To run an analysis with the scripts in this directory, input NTuples containing flat trees produced with [CMSTrackerDPG/SiPixelTools-Phase1PixelNtuplizer](https://github.com/CMSTrackerDPG/SiPixelTools-Phase1PixelNtuplizer) have to be provided. For the sake of time this step has already been performed, and the files can be accessed via `xrdroot` (see next steps).
 
 Now let's have a look to the structure of the code we will be using, opening a few random files in this directory you will notice on the spot that these are not crystal clear and that additions have built up in layers over time. Here are listed a few interesting places that are worhty of being pointed out to understand how this analysis is performed.
 
-### PhaseIScanHistoMaker.cc
+### Phase1ScanHistoMaker.cc
 
 The first ~90 lines of this file are used to configure the scan: 
 * define which version of the included files has to be used \rightarrow [lines](https://github.com/TizianoBevilacqua/SiPixelTools-PixelHistoMaker/blob/e5e248869e8f79b564c7a64482187cded278434c/Phase1ScanHistoMaker.cc#L40) 40-71, 
@@ -76,11 +76,11 @@ This file is crucial to the good outcome of the scans, it encodes timing and bia
 * **run numbers** and related scan numbers at the bottom of `delay_scan_number()` function, [line 9](https://github.com/TizianoBevilacqua/SiPixelTools-PixelHistoMaker/blob/e5e248869e8f79b564c7a64482187cded278434c/interface/scan_points.h#L9), 
 * **delays** at the bottom of the `delay()` one, [line428](https://github.com/TizianoBevilacqua/SiPixelTools-PixelHistoMaker/blob/e5e248869e8f79b564c7a64482187cded278434c/interface/scan_points.h#L428)
 
-the scan number set in the `delay_scan_number()` has to be the same as the one set for the `"DelayScans"` `PostFix` at [line 207](https://github.com/TizianoBevilacqua/SiPixelTools-PixelHistoMaker/blob/e5e248869e8f79b564c7a64482187cded278434c/Phase1ScanHistoMaker.cc#L207) of `PhaseIScanHistoMaker.cc`.
+the scan number set in the `delay_scan_number()` has to be the same as the one set for the `"DelayScans"` `PostFix` at [line 207](https://github.com/TizianoBevilacqua/SiPixelTools-PixelHistoMaker/blob/e5e248869e8f79b564c7a64482187cded278434c/Phase1ScanHistoMaker.cc#L207) of `Phase1ScanHistoMaker.cc`.
 
 ### Luminosity informations
 
-This section is more relevant for the `PhaseIPixelHistoMaker` script than for the production of the TimingScan, but still very important. To allow the code to be aware of the luminosity informations of different runs a file obtained using `brilcalc` to extract the delivered luminosity and PileUp of each lumisection (ls) is stored in the `input` directory. The structure of this file has changed during the ages but for Run3 the relevant file is `input/run_ls_intlumi_pileup_phase1_Run3.txt`, it basically contains 4 columns of number that should correspond to the 4 quantities stated in the name of the file itself.
+This section is more relevant for the `Phase1PixelHistoMaker` script than for the production of the TimingScan, but still very important. To allow the code to be aware of the luminosity informations of different runs a file obtained using `brilcalc` to extract the delivered luminosity and PileUp of each lumisection (ls) is stored in the `input` directory. The structure of this file has changed during the ages but for Run3 the relevant file is `input/run_ls_intlumi_pileup_phase1_Run3.txt`, it basically contains 4 columns of number that should correspond to the 4 quantities stated in the name of the file itself.
 
 To update this file when new runs are analysed one can run these command after having installed brilcalc:
 ```
@@ -94,7 +94,7 @@ This file is then loaded and used in the script in the `interface/Variables.h` f
 
 ### Bad ReadOutChips (ROCs) exclusion
 
-Again this section is more relevant for the `PhaseIPixelHistoMaker` script than for the Scans but is fundamental to get sensible results. In our analysis of the performances of the Pixel we want to exclude ROCs that are not behaving properly in the run for whatever reason. To do so we use a bookkeeping file that stores the information about the ROCs that are marked as bad in each run. This file is placed in the `input` directory as `input/Badroc_List.root`. It stores histograms for each analysed run containing the ID numbers of the incriminated ROCs (in an arcane and mysterious scheme) and a distribution of the HitEfficiency of the ROCs in the run. The list is loaded every time the code is used, and updated when a new run is processed or more statistycs is accumulated for an already processed one. Thus whenever one is interested in results concerning new runs the code has to be run twice to account for and exclude bad ROCs (the `-b` flag can be use to speed up the process in the first iteration of the execution).
+Again this section is more relevant for the `Phase1PixelHistoMaker` script than for the Scans but is fundamental to get sensible results. In our analysis of the performances of the Pixel we want to exclude ROCs that are not behaving properly in the run for whatever reason. To do so we use a bookkeeping file that stores the information about the ROCs that are marked as bad in each run. This file is placed in the `input` directory as `input/Badroc_List.root`. It stores histograms for each analysed run containing the ID numbers of the incriminated ROCs (in an arcane and mysterious scheme) and a distribution of the HitEfficiency of the ROCs in the run. The list is loaded every time the code is used, and updated when a new run is processed or more statistycs is accumulated for an already processed one. Thus whenever one is interested in results concerning new runs the code has to be run twice to account for and exclude bad ROCs (the `-b` flag can be use to speed up the process in the first iteration of the execution).
 
 The handling of loading and updating of the file is dealt with in the `interface/Variables.h` file at [line 1084](https://github.com/CMSTrackerDPG/SiPixelTools-PixelHistoMaker/blob/aeb353b4474b169fddc57900ceb14c45eefdb553/interface/Variables.h#L1084), with the `load_roc_sel()` function and in the `interface/TreeLooper.h` at [line 512](https://github.com/CMSTrackerDPG/SiPixelTools-PixelHistoMaker/blob/09d1d8bc53590b9e7a1f2ef4c1b5078d9bb383d1/interface/TreeLooper.h#L512) with the `badroc_run_()` function.
 
@@ -114,21 +114,22 @@ make -j8 Phase1ScanHistoMaker
 ```
 then we can run the Timing Scan on the NTuples starting with run ##RUN Number##, we run it twice (first with the `-b` flag to speed up) to update the BadROCs list. 
 ``` 
-./Phase1ScanHistoMaker -b -o PHM_PHASE1_out/Histo_TimingScan_Sep2022_run359576_badrocrun.root root://t3dcachedb03.psi.ch:1094/pnfs/psi.ch/cms/trivcat/store/user/bevila_t/TrackerTutorial/input_files/NTuple_run359576.root
+#root://t3dcachedb03.psi.ch:1094/pnfs/psi.ch/cms/trivcat should be an alternative to root://cms-xrd-global.cern.ch/
+./Phase1ScanHistoMaker -b -o PHM_PHASE1_out/Histo_TimingScan_Sep2022_run359576_badrocrun.root root://cms-xrd-global.cern.ch//store/user/bevila_t/TrackerTutorial/input_files/NTuple_run359576.root
 
-./Phase1ScanHistoMaker -o PHM_PHASE1_out/Histo_TimingScan_Sep2022_run359576.root root://t3dcachedb03.psi.ch:1094/pnfs/psi.ch/cms/trivcat/store/user/bevila_t/TrackerTutorial/input_files/NTuple_run359576.root
+./Phase1ScanHistoMaker -o PHM_PHASE1_out/Histo_TimingScan_Sep2022_run359576.root root://cms-xrd-global.cern.ch//store/user/bevila_t/TrackerTutorial/input_files/NTuple_run359576.root
 ``` 
 in principle each run should be processed but for the sake of time we already provide you with the outputs for the other runs, that can be downloaded from [here](). 
 Once we have all the outputs for the different runs we have to combine them, so we run the `Phase1ScanHistoMaker` once more with the `-a` flag, providing the script with all the paths to the other files (two in this case)
 ```
-./Phase1ScanHistoMaker -o PHM_PHASE1_out/Histo_TimingScan_Sep2022_merged.root -a PHM_PHASE1_out/Histo_TimingScan_Sep2022_run359576.root root://t3dcachedb03.psi.ch:1094/pnfs/psi.ch/cms/trivcat/store/user/bevila_t/TrackerTutorial/input_files/merged_Histos_SepTS_runs359577_359584.root
+./Phase1ScanHistoMaker -o PHM_PHASE1_out/Histo_TimingScan_Sep2022_merged.root -a PHM_PHASE1_out/Histo_TimingScan_Sep2022_run359576.root root://cms-xrd-global.cern.ch//store/user/bevila_t/TrackerTutorial/input_files/merged_Histos_SepTS_runs359577_359584.root
 ```
 
 ### Plotting
 
 Now if everything proceeded smoothly our output file will contain a ton of histograms of whom a few are interesting to our pourposes, to select them and save them nicely to `.png`s we can use the `MakeTimingScanTutorialPlots.py` script
 ```
-xrdcp root://t3dcachedb03.psi.ch:1094/pnfs/psi.ch/cms/trivcat/store/user/bevila_t/TrackerTutorial/scripts/MakeTimingScanTutorialPlots.py .
+xrdcp root://cms-xrd-global.cern.ch//store/user/bevila_t/TrackerTutorial/scripts/MakeTimingScanTutorialPlots.py .
 
 python MakeTimingScanTutorialPlots.py PHM_PHASE1_out/Histo_TimingScan_Sep2022_merged.root
 ```
