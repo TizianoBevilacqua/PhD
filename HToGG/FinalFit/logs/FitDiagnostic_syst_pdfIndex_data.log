@@ -1,0 +1,771 @@
+#######################################
+logfile obtained running command:
+combine -M FitDiagnostics ../../Datacard_mu_inclusive.root --expectSignal 1  -n HGG_test_syst_pdfIndex --cminDefaultMinimizerStrategy=0 --plots --saveShapes  --rMin -1 --rMax 3 -v 3 -m 125 --cminDefaultMinimizerTolerance 0.1 --cminApproxPreFitTolerance=10 --saveWorkspace
+
+output filename: ../output/fitDiagnosticsHGG_test_syst_pdfIndex.root 
+######################################
+
+
+>>> method used is FitDiagnostics
+>>> random number generator seed is 123456
+[#1] INFO:ObjectHandling -- RooWorkspace::import(w) importing RooUniform::prior
+Adding discrete pdfindex_WStest_2017_13TeV
+Saving snapshot 'clean'
+Saved snapshot 'clean'
+[#1] INFO:Eval -- RooRealVar::setRange(lumi_13TeV) new range named 'optimizeBoundRange' created with bounds [-7,7]
+SimNLL created with 0 channels, 0 generic constraints, 1 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+Set default minimizer to Minuit2, algorithm Migrad, tolerance 10
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_binWStest_2017) directly selected PDF components: (shapeSig_ggH_2017_hgg_WStest_2017,shapeSig_ggH_2017_hgg_WStest_2017__norm,shapeSig_qqH_2017_hgg_WStest_2017,shapeSig_qqH_2017_hgg_WStest_2017__norm,shapeSig_vH_2017_hgg_WStest_2017,shapeSig_vH_2017_hgg_WStest_2017__norm,shapeSig_ttH_2017_hgg_WStest_2017,shapeSig_ttH_2017_hgg_WStest_2017__norm)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_binWStest_2017) indirectly selected PDF components: (gaus_g1_GG2H_2017_WStest_13TeV,mean_g1_GG2H_2017_WStest_13TeV,dm_g1_GG2H_2017_WStest_13TeV,sigma_g1_GG2H_2017_WStest_13TeV,sigma_fit_g1_GG2H_2017_WStest_13TeV,gaus_g2_GG2H_2017_WStest_13TeV,mean_g2_GG2H_2017_WStest_13TeV,dm_g2_GG2H_2017_WStest_13TeV,sigma_g2_GG2H_2017_WStest_13TeV,sigma_fit_g2_GG2H_2017_WStest_13TeV,gaus_g0_GG2H_2017_WStest_13TeV,mean_g0_GG2H_2017_WStest_13TeV,dm_g0_GG2H_2017_WStest_13TeV,sigma_g0_GG2H_2017_WStest_13TeV,sigma_fit_g0_GG2H_2017_WStest_13TeV,frac_g0_GG2H_2017_WStest_13TeV,hggpdfsmrel_GG2H_2017_WStest_13TeV_recursive_fraction_gaus_g1_GG2H_2017_WStest_13TeV,frac_g1_GG2H_2017_WStest_13TeV,hggpdfsmrel_GG2H_2017_WStest_13TeV_recursive_fraction_gaus_g2_GG2H_2017_WStest_13TeV,frac_g2_GG2H_2017_WStest_13TeV,gaus_g3_GG2H_2017_WStest_13TeV,mean_g3_GG2H_2017_WStest_13TeV,dm_g3_GG2H_2017_WStest_13TeV,sigma_g3_GG2H_2017_WStest_13TeV,sigma_fit_g3_GG2H_2017_WStest_13TeV,hggpdfsmrel_GG2H_2017_WStest_13TeV_recursive_fraction_gaus_g3_GG2H_2017_WStest_13TeV,fxs_GG2H_13TeV,fea_GG2H_2017_WStest_13TeV,rate_GG2H_2017_WStest_13TeV,fbr_13TeV,gaus_g0_VBF_2017_WStest_13TeV,mean_g0_VBF_2017_WStest_13TeV,dm_g0_VBF_2017_WStest_13TeV,sigma_g0_VBF_2017_WStest_13TeV,sigma_fit_g0_VBF_2017_WStest_13TeV,gaus_g1_VBF_2017_WStest_13TeV,mean_g1_VBF_2017_WStest_13TeV,dm_g1_VBF_2017_WStest_13TeV,sigma_g1_VBF_2017_WStest_13TeV,sigma_fit_g1_VBF_2017_WStest_13TeV,frac_g0_VBF_2017_WStest_13TeV,hggpdfsmrel_VBF_2017_WStest_13TeV_recursive_fraction_gaus_g1_VBF_2017_WStest_13TeV,fxs_VBF_13TeV,fea_VBF_2017_WStest_13TeV,rate_VBF_2017_WStest_13TeV,gaus_g1_VH_2017_WStest_13TeV,mean_g1_VH_2017_WStest_13TeV,dm_g1_VH_2017_WStest_13TeV,sigma_g1_VH_2017_WStest_13TeV,sigma_fit_g1_VH_2017_WStest_13TeV,gaus_g2_VH_2017_WStest_13TeV,mean_g2_VH_2017_WStest_13TeV,dm_g2_VH_2017_WStest_13TeV,sigma_g2_VH_2017_WStest_13TeV,sigma_fit_g2_VH_2017_WStest_13TeV,gaus_g0_VH_2017_WStest_13TeV,mean_g0_VH_2017_WStest_13TeV,dm_g0_VH_2017_WStest_13TeV,sigma_g0_VH_2017_WStest_13TeV,sigma_fit_g0_VH_2017_WStest_13TeV,frac_g0_VH_2017_WStest_13TeV,hggpdfsmrel_VH_2017_WStest_13TeV_recursive_fraction_gaus_g1_VH_2017_WStest_13TeV,frac_g1_VH_2017_WStest_13TeV,hggpdfsmrel_VH_2017_WStest_13TeV_recursive_fraction_gaus_g2_VH_2017_WStest_13TeV,fxs_VH_13TeV,fea_VH_2017_WStest_13TeV,rate_VH_2017_WStest_13TeV,gaus_g0_TTH_2017_WStest_13TeV,mean_g0_TTH_2017_WStest_13TeV,dm_g0_TTH_2017_WStest_13TeV,sigma_g0_TTH_2017_WStest_13TeV,sigma_fit_g0_TTH_2017_WStest_13TeV,gaus_g2_TTH_2017_WStest_13TeV,mean_g2_TTH_2017_WStest_13TeV,dm_g2_TTH_2017_WStest_13TeV,sigma_g2_TTH_2017_WStest_13TeV,sigma_fit_g2_TTH_2017_WStest_13TeV,frac_g0_TTH_2017_WStest_13TeV,gaus_g1_TTH_2017_WStest_13TeV,mean_g1_TTH_2017_WStest_13TeV,dm_g1_TTH_2017_WStest_13TeV,sigma_g1_TTH_2017_WStest_13TeV,sigma_fit_g1_TTH_2017_WStest_13TeV,hggpdfsmrel_TTH_2017_WStest_13TeV_recursive_fraction_gaus_g1_TTH_2017_WStest_13TeV,frac_g1_TTH_2017_WStest_13TeV,hggpdfsmrel_TTH_2017_WStest_13TeV_recursive_fraction_gaus_g2_TTH_2017_WStest_13TeV,frac_g2_TTH_2017_WStest_13TeV,gaus_g3_TTH_2017_WStest_13TeV,mean_g3_TTH_2017_WStest_13TeV,dm_g3_TTH_2017_WStest_13TeV,sigma_g3_TTH_2017_WStest_13TeV,sigma_fit_g3_TTH_2017_WStest_13TeV,hggpdfsmrel_TTH_2017_WStest_13TeV_recursive_fraction_gaus_g3_TTH_2017_WStest_13TeV,frac_g3_TTH_2017_WStest_13TeV,gaus_g4_TTH_2017_WStest_13TeV,mean_g4_TTH_2017_WStest_13TeV,dm_g4_TTH_2017_WStest_13TeV,sigma_g4_TTH_2017_WStest_13TeV,sigma_fit_g4_TTH_2017_WStest_13TeV,hggpdfsmrel_TTH_2017_WStest_13TeV_recursive_fraction_gaus_g4_TTH_2017_WStest_13TeV,fxs_TTH_13TeV,fea_TTH_2017_WStest_13TeV,rate_TTH_2017_WStest_13TeV,pdf_binWStest_2017_nuis,n_exp_final_binWStest_2017_proc_ggH_2017_hgg,n_exp_final_binWStest_2017_proc_qqH_2017_hgg,n_exp_final_binWStest_2017_proc_vH_2017_hgg,n_exp_final_binWStest_2017_proc_ttH_2017_hgg)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_binWStest_2017) directly selected PDF components: (shapeSig_ggH_2017_hgg_WStest_2017,shapeSig_ggH_2017_hgg_WStest_2017__norm,shapeSig_qqH_2017_hgg_WStest_2017,shapeSig_qqH_2017_hgg_WStest_2017__norm,shapeSig_vH_2017_hgg_WStest_2017,shapeSig_vH_2017_hgg_WStest_2017__norm,shapeSig_ttH_2017_hgg_WStest_2017,shapeSig_ttH_2017_hgg_WStest_2017__norm)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_binWStest_2017) indirectly selected PDF components: (gaus_g1_GG2H_2017_WStest_13TeV,mean_g1_GG2H_2017_WStest_13TeV,dm_g1_GG2H_2017_WStest_13TeV,sigma_g1_GG2H_2017_WStest_13TeV,sigma_fit_g1_GG2H_2017_WStest_13TeV,gaus_g2_GG2H_2017_WStest_13TeV,mean_g2_GG2H_2017_WStest_13TeV,dm_g2_GG2H_2017_WStest_13TeV,sigma_g2_GG2H_2017_WStest_13TeV,sigma_fit_g2_GG2H_2017_WStest_13TeV,gaus_g0_GG2H_2017_WStest_13TeV,mean_g0_GG2H_2017_WStest_13TeV,dm_g0_GG2H_2017_WStest_13TeV,sigma_g0_GG2H_2017_WStest_13TeV,sigma_fit_g0_GG2H_2017_WStest_13TeV,frac_g0_GG2H_2017_WStest_13TeV,hggpdfsmrel_GG2H_2017_WStest_13TeV_recursive_fraction_gaus_g1_GG2H_2017_WStest_13TeV,frac_g1_GG2H_2017_WStest_13TeV,hggpdfsmrel_GG2H_2017_WStest_13TeV_recursive_fraction_gaus_g2_GG2H_2017_WStest_13TeV,frac_g2_GG2H_2017_WStest_13TeV,gaus_g3_GG2H_2017_WStest_13TeV,mean_g3_GG2H_2017_WStest_13TeV,dm_g3_GG2H_2017_WStest_13TeV,sigma_g3_GG2H_2017_WStest_13TeV,sigma_fit_g3_GG2H_2017_WStest_13TeV,hggpdfsmrel_GG2H_2017_WStest_13TeV_recursive_fraction_gaus_g3_GG2H_2017_WStest_13TeV,fxs_GG2H_13TeV,fea_GG2H_2017_WStest_13TeV,rate_GG2H_2017_WStest_13TeV,fbr_13TeV,gaus_g0_VBF_2017_WStest_13TeV,mean_g0_VBF_2017_WStest_13TeV,dm_g0_VBF_2017_WStest_13TeV,sigma_g0_VBF_2017_WStest_13TeV,sigma_fit_g0_VBF_2017_WStest_13TeV,gaus_g1_VBF_2017_WStest_13TeV,mean_g1_VBF_2017_WStest_13TeV,dm_g1_VBF_2017_WStest_13TeV,sigma_g1_VBF_2017_WStest_13TeV,sigma_fit_g1_VBF_2017_WStest_13TeV,frac_g0_VBF_2017_WStest_13TeV,hggpdfsmrel_VBF_2017_WStest_13TeV_recursive_fraction_gaus_g1_VBF_2017_WStest_13TeV,fxs_VBF_13TeV,fea_VBF_2017_WStest_13TeV,rate_VBF_2017_WStest_13TeV,gaus_g1_VH_2017_WStest_13TeV,mean_g1_VH_2017_WStest_13TeV,dm_g1_VH_2017_WStest_13TeV,sigma_g1_VH_2017_WStest_13TeV,sigma_fit_g1_VH_2017_WStest_13TeV,gaus_g2_VH_2017_WStest_13TeV,mean_g2_VH_2017_WStest_13TeV,dm_g2_VH_2017_WStest_13TeV,sigma_g2_VH_2017_WStest_13TeV,sigma_fit_g2_VH_2017_WStest_13TeV,gaus_g0_VH_2017_WStest_13TeV,mean_g0_VH_2017_WStest_13TeV,dm_g0_VH_2017_WStest_13TeV,sigma_g0_VH_2017_WStest_13TeV,sigma_fit_g0_VH_2017_WStest_13TeV,frac_g0_VH_2017_WStest_13TeV,hggpdfsmrel_VH_2017_WStest_13TeV_recursive_fraction_gaus_g1_VH_2017_WStest_13TeV,frac_g1_VH_2017_WStest_13TeV,hggpdfsmrel_VH_2017_WStest_13TeV_recursive_fraction_gaus_g2_VH_2017_WStest_13TeV,fxs_VH_13TeV,fea_VH_2017_WStest_13TeV,rate_VH_2017_WStest_13TeV,gaus_g0_TTH_2017_WStest_13TeV,mean_g0_TTH_2017_WStest_13TeV,dm_g0_TTH_2017_WStest_13TeV,sigma_g0_TTH_2017_WStest_13TeV,sigma_fit_g0_TTH_2017_WStest_13TeV,gaus_g2_TTH_2017_WStest_13TeV,mean_g2_TTH_2017_WStest_13TeV,dm_g2_TTH_2017_WStest_13TeV,sigma_g2_TTH_2017_WStest_13TeV,sigma_fit_g2_TTH_2017_WStest_13TeV,frac_g0_TTH_2017_WStest_13TeV,gaus_g1_TTH_2017_WStest_13TeV,mean_g1_TTH_2017_WStest_13TeV,dm_g1_TTH_2017_WStest_13TeV,sigma_g1_TTH_2017_WStest_13TeV,sigma_fit_g1_TTH_2017_WStest_13TeV,hggpdfsmrel_TTH_2017_WStest_13TeV_recursive_fraction_gaus_g1_TTH_2017_WStest_13TeV,frac_g1_TTH_2017_WStest_13TeV,hggpdfsmrel_TTH_2017_WStest_13TeV_recursive_fraction_gaus_g2_TTH_2017_WStest_13TeV,frac_g2_TTH_2017_WStest_13TeV,gaus_g3_TTH_2017_WStest_13TeV,mean_g3_TTH_2017_WStest_13TeV,dm_g3_TTH_2017_WStest_13TeV,sigma_g3_TTH_2017_WStest_13TeV,sigma_fit_g3_TTH_2017_WStest_13TeV,hggpdfsmrel_TTH_2017_WStest_13TeV_recursive_fraction_gaus_g3_TTH_2017_WStest_13TeV,frac_g3_TTH_2017_WStest_13TeV,gaus_g4_TTH_2017_WStest_13TeV,mean_g4_TTH_2017_WStest_13TeV,dm_g4_TTH_2017_WStest_13TeV,sigma_g4_TTH_2017_WStest_13TeV,sigma_fit_g4_TTH_2017_WStest_13TeV,hggpdfsmrel_TTH_2017_WStest_13TeV_recursive_fraction_gaus_g4_TTH_2017_WStest_13TeV,fxs_TTH_13TeV,fea_TTH_2017_WStest_13TeV,rate_TTH_2017_WStest_13TeV,pdf_binWStest_2017_nuis,n_exp_final_binWStest_2017_proc_ggH_2017_hgg,n_exp_final_binWStest_2017_proc_qqH_2017_hgg,n_exp_final_binWStest_2017_proc_vH_2017_hgg,n_exp_final_binWStest_2017_proc_ttH_2017_hgg)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_binWStest_2017) directly selected PDF components: (shapeBkg_bkg_mass_WStest_2017)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_binWStest_2017) indirectly selected PDF components: (env_pdf_0_2017_13TeV_bern5,env_pdf_0_2017_13TeV_bern5_p0_sq,env_pdf_0_2017_13TeV_bern5_p1_sq,env_pdf_0_2017_13TeV_bern5_p2_sq,env_pdf_0_2017_13TeV_bern5_p3_sq,env_pdf_0_2017_13TeV_bern5_p4_sq,env_pdf_0_2017_13TeV_exp3,env_pdf_0_2017_13TeV_exp3_e1,env_pdf_0_2017_13TeV_exp3_e2,env_pdf_0_2017_13TeV_exp3_recursive_fraction_env_pdf_0_2017_13TeV_exp3_e2,env_pdf_0_2017_13TeV_pow1,env_pdf_0_2017_13TeV_pow1_e1,env_pdf_0_2017_13TeV_pow1_recursive_fraction_env_pdf_0_2017_13TeV_pow1_e1,env_pdf_0_2017_13TeV_lau1,env_pdf_0_2017_13TeV_lau1_pow0,env_pdf_0_2017_13TeV_lau1_powl1,env_pdf_0_2017_13TeV_lau1_recursive_fraction_env_pdf_0_2017_13TeV_lau1_powl1,pdf_binWStest_2017_nuis)
+[utils::makePlots] Number of events for pdf in WStest_2017_CMS_hgg_mass, pdf pdf_binWStest_2017 = 320381
+SimNLL created with 1 channels, 0 generic constraints, 1 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+do first Minimization 
+Running pre-fit with Minuit2,Migrad and tolerance 10
+Set default minimizer to Minuit2, algorithm Migrad, tolerance 10
+Minuit2Minimizer: Minimize with max-calls 6500 convergence for edm < 10 strategy 0
+Minuit2Minimizer::Minuit  - Changing default options
+             StorageLevel :               0
+MnSeedGenerator: for initial parameters FCN = 0
+MnSeedGenerator: Initial state:   - FCN =                0 Edm =  0.000374039 NCalls =     53
+MnSeedGenerator: Negative G2 found - new state:   - FCN =                0 Edm =  0.000374039 NCalls =     53
+VariableMetric: start iterating until Edm is < 0.00988946
+VariableMetric: Initial state   - FCN =                0 Edm =  0.000374039 NCalls =     53
+VariableMetric: Iteration #   0 - FCN =                0 Edm =  0.000374039 NCalls =     53
+VariableMetric: Iteration #   1 - FCN = -0.0003070363739184 Edm =  0.000143509 NCalls =     83
+Number of iterations 3
+----------> Iteration 0
+            FVAL = 0 Edm = 0.000374038574097 Nfcn = 53
+            Error matrix change = 1
+            Parameters :  p0 = 125 p1 = 0.503314 p2 = 0.573492 p3 = 0.258121 p4 = 0.350928 p5 = 0.248835 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = 0 p12 = 318710
+----------> Iteration 1
+            FVAL = -0.000307036373918 Edm = 0.000143509256839 Nfcn = 83
+            Error matrix change = 0.5
+            Parameters :  p0 = 125 p1 = 0.503426 p2 = 0.573511 p3 = 0.258135 p4 = 0.350938 p5 = 0.248837 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = 0 p12 = 318710
+----------> Iteration 2
+            FVAL = -0.000307036373918 Edm = 0.000143509256839 Nfcn = 83
+            Error matrix change = 0.5
+            Parameters :  p0 = 125 p1 = 0.503426 p2 = 0.573511 p3 = 0.258135 p4 = 0.350938 p5 = 0.248837 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = 0 p12 = 318710
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -0.000307036373918379013
+Edm   = 0.000143509256838752575
+Nfcn  = 83
+MH	  = 125	 +/-  4.19232	(limited)
+env_pdf_0_2017_13TeV_bern5_p0	  = 0.503426	 +/-  0.00602241	(limited)
+env_pdf_0_2017_13TeV_bern5_p1	  = 0.573511	 +/-  0.0024203	(limited)
+env_pdf_0_2017_13TeV_bern5_p2	  = 0.258135	 +/-  0.00437201	(limited)
+env_pdf_0_2017_13TeV_bern5_p3	  = 0.350938	 +/-  0.00235287	(limited)
+env_pdf_0_2017_13TeV_bern5_p4	  = 0.248837	 +/-  0.00186843	(limited)
+env_pdf_0_2017_13TeV_exp3_f1	  = 0.279014	 +/-  0.37597	(limited)
+env_pdf_0_2017_13TeV_exp3_p1	  = -0.0679454	 +/-  0.211001	(limited)
+env_pdf_0_2017_13TeV_exp3_p2	  = -0.0264914	 +/-  0.215467	(limited)
+env_pdf_0_2017_13TeV_lau1_l1	  = 0.409632	 +/-  0.412327	(limited)
+env_pdf_0_2017_13TeV_pow1_p1	  = -4.57694	 +/-  4.16432	(limited)
+lumi_13TeV	  = 0	 +/-  0.994458
+shapeBkg_bkg_mass_WStest_2017__norm	  = 318710	 +/-  561.415	(limited)
+Minuit2Minimizer: Minimize with max-calls 6500 convergence for edm < 0.1 strategy 0
+Minuit2Minimizer::Minuit  - Changing default options
+             StorageLevel :               0
+MnSeedGenerator: for initial parameters FCN = 0
+MnSeedGenerator: Initial state:   - FCN =                0 Edm =  0.000143548 NCalls =     53
+MnSeedGenerator: Negative G2 found - new state:   - FCN =                0 Edm =  0.000143548 NCalls =     53
+VariableMetric: start iterating until Edm is < 9.88947e-05
+VariableMetric: Initial state   - FCN =                0 Edm =  0.000143548 NCalls =     53
+VariableMetric: Iteration #   0 - FCN =                0 Edm =  0.000143548 NCalls =     53
+VariableMetric: Iteration #   1 - FCN = -0.0001443047514442 Edm =  9.46814e-05 NCalls =     80
+VariableMetric: Iteration #   2 - FCN = -0.0003485401712879 Edm =  4.24651e-05 NCalls =    108
+Number of iterations 4
+----------> Iteration 0
+            FVAL = 0 Edm = 0.000143548397688 Nfcn = 53
+            Error matrix change = 1
+            Parameters :  p0 = 125 p1 = 0.503426 p2 = 0.573511 p3 = 0.258135 p4 = 0.350938 p5 = 0.248837 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = 0 p12 = 318710
+----------> Iteration 1
+            FVAL = -0.000144304751444 Edm = 9.4681419816e-05 Nfcn = 80
+            Error matrix change = 0.5
+            Parameters :  p0 = 125 p1 = 0.503446 p2 = 0.573472 p3 = 0.258108 p4 = 0.350951 p5 = 0.248849 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = 0 p12 = 318710
+----------> Iteration 2
+            FVAL = -0.000348540171288 Edm = 4.24650907479e-05 Nfcn = 108
+            Error matrix change = 0.25
+            Parameters :  p0 = 125 p1 = 0.503608 p2 = 0.573429 p3 = 0.258112 p4 = 0.350995 p5 = 0.248858 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = 0 p12 = 318710
+----------> Iteration 3
+            FVAL = -0.000348540171288 Edm = 4.24650907479e-05 Nfcn = 108
+            Error matrix change = 0.25
+            Parameters :  p0 = 125 p1 = 0.503608 p2 = 0.573429 p3 = 0.258112 p4 = 0.350995 p5 = 0.248858 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = 0 p12 = 318710
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -0.000348540171287936573
+Edm   = 4.24650907479328101e-05
+Nfcn  = 108
+MH	  = 125	 +/-  4.19232	(limited)
+env_pdf_0_2017_13TeV_bern5_p0	  = 0.503608	 +/-  0.0090795	(limited)
+env_pdf_0_2017_13TeV_bern5_p1	  = 0.573429	 +/-  0.00413808	(limited)
+env_pdf_0_2017_13TeV_bern5_p2	  = 0.258112	 +/-  0.00432069	(limited)
+env_pdf_0_2017_13TeV_bern5_p3	  = 0.350995	 +/-  0.00313388	(limited)
+env_pdf_0_2017_13TeV_bern5_p4	  = 0.248858	 +/-  0.00175375	(limited)
+env_pdf_0_2017_13TeV_exp3_f1	  = 0.279014	 +/-  0.37597	(limited)
+env_pdf_0_2017_13TeV_exp3_p1	  = -0.0679454	 +/-  0.211001	(limited)
+env_pdf_0_2017_13TeV_exp3_p2	  = -0.0264914	 +/-  0.215467	(limited)
+env_pdf_0_2017_13TeV_lau1_l1	  = 0.409632	 +/-  0.412327	(limited)
+env_pdf_0_2017_13TeV_pow1_p1	  = -4.57694	 +/-  4.16432	(limited)
+lumi_13TeV	  = 0	 +/-  0.994458
+shapeBkg_bkg_mass_WStest_2017__norm	  = 318710	 +/-  561.425	(limited)
+Setting indices := 0 
+Minuit2Minimizer: Minimize with max-calls 6500 convergence for edm < 0.1 strategy 0
+Minuit2Minimizer::Minuit  - Changing default options
+             StorageLevel :               0
+MnSeedGenerator: for initial parameters FCN = 0
+MnSeedGenerator: Initial state:   - FCN =                0 Edm =  4.24788e-05 NCalls =     41
+MnSeedGenerator: Negative G2 found - new state:   - FCN =                0 Edm =  4.24788e-05 NCalls =     41
+VariableMetric: start iterating until Edm is < 9.88947e-05
+VariableMetric: Initial state   - FCN =                0 Edm =  4.24788e-05 NCalls =     41
+VariableMetric: Iteration #   0 - FCN =                0 Edm =  4.24788e-05 NCalls =     41
+VariableMetric: Iteration #   1 - FCN = -4.928791895509e-05 Edm =  3.87979e-05 NCalls =     63
+Number of iterations 3
+----------> Iteration 0
+            FVAL = 0 Edm = 4.24787931697e-05 Nfcn = 41
+            Error matrix change = 1
+            Parameters :  p0 = 0.503608 p1 = 0.573429 p2 = 0.258112 p3 = 0.350995 p4 = 0.248858 p5 = 0.279014 p6 = -0.0679454 p7 = -0.0264914 p8 = 0.409632 p9 = -4.57694
+----------> Iteration 1
+            FVAL = -4.92879189551e-05 Edm = 3.87978992173e-05 Nfcn = 63
+            Error matrix change = 0.5
+            Parameters :  p0 = 0.503604 p1 = 0.573413 p2 = 0.258117 p3 = 0.350993 p4 = 0.248841 p5 = 0.279014 p6 = -0.0679454 p7 = -0.0264914 p8 = 0.409632 p9 = -4.57694
+----------> Iteration 2
+            FVAL = -4.92879189551e-05 Edm = 3.87978992173e-05 Nfcn = 63
+            Error matrix change = 0.5
+            Parameters :  p0 = 0.503604 p1 = 0.573413 p2 = 0.258117 p3 = 0.350993 p4 = 0.248841 p5 = 0.279014 p6 = -0.0679454 p7 = -0.0264914 p8 = 0.409632 p9 = -4.57694
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -4.92879189550876617e-05
+Edm   = 3.87978992173279263e-05
+Nfcn  = 63
+MH	  = 125	 (fixed)
+env_pdf_0_2017_13TeV_bern5_p0	  = 0.503604	 +/-  0.00539589	(limited)
+env_pdf_0_2017_13TeV_bern5_p1	  = 0.573413	 +/-  0.00328616	(limited)
+env_pdf_0_2017_13TeV_bern5_p2	  = 0.258117	 +/-  0.00418135	(limited)
+env_pdf_0_2017_13TeV_bern5_p3	  = 0.350993	 +/-  0.00197677	(limited)
+env_pdf_0_2017_13TeV_bern5_p4	  = 0.248841	 +/-  0.00223521	(limited)
+env_pdf_0_2017_13TeV_exp3_f1	  = 0.279014	 +/-  0.37597	(limited)
+env_pdf_0_2017_13TeV_exp3_p1	  = -0.0679454	 +/-  0.211001	(limited)
+env_pdf_0_2017_13TeV_exp3_p2	  = -0.0264914	 +/-  0.215467	(limited)
+env_pdf_0_2017_13TeV_lau1_l1	  = 0.409632	 +/-  0.412327	(limited)
+env_pdf_0_2017_13TeV_pow1_p1	  = -4.57694	 +/-  4.16432	(limited)
+lumi_13TeV	  = 0	 (fixed)
+shapeBkg_bkg_mass_WStest_2017__norm	  = 318710	 (fixed)
+ .... Found a better fit: new NLL = -0.000704864 (improvement: -4.92879e-05
+Setting indices := 1 
+Minuit2Minimizer: Minimize with max-calls 6500 convergence for edm < 0.1 strategy 0
+Minuit2Minimizer::Minuit  - Changing default options
+             StorageLevel :               0
+MnSeedGenerator: for initial parameters FCN = 0
+MnSeedGenerator: Initial state:   - FCN =                0 Edm =  0.000271368 NCalls =     41
+MnSeedGenerator: Negative G2 found - new state:   - FCN =                0 Edm =  0.000271368 NCalls =     41
+VariableMetric: start iterating until Edm is < 9.88947e-05
+VariableMetric: Initial state   - FCN =                0 Edm =  0.000271368 NCalls =     41
+VariableMetric: Iteration #   0 - FCN =                0 Edm =  0.000271368 NCalls =     41
+VariableMetric: Iteration #   1 - FCN = -0.0001032883301377 Edm =  2.06782e-06 NCalls =     69
+Number of iterations 3
+----------> Iteration 0
+            FVAL = 0 Edm = 0.000271367610832 Nfcn = 41
+            Error matrix change = 1
+            Parameters :  p0 = 0.503608 p1 = 0.573429 p2 = 0.258112 p3 = 0.350995 p4 = 0.248858 p5 = 0.279014 p6 = -0.0679454 p7 = -0.0264914 p8 = 0.409632 p9 = -4.57694
+----------> Iteration 1
+            FVAL = -0.000103288330138 Edm = 2.06781942896e-06 Nfcn = 69
+            Error matrix change = 0.500001
+            Parameters :  p0 = 0.503608 p1 = 0.573429 p2 = 0.258112 p3 = 0.350995 p4 = 0.248858 p5 = 0.279029 p6 = -0.0679484 p7 = -0.0264919 p8 = 0.409632 p9 = -4.57694
+----------> Iteration 2
+            FVAL = -0.000103288330138 Edm = 2.06781942896e-06 Nfcn = 69
+            Error matrix change = 0.500001
+            Parameters :  p0 = 0.503608 p1 = 0.573429 p2 = 0.258112 p3 = 0.350995 p4 = 0.248858 p5 = 0.279029 p6 = -0.0679484 p7 = -0.0264919 p8 = 0.409632 p9 = -4.57694
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -0.000103288330137729645
+Edm   = 2.06781942896375376e-06
+Nfcn  = 69
+MH	  = 125	 (fixed)
+env_pdf_0_2017_13TeV_bern5_p0	  = 0.503608	 +/-  12.5699	(limited)
+env_pdf_0_2017_13TeV_bern5_p1	  = 0.573429	 +/-  12.5678	(limited)
+env_pdf_0_2017_13TeV_bern5_p2	  = 0.258112	 +/-  12.5751	(limited)
+env_pdf_0_2017_13TeV_bern5_p3	  = 0.350995	 +/-  12.5735	(limited)
+env_pdf_0_2017_13TeV_bern5_p4	  = 0.248858	 +/-  12.5752	(limited)
+env_pdf_0_2017_13TeV_exp3_f1	  = 0.279029	 +/-  0.00239887	(limited)
+env_pdf_0_2017_13TeV_exp3_p1	  = -0.0679484	 +/-  0.000482435	(limited)
+env_pdf_0_2017_13TeV_exp3_p2	  = -0.0264919	 +/-  9.9016e-05	(limited)
+env_pdf_0_2017_13TeV_lau1_l1	  = 0.409632	 +/-  0.412327	(limited)
+env_pdf_0_2017_13TeV_pow1_p1	  = -4.57694	 +/-  4.16432	(limited)
+lumi_13TeV	  = 0	 (fixed)
+shapeBkg_bkg_mass_WStest_2017__norm	  = 318710	 (fixed)
+Setting indices := 2 
+Minuit2Minimizer: Minimize with max-calls 6500 convergence for edm < 0.1 strategy 0
+Minuit2Minimizer::Minuit  - Changing default options
+             StorageLevel :               0
+MnSeedGenerator: for initial parameters FCN = 0
+MnSeedGenerator: Initial state:   - FCN =                0 Edm =  1.32017e-07 NCalls =     41
+MnSeedGenerator: Negative G2 found - new state:   - FCN =                0 Edm =  1.32017e-07 NCalls =     41
+VariableMetric: start iterating until Edm is < 9.88947e-05
+VariableMetric: Initial state   - FCN =                0 Edm =  1.32017e-07 NCalls =     41
+VariableMetric: Iteration #   0 - FCN =                0 Edm =  1.32017e-07 NCalls =     41
+VariableMetric: Iteration #   1 - FCN = -9.988434612751e-08 Edm =  1.70097e-13 NCalls =     66
+Number of iterations 3
+----------> Iteration 0
+            FVAL = 0 Edm = 1.32017257849e-07 Nfcn = 41
+            Error matrix change = 1
+            Parameters :  p0 = 0.503608 p1 = 0.573429 p2 = 0.258112 p3 = 0.350995 p4 = 0.248858 p5 = 0.279014 p6 = -0.0679454 p7 = -0.0264914 p8 = 0.409632 p9 = -4.57694
+----------> Iteration 1
+            FVAL = -9.98843461275e-08 Edm = 1.70097414783e-13 Nfcn = 66
+            Error matrix change = 0.5
+            Parameters :  p0 = 0.503608 p1 = 0.573429 p2 = 0.258112 p3 = 0.350995 p4 = 0.248858 p5 = 0.279014 p6 = -0.0679454 p7 = -0.0264914 p8 = 0.409632 p9 = -4.57695
+----------> Iteration 2
+            FVAL = -9.98843461275e-08 Edm = 1.70097414783e-13 Nfcn = 66
+            Error matrix change = 0.5
+            Parameters :  p0 = 0.503608 p1 = 0.573429 p2 = 0.258112 p3 = 0.350995 p4 = 0.248858 p5 = 0.279014 p6 = -0.0679454 p7 = -0.0264914 p8 = 0.409632 p9 = -4.57695
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -9.98843461275100708e-08
+Edm   = 1.70097414782527527e-13
+Nfcn  = 66
+MH	  = 125	 (fixed)
+env_pdf_0_2017_13TeV_bern5_p0	  = 0.503608	 +/-  12.5699	(limited)
+env_pdf_0_2017_13TeV_bern5_p1	  = 0.573429	 +/-  12.5678	(limited)
+env_pdf_0_2017_13TeV_bern5_p2	  = 0.258112	 +/-  12.5751	(limited)
+env_pdf_0_2017_13TeV_bern5_p3	  = 0.350995	 +/-  12.5735	(limited)
+env_pdf_0_2017_13TeV_bern5_p4	  = 0.248858	 +/-  12.5752	(limited)
+env_pdf_0_2017_13TeV_exp3_f1	  = 0.279014	 +/-  0.37597	(limited)
+env_pdf_0_2017_13TeV_exp3_p1	  = -0.0679454	 +/-  0.211001	(limited)
+env_pdf_0_2017_13TeV_exp3_p2	  = -0.0264914	 +/-  0.215467	(limited)
+env_pdf_0_2017_13TeV_lau1_l1	  = 0.409632	 +/-  0.412327	(limited)
+env_pdf_0_2017_13TeV_pow1_p1	  = -4.57695	 +/-  0.0107444	(limited)
+lumi_13TeV	  = 0	 (fixed)
+shapeBkg_bkg_mass_WStest_2017__norm	  = 318710	 (fixed)
+Setting indices := 3 
+Minuit2Minimizer: Minimize with max-calls 6500 convergence for edm < 0.1 strategy 0
+Minuit2Minimizer::Minuit  - Changing default options
+             StorageLevel :               0
+MnSeedGenerator: for initial parameters FCN = 0
+MnSeedGenerator: Initial state:   - FCN =                0 Edm =  7.94846e-07 NCalls =     41
+MnSeedGenerator: Negative G2 found - new state:   - FCN =                0 Edm =  7.94846e-07 NCalls =     41
+VariableMetric: start iterating until Edm is < 9.88947e-05
+VariableMetric: Initial state   - FCN =                0 Edm =  7.94846e-07 NCalls =     41
+VariableMetric: Iteration #   0 - FCN =                0 Edm =  7.94846e-07 NCalls =     41
+VariableMetric: Iteration #   1 - FCN = -7.899943739176e-07 Edm =  8.30568e-12 NCalls =     64
+Number of iterations 3
+----------> Iteration 0
+            FVAL = 0 Edm = 7.94845876191e-07 Nfcn = 41
+            Error matrix change = 1
+            Parameters :  p0 = 0.503608 p1 = 0.573429 p2 = 0.258112 p3 = 0.350995 p4 = 0.248858 p5 = 0.279014 p6 = -0.0679454 p7 = -0.0264914 p8 = 0.409632 p9 = -4.57694
+----------> Iteration 1
+            FVAL = -7.89994373918e-07 Edm = 8.30568085555e-12 Nfcn = 64
+            Error matrix change = 0.5
+            Parameters :  p0 = 0.503608 p1 = 0.573429 p2 = 0.258112 p3 = 0.350995 p4 = 0.248858 p5 = 0.279014 p6 = -0.0679454 p7 = -0.0264914 p8 = 0.409617 p9 = -4.57694
+----------> Iteration 2
+            FVAL = -7.89994373918e-07 Edm = 8.30568085555e-12 Nfcn = 64
+            Error matrix change = 0.5
+            Parameters :  p0 = 0.503608 p1 = 0.573429 p2 = 0.258112 p3 = 0.350995 p4 = 0.248858 p5 = 0.279014 p6 = -0.0679454 p7 = -0.0264914 p8 = 0.409617 p9 = -4.57694
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -7.89994373917579651e-07
+Edm   = 8.30568085555016006e-12
+Nfcn  = 64
+MH	  = 125	 (fixed)
+env_pdf_0_2017_13TeV_bern5_p0	  = 0.503608	 +/-  12.5699	(limited)
+env_pdf_0_2017_13TeV_bern5_p1	  = 0.573429	 +/-  12.5678	(limited)
+env_pdf_0_2017_13TeV_bern5_p2	  = 0.258112	 +/-  12.5751	(limited)
+env_pdf_0_2017_13TeV_bern5_p3	  = 0.350995	 +/-  12.5735	(limited)
+env_pdf_0_2017_13TeV_bern5_p4	  = 0.248858	 +/-  12.5752	(limited)
+env_pdf_0_2017_13TeV_exp3_f1	  = 0.279014	 +/-  0.37597	(limited)
+env_pdf_0_2017_13TeV_exp3_p1	  = -0.0679454	 +/-  0.211001	(limited)
+env_pdf_0_2017_13TeV_exp3_p2	  = -0.0264914	 +/-  0.215467	(limited)
+env_pdf_0_2017_13TeV_lau1_l1	  = 0.409617	 +/-  0.0114521	(limited)
+env_pdf_0_2017_13TeV_pow1_p1	  = -4.57694	 +/-  4.16432	(limited)
+lumi_13TeV	  = 0	 (fixed)
+shapeBkg_bkg_mass_WStest_2017__norm	  = 318710	 (fixed)
+Done 4 combinations in 0.0148239 s. New discrete minimum? 0
+Minuit2Minimizer: Minimize with max-calls 6500 convergence for edm < 0.1 strategy 0
+Minuit2Minimizer::Minuit  - Changing default options
+             StorageLevel :               0
+MnSeedGenerator: for initial parameters FCN = 0
+MnSeedGenerator: Initial state:   - FCN =                0 Edm =   0.00359065 NCalls =     53
+MnSeedGenerator: Negative G2 found - new state:   - FCN =                0 Edm =   0.00359065 NCalls =     53
+VariableMetric: start iterating until Edm is < 9.88947e-05
+VariableMetric: Initial state   - FCN =                0 Edm =   0.00359065 NCalls =     53
+VariableMetric: Iteration #   0 - FCN =                0 Edm =   0.00359065 NCalls =     53
+VariableMetric: Iteration #   1 - FCN =                0 Edm =   0.00359065 NCalls =     55
+Number of iterations 3
+----------> Iteration 0
+            FVAL = 0 Edm = 0.00359065491321 Nfcn = 53
+            Error matrix change = 1
+            Parameters :  p0 = 125 p1 = 0.503604 p2 = 0.573413 p3 = 0.258117 p4 = 0.350993 p5 = 0.248841 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = 0 p12 = 318710
+----------> Iteration 1
+            FVAL = 0 Edm = 0.00359065491321 Nfcn = 55
+            Error matrix change = 1
+            Parameters :  p0 = 125 p1 = 0.503604 p2 = 0.573413 p3 = 0.258117 p4 = 0.350993 p5 = 0.248841 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = 0 p12 = 318710
+----------> Iteration 2
+            FVAL = 0 Edm = 0.00359065491321 Nfcn = 55
+            Error matrix change = 1
+            Parameters :  p0 = 125 p1 = 0.503604 p2 = 0.573413 p3 = 0.258117 p4 = 0.350993 p5 = 0.248841 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = 0 p12 = 318710
+Minuit2Minimizer : Invalid Minimum - status = 3
+FVAL  = 0
+Edm   = 0.00359065
+Nfcn  = 55
+Done the full fit in 0.00409913
+  [WARNING] Found [env_pdf_0_2017_13TeV_exp3_f1] at boundary. 
+       RooRealVar::env_pdf_0_2017_13TeV_exp3_f1 = 0.279014 +/- 0.37597  L(0.0001 - 0.9999) 
+  [WARNING] Found [env_pdf_0_2017_13TeV_exp3_p1] at boundary. 
+       RooRealVar::env_pdf_0_2017_13TeV_exp3_p1 = -0.0679454 +/- 0.211001  L(-1 - 0) 
+  [WARNING] Found [env_pdf_0_2017_13TeV_exp3_p2] at boundary. 
+       RooRealVar::env_pdf_0_2017_13TeV_exp3_p2 = -0.0264914 +/- 0.215467  L(-1 - 0) 
+  [WARNING] Found [env_pdf_0_2017_13TeV_lau1_l1] at boundary. 
+       RooRealVar::env_pdf_0_2017_13TeV_lau1_l1 = 0.409632 +/- 0.412327  L(1e-06 - 0.999999) 
+ [WARNING] After the fit some parameters are at their boundary.
+ [WARNING] Are you sure your model is correct?
+Minimized in : Real time 0:00:00, CP time 0.020
+FINAL NLL - NLL0 VALUE = -0.0007048644642
+FINAL CATEGORIES: pdfindex_WStest_2017_13TeV=0
+Initial minimization failed. Aborting.
+do first Minimization 
+Running pre-fit with Minuit2,Migrad and tolerance 10
+Set default minimizer to Minuit2, algorithm Migrad, tolerance 10
+Minuit2Minimizer: Minimize with max-calls 7000 convergence for edm < 10 strategy 0
+Minuit2Minimizer::Minuit  - Changing default options
+             StorageLevel :               0
+MnSeedGenerator: for initial parameters FCN = 0
+MnSeedGenerator: Initial state:   - FCN =                0 Edm =      26.8895 NCalls =     57
+MnSeedGenerator: Negative G2 found - new state:   - FCN =                0 Edm =      26.8895 NCalls =     57
+VariableMetric: start iterating until Edm is < 0.00988946
+VariableMetric: Initial state   - FCN =                0 Edm =      26.8895 NCalls =     57
+VariableMetric: Iteration #   0 - FCN =                0 Edm =      26.8895 NCalls =     57
+VariableMetric: Iteration #   1 - FCN =  -14.65737564105 Edm =      2.44376 NCalls =     89
+VariableMetric: Iteration #   2 - FCN =  -16.54589468419 Edm =     0.446929 NCalls =    119
+VariableMetric: Iteration #   3 - FCN =  -16.94936442735 Edm =     0.235925 NCalls =    149
+VariableMetric: Iteration #   4 - FCN =  -17.22515536569 Edm =    0.0646711 NCalls =    179
+VariableMetric: Iteration #   5 - FCN =  -17.32155086989 Edm =    0.0395169 NCalls =    209
+VariableMetric: Iteration #   6 - FCN =   -17.5251678045 Edm =    0.0657427 NCalls =    240
+VariableMetric: Iteration #   7 - FCN =  -17.64527455432 Edm =    0.0269754 NCalls =    270
+VariableMetric: Iteration #   8 - FCN =  -17.95653621128 Edm =     0.124145 NCalls =    301
+VariableMetric: Iteration #   9 - FCN =  -18.23772940353 Edm =    0.0313695 NCalls =    331
+VariableMetric: Iteration #  10 - FCN =  -18.26264366959 Edm =   0.00397897 NCalls =    361
+Number of iterations 12
+----------> Iteration 0
+            FVAL = 0 Edm = 26.8895111212 Nfcn = 57
+            Error matrix change = 1
+            Parameters :  p0 = 125 p1 = 0.503314 p2 = 0.573492 p3 = 0.258121 p4 = 0.350928 p5 = 0.248835 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = 0 p12 = 1 p13 = 318710
+----------> Iteration 1
+            FVAL = -14.657375641 Edm = 2.44375771652 Nfcn = 89
+            Error matrix change = 0.501814
+            Parameters :  p0 = 125.679 p1 = 0.49236 p2 = 0.570628 p3 = 0.259743 p4 = 0.35253 p5 = 0.249717 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = -0.376043 p12 = 0.750481 p13 = 317796
+----------> Iteration 2
+            FVAL = -16.5458946842 Edm = 0.446928649031 Nfcn = 119
+----------> Iteration 3
+            FVAL = -16.9493644273 Edm = 0.235925265676 Nfcn = 149
+----------> Iteration 4
+            FVAL = -17.2251553657 Edm = 0.0646711184292 Nfcn = 179
+----------> Iteration 5
+            FVAL = -17.3215508699 Edm = 0.0395169145298 Nfcn = 209
+----------> Iteration 6
+            FVAL = -17.5251678045 Edm = 0.0657426652824 Nfcn = 240
+----------> Iteration 7
+            FVAL = -17.6452745543 Edm = 0.0269753612332 Nfcn = 270
+----------> Iteration 8
+            FVAL = -17.9565362113 Edm = 0.124145343369 Nfcn = 301
+----------> Iteration 9
+            FVAL = -18.2377294035 Edm = 0.0313695407398 Nfcn = 331
+----------> Iteration 10
+            FVAL = -18.2626436696 Edm = 0.00397897405233 Nfcn = 361
+            Error matrix change = 0.00737839
+            Parameters :  p0 = 126.106 p1 = 0.497924 p2 = 0.552543 p3 = 0.297527 p4 = 0.338036 p5 = 0.250831 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = -0.0326997 p12 = 0.917811 p13 = 317203
+----------> Iteration 11
+            FVAL = -18.2626436696 Edm = 0.00397897405233 Nfcn = 361
+            Error matrix change = 0.00737839
+            Parameters :  p0 = 126.106 p1 = 0.497924 p2 = 0.552543 p3 = 0.297527 p4 = 0.338036 p5 = 0.250831 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = -0.0326997 p12 = 0.917811 p13 = 317203
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -18.2626436695918137
+Edm   = 0.00397897405232863245
+Nfcn  = 361
+MH	  = 126.106	 +/-  0.328311	(limited)
+env_pdf_0_2017_13TeV_bern5_p0	  = 0.497924	 +/-  0.0136205	(limited)
+env_pdf_0_2017_13TeV_bern5_p1	  = 0.552543	 +/-  0.0141194	(limited)
+env_pdf_0_2017_13TeV_bern5_p2	  = 0.297527	 +/-  0.0219604	(limited)
+env_pdf_0_2017_13TeV_bern5_p3	  = 0.338036	 +/-  0.00807352	(limited)
+env_pdf_0_2017_13TeV_bern5_p4	  = 0.250831	 +/-  0.00323024	(limited)
+env_pdf_0_2017_13TeV_exp3_f1	  = 0.279014	 +/-  0.37597	(limited)
+env_pdf_0_2017_13TeV_exp3_p1	  = -0.0679454	 +/-  0.211001	(limited)
+env_pdf_0_2017_13TeV_exp3_p2	  = -0.0264914	 +/-  0.215467	(limited)
+env_pdf_0_2017_13TeV_lau1_l1	  = 0.409632	 +/-  0.412327	(limited)
+env_pdf_0_2017_13TeV_pow1_p1	  = -4.57694	 +/-  4.16432	(limited)
+lumi_13TeV	  = -0.0326997	 +/-  0.992806
+r	  = 0.917811	 +/-  0.136576	(limited)
+shapeBkg_bkg_mass_WStest_2017__norm	  = 317203	 +/-  608.155	(limited)
+Minuit2Minimizer: Minimize with max-calls 7000 convergence for edm < 0.1 strategy 0
+Minuit2Minimizer::Minuit  - Changing default options
+             StorageLevel :               0
+MnSeedGenerator: for initial parameters FCN = 0
+MnSeedGenerator: Initial state:   - FCN =                0 Edm =   0.00175729 NCalls =     57
+MnSeedGenerator: Negative G2 found - new state:   - FCN =                0 Edm =   0.00175729 NCalls =     57
+VariableMetric: start iterating until Edm is < 9.88947e-05
+VariableMetric: Initial state   - FCN =                0 Edm =   0.00175729 NCalls =     57
+VariableMetric: Iteration #   0 - FCN =                0 Edm =   0.00175729 NCalls =     57
+VariableMetric: Iteration #   1 - FCN = -0.001650358592272 Edm =  0.000229809 NCalls =     87
+VariableMetric: Iteration #   2 - FCN = -0.00179585919593 Edm =  7.30107e-05 NCalls =    117
+VariableMetric: Iteration #   3 - FCN = -0.002001020591279 Edm =  0.000141291 NCalls =    147
+VariableMetric: Iteration #   4 - FCN = -0.002343695401549 Edm =  0.000134648 NCalls =    177
+VariableMetric: Iteration #   5 - FCN = -0.002482486069438 Edm =  8.55414e-05 NCalls =    206
+VariableMetric: Iteration #   6 - FCN = -0.00280553650565 Edm =  0.000102147 NCalls =    237
+VariableMetric: Iteration #   7 - FCN = -0.003363896665976 Edm =  0.000140137 NCalls =    268
+VariableMetric: Iteration #   8 - FCN = -0.00377820034481 Edm =  4.25947e-05 NCalls =    298
+Number of iterations 10
+----------> Iteration 0
+            FVAL = 0 Edm = 0.00175729438204 Nfcn = 57
+            Error matrix change = 1
+            Parameters :  p0 = 126.106 p1 = 0.497924 p2 = 0.552543 p3 = 0.297527 p4 = 0.338036 p5 = 0.250831 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = -0.0326997 p12 = 0.917811 p13 = 317203
+----------> Iteration 1
+            FVAL = -0.00165035859227 Edm = 0.000229809084253 Nfcn = 87
+            Error matrix change = 0.507672
+            Parameters :  p0 = 126.11 p1 = 0.497918 p2 = 0.552567 p3 = 0.297583 p4 = 0.338033 p5 = 0.250838 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = -0.0048429 p12 = 0.916682 p13 = 317179
+----------> Iteration 2
+            FVAL = -0.00179585919593 Edm = 7.30106546013e-05 Nfcn = 117
+----------> Iteration 3
+            FVAL = -0.00200102059128 Edm = 0.000141290632871 Nfcn = 147
+----------> Iteration 4
+            FVAL = -0.00234369540155 Edm = 0.000134647888944 Nfcn = 177
+----------> Iteration 5
+            FVAL = -0.00248248606944 Edm = 8.55414435825e-05 Nfcn = 206
+----------> Iteration 6
+            FVAL = -0.00280553650565 Edm = 0.000102146620206 Nfcn = 237
+----------> Iteration 7
+            FVAL = -0.00336389666598 Edm = 0.000140136895946 Nfcn = 268
+----------> Iteration 8
+            FVAL = -0.00377820034481 Edm = 4.25947269388e-05 Nfcn = 298
+            Error matrix change = 0.0116298
+            Parameters :  p0 = 126.113 p1 = 0.498411 p2 = 0.551721 p3 = 0.299059 p4 = 0.337416 p5 = 0.251018 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = -0.0044259 p12 = 0.919359 p13 = 317173
+----------> Iteration 9
+            FVAL = -0.00377820034481 Edm = 4.25947269388e-05 Nfcn = 298
+            Error matrix change = 0.0116298
+            Parameters :  p0 = 126.113 p1 = 0.498411 p2 = 0.551721 p3 = 0.299059 p4 = 0.337416 p5 = 0.251018 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = -0.0044259 p12 = 0.919359 p13 = 317173
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -0.00377820034480965631
+Edm   = 4.2594726938792533e-05
+Nfcn  = 298
+MH	  = 126.113	 +/-  0.315876	(limited)
+env_pdf_0_2017_13TeV_bern5_p0	  = 0.498411	 +/-  0.0136897	(limited)
+env_pdf_0_2017_13TeV_bern5_p1	  = 0.551721	 +/-  0.0153236	(limited)
+env_pdf_0_2017_13TeV_bern5_p2	  = 0.299059	 +/-  0.0243386	(limited)
+env_pdf_0_2017_13TeV_bern5_p3	  = 0.337416	 +/-  0.00950495	(limited)
+env_pdf_0_2017_13TeV_bern5_p4	  = 0.251018	 +/-  0.00336444	(limited)
+env_pdf_0_2017_13TeV_exp3_f1	  = 0.279014	 +/-  0.37597	(limited)
+env_pdf_0_2017_13TeV_exp3_p1	  = -0.0679454	 +/-  0.211001	(limited)
+env_pdf_0_2017_13TeV_exp3_p2	  = -0.0264914	 +/-  0.215467	(limited)
+env_pdf_0_2017_13TeV_lau1_l1	  = 0.409632	 +/-  0.412327	(limited)
+env_pdf_0_2017_13TeV_pow1_p1	  = -4.57694	 +/-  4.16432	(limited)
+lumi_13TeV	  = -0.0044259	 +/-  0.97642
+r	  = 0.919359	 +/-  0.136454	(limited)
+shapeBkg_bkg_mass_WStest_2017__norm	  = 317173	 +/-  602.569	(limited)
+Setting indices := 0 
+Minuit2Minimizer: Minimize with max-calls 7000 convergence for edm < 0.1 strategy 0
+Minuit2Minimizer::Minuit  - Changing default options
+             StorageLevel :               0
+MnSeedGenerator: for initial parameters FCN = 0
+MnSeedGenerator: Initial state:   - FCN =                0 Edm =  2.38238e-05 NCalls =     41
+MnSeedGenerator: Negative G2 found - new state:   - FCN =                0 Edm =  2.38238e-05 NCalls =     41
+VariableMetric: start iterating until Edm is < 9.88947e-05
+VariableMetric: Initial state   - FCN =                0 Edm =  2.38238e-05 NCalls =     41
+VariableMetric: Iteration #   0 - FCN =                0 Edm =  2.38238e-05 NCalls =     41
+VariableMetric: Iteration #   1 - FCN = -1.627206802368e-05 Edm =  4.83694e-06 NCalls =     63
+Number of iterations 3
+----------> Iteration 0
+            FVAL = 0 Edm = 2.38237507212e-05 Nfcn = 41
+            Error matrix change = 1
+            Parameters :  p0 = 0.498411 p1 = 0.551721 p2 = 0.299059 p3 = 0.337416 p4 = 0.251018 p5 = 0.279014 p6 = -0.0679454 p7 = -0.0264914 p8 = 0.409632 p9 = -4.57694
+----------> Iteration 1
+            FVAL = -1.62720680237e-05 Edm = 4.83693825669e-06 Nfcn = 63
+            Error matrix change = 0.5
+            Parameters :  p0 = 0.498419 p1 = 0.551727 p2 = 0.299067 p3 = 0.337417 p4 = 0.251011 p5 = 0.279014 p6 = -0.0679454 p7 = -0.0264914 p8 = 0.409632 p9 = -4.57694
+----------> Iteration 2
+            FVAL = -1.62720680237e-05 Edm = 4.83693825669e-06 Nfcn = 63
+            Error matrix change = 0.5
+            Parameters :  p0 = 0.498419 p1 = 0.551727 p2 = 0.299067 p3 = 0.337417 p4 = 0.251011 p5 = 0.279014 p6 = -0.0679454 p7 = -0.0264914 p8 = 0.409632 p9 = -4.57694
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -1.62720680236816406e-05
+Edm   = 4.83693825668544286e-06
+Nfcn  = 63
+MH	  = 126.113	 (fixed)
+env_pdf_0_2017_13TeV_bern5_p0	  = 0.498419	 +/-  0.00498497	(limited)
+env_pdf_0_2017_13TeV_bern5_p1	  = 0.551727	 +/-  0.00259841	(limited)
+env_pdf_0_2017_13TeV_bern5_p2	  = 0.299067	 +/-  0.00383977	(limited)
+env_pdf_0_2017_13TeV_bern5_p3	  = 0.337417	 +/-  0.00242385	(limited)
+env_pdf_0_2017_13TeV_bern5_p4	  = 0.251011	 +/-  0.00200837	(limited)
+env_pdf_0_2017_13TeV_exp3_f1	  = 0.279014	 +/-  0.37597	(limited)
+env_pdf_0_2017_13TeV_exp3_p1	  = -0.0679454	 +/-  0.211001	(limited)
+env_pdf_0_2017_13TeV_exp3_p2	  = -0.0264914	 +/-  0.215467	(limited)
+env_pdf_0_2017_13TeV_lau1_l1	  = 0.409632	 +/-  0.412327	(limited)
+env_pdf_0_2017_13TeV_pow1_p1	  = -4.57694	 +/-  4.16432	(limited)
+lumi_13TeV	  = -0.0044259	 (fixed)
+r	  = 0.919359	 (fixed)
+shapeBkg_bkg_mass_WStest_2017__norm	  = 317173	 (fixed)
+ .... Found a better fit: new NLL = -23.1721 (improvement: -1.62721e-05
+Setting indices := 1 
+Minuit2Minimizer: Minimize with max-calls 7000 convergence for edm < 0.1 strategy 0
+Minuit2Minimizer::Minuit  - Changing default options
+             StorageLevel :               0
+MnSeedGenerator: for initial parameters FCN = 0
+MnSeedGenerator: Initial state:   - FCN =                0 Edm =      2.73092 NCalls =     41
+MnSeedGenerator: Negative G2 found - new state:   - FCN =                0 Edm =      2.73092 NCalls =     41
+VariableMetric: start iterating until Edm is < 9.88947e-05
+VariableMetric: Initial state   - FCN =                0 Edm =      2.73092 NCalls =     41
+VariableMetric: Iteration #   0 - FCN =                0 Edm =      2.73092 NCalls =     41
+VariableMetric: Iteration #   1 - FCN =  -1.775786568876 Edm =      1.68833 NCalls =     69
+VariableMetric: Iteration #   2 - FCN =  -4.948093408719 Edm =   0.00239472 NCalls =     91
+VariableMetric: Iteration #   3 - FCN =  -4.953374677803 Edm =  0.000296516 NCalls =    112
+VariableMetric: Iteration #   4 - FCN =  -5.003816130338 Edm =    0.0254631 NCalls =    138
+VariableMetric: Iteration #   5 - FCN =  -5.053668989101 Edm =    0.0012929 NCalls =    160
+VariableMetric: Iteration #   6 - FCN =  -5.055328088114 Edm =  2.44125e-05 NCalls =    182
+Number of iterations 8
+----------> Iteration 0
+            FVAL = 0 Edm = 2.73092158118 Nfcn = 41
+            Error matrix change = 1
+            Parameters :  p0 = 0.498411 p1 = 0.551721 p2 = 0.299059 p3 = 0.337416 p4 = 0.251018 p5 = 0.279014 p6 = -0.0679454 p7 = -0.0264914 p8 = 0.409632 p9 = -4.57694
+----------> Iteration 1
+            FVAL = -1.77578656888 Edm = 1.68833412774 Nfcn = 69
+            Error matrix change = 0.500001
+            Parameters :  p0 = 0.498411 p1 = 0.551721 p2 = 0.299059 p3 = 0.337416 p4 = 0.251018 p5 = 0.280719 p6 = -0.0686949 p7 = -0.02648 p8 = 0.409632 p9 = -4.57694
+----------> Iteration 2
+            FVAL = -4.94809340872 Edm = 0.0023947248474 Nfcn = 91
+----------> Iteration 3
+            FVAL = -4.9533746778 Edm = 0.0002965158633 Nfcn = 112
+----------> Iteration 4
+            FVAL = -5.00381613034 Edm = 0.0254631239808 Nfcn = 138
+----------> Iteration 5
+            FVAL = -5.0536689891 Edm = 0.00129290422429 Nfcn = 160
+----------> Iteration 6
+            FVAL = -5.05532808811 Edm = 2.44124759617e-05 Nfcn = 182
+            Error matrix change = 0.0159119
+            Parameters :  p0 = 0.498411 p1 = 0.551721 p2 = 0.299059 p3 = 0.337416 p4 = 0.251018 p5 = 0.262008 p6 = -0.0722465 p7 = -0.0265541 p8 = 0.409632 p9 = -4.57694
+----------> Iteration 7
+            FVAL = -5.05532808811 Edm = 2.44124759617e-05 Nfcn = 182
+            Error matrix change = 0.0159119
+            Parameters :  p0 = 0.498411 p1 = 0.551721 p2 = 0.299059 p3 = 0.337416 p4 = 0.251018 p5 = 0.262008 p6 = -0.0722465 p7 = -0.0265541 p8 = 0.409632 p9 = -4.57694
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -5.05532808811403811
+Edm   = 2.44124759617250797e-05
+Nfcn  = 182
+MH	  = 126.113	 (fixed)
+env_pdf_0_2017_13TeV_bern5_p0	  = 0.498411	 +/-  12.57	(limited)
+env_pdf_0_2017_13TeV_bern5_p1	  = 0.551721	 +/-  12.5684	(limited)
+env_pdf_0_2017_13TeV_bern5_p2	  = 0.299059	 +/-  12.5745	(limited)
+env_pdf_0_2017_13TeV_bern5_p3	  = 0.337416	 +/-  12.5738	(limited)
+env_pdf_0_2017_13TeV_bern5_p4	  = 0.251018	 +/-  12.5752	(limited)
+env_pdf_0_2017_13TeV_exp3_f1	  = 0.262008	 +/-  0.0395522	(limited)
+env_pdf_0_2017_13TeV_exp3_p1	  = -0.0722465	 +/-  0.00465493	(limited)
+env_pdf_0_2017_13TeV_exp3_p2	  = -0.0265541	 +/-  0.00100551	(limited)
+env_pdf_0_2017_13TeV_lau1_l1	  = 0.409632	 +/-  0.412327	(limited)
+env_pdf_0_2017_13TeV_pow1_p1	  = -4.57694	 +/-  4.16432	(limited)
+lumi_13TeV	  = -0.0044259	 (fixed)
+r	  = 0.919359	 (fixed)
+shapeBkg_bkg_mass_WStest_2017__norm	  = 317173	 (fixed)
+Setting indices := 2 
+Minuit2Minimizer: Minimize with max-calls 7000 convergence for edm < 0.1 strategy 0
+Minuit2Minimizer::Minuit  - Changing default options
+             StorageLevel :               0
+MnSeedGenerator: for initial parameters FCN = 0
+MnSeedGenerator: Initial state:   - FCN =                0 Edm =      0.13274 NCalls =     41
+MnSeedGenerator: Negative G2 found - new state:   - FCN =                0 Edm =      0.13274 NCalls =     41
+VariableMetric: start iterating until Edm is < 9.88947e-05
+VariableMetric: Initial state   - FCN =                0 Edm =      0.13274 NCalls =     41
+VariableMetric: Iteration #   0 - FCN =                0 Edm =      0.13274 NCalls =     41
+VariableMetric: Iteration #   1 - FCN = -0.1327532683499 Edm =  2.20973e-08 NCalls =     64
+Number of iterations 3
+----------> Iteration 0
+            FVAL = 0 Edm = 0.13274008214 Nfcn = 41
+            Error matrix change = 1
+            Parameters :  p0 = 0.498411 p1 = 0.551721 p2 = 0.299059 p3 = 0.337416 p4 = 0.251018 p5 = 0.279014 p6 = -0.0679454 p7 = -0.0264914 p8 = 0.409632 p9 = -4.57694
+----------> Iteration 1
+            FVAL = -0.13275326835 Edm = 2.20973344271e-08 Nfcn = 64
+            Error matrix change = 0.5
+            Parameters :  p0 = 0.498411 p1 = 0.551721 p2 = 0.299059 p3 = 0.337416 p4 = 0.251018 p5 = 0.279014 p6 = -0.0679454 p7 = -0.0264914 p8 = 0.409632 p9 = -4.58293
+----------> Iteration 2
+            FVAL = -0.13275326835 Edm = 2.20973344271e-08 Nfcn = 64
+            Error matrix change = 0.5
+            Parameters :  p0 = 0.498411 p1 = 0.551721 p2 = 0.299059 p3 = 0.337416 p4 = 0.251018 p5 = 0.279014 p6 = -0.0679454 p7 = -0.0264914 p8 = 0.409632 p9 = -4.58293
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -0.132753268349915743
+Edm   = 2.20973344271482695e-08
+Nfcn  = 64
+MH	  = 126.113	 (fixed)
+env_pdf_0_2017_13TeV_bern5_p0	  = 0.498411	 +/-  12.57	(limited)
+env_pdf_0_2017_13TeV_bern5_p1	  = 0.551721	 +/-  12.5684	(limited)
+env_pdf_0_2017_13TeV_bern5_p2	  = 0.299059	 +/-  12.5745	(limited)
+env_pdf_0_2017_13TeV_bern5_p3	  = 0.337416	 +/-  12.5738	(limited)
+env_pdf_0_2017_13TeV_bern5_p4	  = 0.251018	 +/-  12.5752	(limited)
+env_pdf_0_2017_13TeV_exp3_f1	  = 0.279014	 +/-  0.37597	(limited)
+env_pdf_0_2017_13TeV_exp3_p1	  = -0.0679454	 +/-  0.211001	(limited)
+env_pdf_0_2017_13TeV_exp3_p2	  = -0.0264914	 +/-  0.215467	(limited)
+env_pdf_0_2017_13TeV_lau1_l1	  = 0.409632	 +/-  0.412327	(limited)
+env_pdf_0_2017_13TeV_pow1_p1	  = -4.58293	 +/-  0.0115462	(limited)
+lumi_13TeV	  = -0.0044259	 (fixed)
+r	  = 0.919359	 (fixed)
+shapeBkg_bkg_mass_WStest_2017__norm	  = 317173	 (fixed)
+Setting indices := 3 
+Minuit2Minimizer: Minimize with max-calls 7000 convergence for edm < 0.1 strategy 0
+Minuit2Minimizer::Minuit  - Changing default options
+             StorageLevel :               0
+MnSeedGenerator: for initial parameters FCN = 0
+MnSeedGenerator: Initial state:   - FCN =                0 Edm =     0.116096 NCalls =     41
+MnSeedGenerator: Negative G2 found - new state:   - FCN =                0 Edm =     0.116096 NCalls =     41
+VariableMetric: start iterating until Edm is < 9.88947e-05
+VariableMetric: Initial state   - FCN =                0 Edm =     0.116096 NCalls =     41
+VariableMetric: Iteration #   0 - FCN =                0 Edm =     0.116096 NCalls =     41
+VariableMetric: Iteration #   1 - FCN =  -0.116285803495 Edm =  7.16928e-07 NCalls =     64
+Number of iterations 3
+----------> Iteration 0
+            FVAL = 0 Edm = 0.116096359754 Nfcn = 41
+            Error matrix change = 1
+            Parameters :  p0 = 0.498411 p1 = 0.551721 p2 = 0.299059 p3 = 0.337416 p4 = 0.251018 p5 = 0.279014 p6 = -0.0679454 p7 = -0.0264914 p8 = 0.409632 p9 = -4.57694
+----------> Iteration 1
+            FVAL = -0.116285803495 Edm = 7.16927793373e-07 Nfcn = 64
+            Error matrix change = 0.5
+            Parameters :  p0 = 0.498411 p1 = 0.551721 p2 = 0.299059 p3 = 0.337416 p4 = 0.251018 p5 = 0.279014 p6 = -0.0679454 p7 = -0.0264914 p8 = 0.404083 p9 = -4.57694
+----------> Iteration 2
+            FVAL = -0.116285803495 Edm = 7.16927793373e-07 Nfcn = 64
+            Error matrix change = 0.5
+            Parameters :  p0 = 0.498411 p1 = 0.551721 p2 = 0.299059 p3 = 0.337416 p4 = 0.251018 p5 = 0.279014 p6 = -0.0679454 p7 = -0.0264914 p8 = 0.404083 p9 = -4.57694
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -0.116285803494974971
+Edm   = 7.16927793373053734e-07
+Nfcn  = 64
+MH	  = 126.113	 (fixed)
+env_pdf_0_2017_13TeV_bern5_p0	  = 0.498411	 +/-  12.57	(limited)
+env_pdf_0_2017_13TeV_bern5_p1	  = 0.551721	 +/-  12.5684	(limited)
+env_pdf_0_2017_13TeV_bern5_p2	  = 0.299059	 +/-  12.5745	(limited)
+env_pdf_0_2017_13TeV_bern5_p3	  = 0.337416	 +/-  12.5738	(limited)
+env_pdf_0_2017_13TeV_bern5_p4	  = 0.251018	 +/-  12.5752	(limited)
+env_pdf_0_2017_13TeV_exp3_f1	  = 0.279014	 +/-  0.37597	(limited)
+env_pdf_0_2017_13TeV_exp3_p1	  = -0.0679454	 +/-  0.211001	(limited)
+env_pdf_0_2017_13TeV_exp3_p2	  = -0.0264914	 +/-  0.215467	(limited)
+env_pdf_0_2017_13TeV_lau1_l1	  = 0.404083	 +/-  0.0114512	(limited)
+env_pdf_0_2017_13TeV_pow1_p1	  = -4.57694	 +/-  4.16432	(limited)
+lumi_13TeV	  = -0.0044259	 (fixed)
+r	  = 0.919359	 (fixed)
+shapeBkg_bkg_mass_WStest_2017__norm	  = 317173	 (fixed)
+Done 4 combinations in 0.0208728 s. New discrete minimum? 0
+Minuit2Minimizer: Minimize with max-calls 7000 convergence for edm < 0.1 strategy 0
+Minuit2Minimizer::Minuit  - Changing default options
+             StorageLevel :               0
+MnSeedGenerator: for initial parameters FCN = 0
+MnSeedGenerator: Initial state:   - FCN =                0 Edm =   0.00413637 NCalls =     57
+MnSeedGenerator: Negative G2 found - new state:   - FCN =                0 Edm =   0.00413637 NCalls =     57
+VariableMetric: start iterating until Edm is < 9.88947e-05
+VariableMetric: Initial state   - FCN =                0 Edm =   0.00413637 NCalls =     57
+VariableMetric: Iteration #   0 - FCN =                0 Edm =   0.00413637 NCalls =     57
+VariableMetric: Iteration #   1 - FCN =                0 Edm =   0.00413637 NCalls =     59
+Number of iterations 3
+----------> Iteration 0
+            FVAL = 0 Edm = 0.00413636875066 Nfcn = 57
+            Error matrix change = 1
+            Parameters :  p0 = 126.113 p1 = 0.498419 p2 = 0.551727 p3 = 0.299067 p4 = 0.337417 p5 = 0.251011 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = -0.0044259 p12 = 0.919359 p13 = 317173
+----------> Iteration 1
+            FVAL = 0 Edm = 0.00413636875066 Nfcn = 59
+            Error matrix change = 1
+            Parameters :  p0 = 126.113 p1 = 0.498419 p2 = 0.551727 p3 = 0.299067 p4 = 0.337417 p5 = 0.251011 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = -0.0044259 p12 = 0.919359 p13 = 317173
+----------> Iteration 2
+            FVAL = 0 Edm = 0.00413636875066 Nfcn = 59
+            Error matrix change = 1
+            Parameters :  p0 = 126.113 p1 = 0.498419 p2 = 0.551727 p3 = 0.299067 p4 = 0.337417 p5 = 0.251011 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = -0.0044259 p12 = 0.919359 p13 = 317173
+Minuit2Minimizer : Invalid Minimum - status = 3
+FVAL  = 0
+Edm   = 0.00413637
+Nfcn  = 59
+Done the full fit in 0.00330281
+  [WARNING] Found [env_pdf_0_2017_13TeV_exp3_f1] at boundary. 
+       RooRealVar::env_pdf_0_2017_13TeV_exp3_f1 = 0.279014 +/- 0.37597  L(0.0001 - 0.9999) 
+  [WARNING] Found [env_pdf_0_2017_13TeV_exp3_p1] at boundary. 
+       RooRealVar::env_pdf_0_2017_13TeV_exp3_p1 = -0.0679454 +/- 0.211001  L(-1 - 0) 
+  [WARNING] Found [env_pdf_0_2017_13TeV_exp3_p2] at boundary. 
+       RooRealVar::env_pdf_0_2017_13TeV_exp3_p2 = -0.0264914 +/- 0.215467  L(-1 - 0) 
+  [WARNING] Found [env_pdf_0_2017_13TeV_lau1_l1] at boundary. 
+       RooRealVar::env_pdf_0_2017_13TeV_lau1_l1 = 0.409632 +/- 0.412327  L(1e-06 - 0.999999) 
+ [WARNING] After the fit some parameters are at their boundary.
+ [WARNING] Are you sure your model is correct?
+Minimized in : Real time 0:00:00, CP time 0.040
+FINAL NLL - NLL0 VALUE = -18.26643814
+FINAL CATEGORIES: pdfindex_WStest_2017_13TeV=0
+Initial minimization failed. Aborting.
+
+ --- FitDiagnostics ---
+Fit failed.
+Done in 0.01 min (cpu), 0.01 min (real)
+Printing Message Summary From ... combine_logger.out
+----------------------------------------------
+Messages of type INFO : 72
+Messages of type DEBUG : 2
+Messages of type ERROR : 0
+----------------------------------------------
+INFO: (function: addDiscreteNuisances) Combine.cc: 1243 -- Adding discrete pdfindex_WStest_2017_13TeV 
+INFO: (function: improveOnce) CascadeMinimizer.cc: 184 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=10
+INFO: (function: improveOnce) CascadeMinimizer.cc: 207 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 212 -- Minimization success! status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 184 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=0.1
+INFO: (function: improveOnce) CascadeMinimizer.cc: 207 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 212 -- Minimization success! status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 184 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=0.1
+INFO: (function: improveOnce) CascadeMinimizer.cc: 207 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 212 -- Minimization success! status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 184 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=0.1
+INFO: (function: improveOnce) CascadeMinimizer.cc: 207 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 212 -- Minimization success! status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 184 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=0.1
+INFO: (function: improveOnce) CascadeMinimizer.cc: 207 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 212 -- Minimization success! status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 184 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=0.1
+INFO: (function: improveOnce) CascadeMinimizer.cc: 207 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 212 -- Minimization success! status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 184 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=0.1
+INFO: (function: improveOnce) CascadeMinimizer.cc: 207 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 212 -- Minimization success! status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 184 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=10
+INFO: (function: improveOnce) CascadeMinimizer.cc: 207 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 212 -- Minimization success! status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 184 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=0.1
+INFO: (function: improveOnce) CascadeMinimizer.cc: 207 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 212 -- Minimization success! status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 184 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=0.1
+INFO: (function: improveOnce) CascadeMinimizer.cc: 207 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 212 -- Minimization success! status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 184 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=0.1
+INFO: (function: improveOnce) CascadeMinimizer.cc: 207 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 212 -- Minimization success! status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 184 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=0.1
+INFO: (function: improveOnce) CascadeMinimizer.cc: 207 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 212 -- Minimization success! status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 184 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=0.1
+INFO: (function: improveOnce) CascadeMinimizer.cc: 207 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 212 -- Minimization success! status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 184 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=0.1
+INFO: (function: improveOnce) CascadeMinimizer.cc: 207 -- Minimisation finished with status=-1
+DEBUG: (function: improveOnce) CascadeMinimizer.cc: 213 -- Minimization ended with latest status != 0 or 1
+INFO: (function: anyParameterAtBoundaries) utils.cc: 1040 -- Found parameter env_pdf_0_2017_13TeV_exp3_f1 at boundary (within ~1sigma): 0.279014+/-0.37597
+INFO: (function: anyParameterAtBoundaries) utils.cc: 1040 -- Found parameter env_pdf_0_2017_13TeV_exp3_p1 at boundary (within ~1sigma): -0.0679454+/-0.211001
+INFO: (function: anyParameterAtBoundaries) utils.cc: 1040 -- Found parameter env_pdf_0_2017_13TeV_exp3_p2 at boundary (within ~1sigma): -0.0264914+/-0.215467
+INFO: (function: anyParameterAtBoundaries) utils.cc: 1040 -- Found parameter env_pdf_0_2017_13TeV_lau1_l1 at boundary (within ~1sigma): 0.409632+/-0.412327
+INFO: (function: minimize) CascadeMinimizer.cc: 462 -- After fit, some parameters are found at the boundary (within ~1sigma)
+INFO: (function: improveOnce) CascadeMinimizer.cc: 184 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=10
+INFO: (function: improveOnce) CascadeMinimizer.cc: 207 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 212 -- Minimization success! status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 184 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=0.1
+INFO: (function: improveOnce) CascadeMinimizer.cc: 207 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 212 -- Minimization success! status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 184 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=0.1
+INFO: (function: improveOnce) CascadeMinimizer.cc: 207 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 212 -- Minimization success! status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 184 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=0.1
+INFO: (function: improveOnce) CascadeMinimizer.cc: 207 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 212 -- Minimization success! status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 184 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=0.1
+INFO: (function: improveOnce) CascadeMinimizer.cc: 207 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 212 -- Minimization success! status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 184 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=0.1
+INFO: (function: improveOnce) CascadeMinimizer.cc: 207 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 212 -- Minimization success! status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 184 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=0.1
+INFO: (function: improveOnce) CascadeMinimizer.cc: 207 -- Minimisation finished with status=-1
+DEBUG: (function: improveOnce) CascadeMinimizer.cc: 213 -- Minimization ended with latest status != 0 or 1
+INFO: (function: anyParameterAtBoundaries) utils.cc: 1040 -- Found parameter env_pdf_0_2017_13TeV_exp3_f1 at boundary (within ~1sigma): 0.279014+/-0.37597
+INFO: (function: anyParameterAtBoundaries) utils.cc: 1040 -- Found parameter env_pdf_0_2017_13TeV_exp3_p1 at boundary (within ~1sigma): -0.0679454+/-0.211001
+INFO: (function: anyParameterAtBoundaries) utils.cc: 1040 -- Found parameter env_pdf_0_2017_13TeV_exp3_p2 at boundary (within ~1sigma): -0.0264914+/-0.215467
+INFO: (function: anyParameterAtBoundaries) utils.cc: 1040 -- Found parameter env_pdf_0_2017_13TeV_lau1_l1 at boundary (within ~1sigma): 0.409632+/-0.412327
+INFO: (function: minimize) CascadeMinimizer.cc: 462 -- After fit, some parameters are found at the boundary (within ~1sigma)

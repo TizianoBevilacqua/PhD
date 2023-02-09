@@ -1,0 +1,500 @@
+###########################################################
+logfile obtained running command:
+combine -M FitDiagnostics ../../Datacard_mu_inclusive.root --expectSignal 1  -n HGG_test_syst_no_pdfIndex --cminDefaultMinimizerStrategy=0 --plots --saveShapes  --rMin -1 --rMax 3 -v 3 -m 125 --cminDefaultMinimizerTolerance 0.1 --cminApproxPreFitTolerance=10 --saveWorkspace
+
+output filename: ../output/fitDiagnosticsHGG_test_syst_no_pdfIndex.root
+########################################################## 
+
+>>> method used is FitDiagnostics
+>>> random number generator seed is 123456
+[#1] INFO:ObjectHandling -- RooWorkspace::import(w) importing RooUniform::prior
+Saving snapshot 'clean'
+Saved snapshot 'clean'
+[#1] INFO:Eval -- RooRealVar::setRange(lumi_13TeV) new range named 'optimizeBoundRange' created with bounds [-7,7]
+SimNLL created with 0 channels, 0 generic constraints, 1 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+Set default minimizer to Minuit2, algorithm Migrad, tolerance 10
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_binWStest_2017) directly selected PDF components: (shapeSig_ggH_2017_hgg_WStest_2017,shapeSig_ggH_2017_hgg_WStest_2017__norm,shapeSig_qqH_2017_hgg_WStest_2017,shapeSig_qqH_2017_hgg_WStest_2017__norm,shapeSig_vH_2017_hgg_WStest_2017,shapeSig_vH_2017_hgg_WStest_2017__norm,shapeSig_ttH_2017_hgg_WStest_2017,shapeSig_ttH_2017_hgg_WStest_2017__norm)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_binWStest_2017) indirectly selected PDF components: (gaus_g1_GG2H_2017_WStest_13TeV,mean_g1_GG2H_2017_WStest_13TeV,dm_g1_GG2H_2017_WStest_13TeV,sigma_g1_GG2H_2017_WStest_13TeV,sigma_fit_g1_GG2H_2017_WStest_13TeV,gaus_g2_GG2H_2017_WStest_13TeV,mean_g2_GG2H_2017_WStest_13TeV,dm_g2_GG2H_2017_WStest_13TeV,sigma_g2_GG2H_2017_WStest_13TeV,sigma_fit_g2_GG2H_2017_WStest_13TeV,gaus_g0_GG2H_2017_WStest_13TeV,mean_g0_GG2H_2017_WStest_13TeV,dm_g0_GG2H_2017_WStest_13TeV,sigma_g0_GG2H_2017_WStest_13TeV,sigma_fit_g0_GG2H_2017_WStest_13TeV,frac_g0_GG2H_2017_WStest_13TeV,hggpdfsmrel_GG2H_2017_WStest_13TeV_recursive_fraction_gaus_g1_GG2H_2017_WStest_13TeV,frac_g1_GG2H_2017_WStest_13TeV,hggpdfsmrel_GG2H_2017_WStest_13TeV_recursive_fraction_gaus_g2_GG2H_2017_WStest_13TeV,frac_g2_GG2H_2017_WStest_13TeV,gaus_g3_GG2H_2017_WStest_13TeV,mean_g3_GG2H_2017_WStest_13TeV,dm_g3_GG2H_2017_WStest_13TeV,sigma_g3_GG2H_2017_WStest_13TeV,sigma_fit_g3_GG2H_2017_WStest_13TeV,hggpdfsmrel_GG2H_2017_WStest_13TeV_recursive_fraction_gaus_g3_GG2H_2017_WStest_13TeV,fxs_GG2H_13TeV,fea_GG2H_2017_WStest_13TeV,rate_GG2H_2017_WStest_13TeV,fbr_13TeV,gaus_g0_VBF_2017_WStest_13TeV,mean_g0_VBF_2017_WStest_13TeV,dm_g0_VBF_2017_WStest_13TeV,sigma_g0_VBF_2017_WStest_13TeV,sigma_fit_g0_VBF_2017_WStest_13TeV,gaus_g1_VBF_2017_WStest_13TeV,mean_g1_VBF_2017_WStest_13TeV,dm_g1_VBF_2017_WStest_13TeV,sigma_g1_VBF_2017_WStest_13TeV,sigma_fit_g1_VBF_2017_WStest_13TeV,frac_g0_VBF_2017_WStest_13TeV,hggpdfsmrel_VBF_2017_WStest_13TeV_recursive_fraction_gaus_g1_VBF_2017_WStest_13TeV,fxs_VBF_13TeV,fea_VBF_2017_WStest_13TeV,rate_VBF_2017_WStest_13TeV,gaus_g1_VH_2017_WStest_13TeV,mean_g1_VH_2017_WStest_13TeV,dm_g1_VH_2017_WStest_13TeV,sigma_g1_VH_2017_WStest_13TeV,sigma_fit_g1_VH_2017_WStest_13TeV,gaus_g2_VH_2017_WStest_13TeV,mean_g2_VH_2017_WStest_13TeV,dm_g2_VH_2017_WStest_13TeV,sigma_g2_VH_2017_WStest_13TeV,sigma_fit_g2_VH_2017_WStest_13TeV,gaus_g0_VH_2017_WStest_13TeV,mean_g0_VH_2017_WStest_13TeV,dm_g0_VH_2017_WStest_13TeV,sigma_g0_VH_2017_WStest_13TeV,sigma_fit_g0_VH_2017_WStest_13TeV,frac_g0_VH_2017_WStest_13TeV,hggpdfsmrel_VH_2017_WStest_13TeV_recursive_fraction_gaus_g1_VH_2017_WStest_13TeV,frac_g1_VH_2017_WStest_13TeV,hggpdfsmrel_VH_2017_WStest_13TeV_recursive_fraction_gaus_g2_VH_2017_WStest_13TeV,fxs_VH_13TeV,fea_VH_2017_WStest_13TeV,rate_VH_2017_WStest_13TeV,gaus_g0_TTH_2017_WStest_13TeV,mean_g0_TTH_2017_WStest_13TeV,dm_g0_TTH_2017_WStest_13TeV,sigma_g0_TTH_2017_WStest_13TeV,sigma_fit_g0_TTH_2017_WStest_13TeV,gaus_g2_TTH_2017_WStest_13TeV,mean_g2_TTH_2017_WStest_13TeV,dm_g2_TTH_2017_WStest_13TeV,sigma_g2_TTH_2017_WStest_13TeV,sigma_fit_g2_TTH_2017_WStest_13TeV,frac_g0_TTH_2017_WStest_13TeV,gaus_g1_TTH_2017_WStest_13TeV,mean_g1_TTH_2017_WStest_13TeV,dm_g1_TTH_2017_WStest_13TeV,sigma_g1_TTH_2017_WStest_13TeV,sigma_fit_g1_TTH_2017_WStest_13TeV,hggpdfsmrel_TTH_2017_WStest_13TeV_recursive_fraction_gaus_g1_TTH_2017_WStest_13TeV,frac_g1_TTH_2017_WStest_13TeV,hggpdfsmrel_TTH_2017_WStest_13TeV_recursive_fraction_gaus_g2_TTH_2017_WStest_13TeV,frac_g2_TTH_2017_WStest_13TeV,gaus_g3_TTH_2017_WStest_13TeV,mean_g3_TTH_2017_WStest_13TeV,dm_g3_TTH_2017_WStest_13TeV,sigma_g3_TTH_2017_WStest_13TeV,sigma_fit_g3_TTH_2017_WStest_13TeV,hggpdfsmrel_TTH_2017_WStest_13TeV_recursive_fraction_gaus_g3_TTH_2017_WStest_13TeV,frac_g3_TTH_2017_WStest_13TeV,gaus_g4_TTH_2017_WStest_13TeV,mean_g4_TTH_2017_WStest_13TeV,dm_g4_TTH_2017_WStest_13TeV,sigma_g4_TTH_2017_WStest_13TeV,sigma_fit_g4_TTH_2017_WStest_13TeV,hggpdfsmrel_TTH_2017_WStest_13TeV_recursive_fraction_gaus_g4_TTH_2017_WStest_13TeV,fxs_TTH_13TeV,fea_TTH_2017_WStest_13TeV,rate_TTH_2017_WStest_13TeV,pdf_binWStest_2017_nuis,n_exp_final_binWStest_2017_proc_ggH_2017_hgg,n_exp_final_binWStest_2017_proc_qqH_2017_hgg,n_exp_final_binWStest_2017_proc_vH_2017_hgg,n_exp_final_binWStest_2017_proc_ttH_2017_hgg)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_binWStest_2017) directly selected PDF components: (shapeSig_ggH_2017_hgg_WStest_2017,shapeSig_ggH_2017_hgg_WStest_2017__norm,shapeSig_qqH_2017_hgg_WStest_2017,shapeSig_qqH_2017_hgg_WStest_2017__norm,shapeSig_vH_2017_hgg_WStest_2017,shapeSig_vH_2017_hgg_WStest_2017__norm,shapeSig_ttH_2017_hgg_WStest_2017,shapeSig_ttH_2017_hgg_WStest_2017__norm)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_binWStest_2017) indirectly selected PDF components: (gaus_g1_GG2H_2017_WStest_13TeV,mean_g1_GG2H_2017_WStest_13TeV,dm_g1_GG2H_2017_WStest_13TeV,sigma_g1_GG2H_2017_WStest_13TeV,sigma_fit_g1_GG2H_2017_WStest_13TeV,gaus_g2_GG2H_2017_WStest_13TeV,mean_g2_GG2H_2017_WStest_13TeV,dm_g2_GG2H_2017_WStest_13TeV,sigma_g2_GG2H_2017_WStest_13TeV,sigma_fit_g2_GG2H_2017_WStest_13TeV,gaus_g0_GG2H_2017_WStest_13TeV,mean_g0_GG2H_2017_WStest_13TeV,dm_g0_GG2H_2017_WStest_13TeV,sigma_g0_GG2H_2017_WStest_13TeV,sigma_fit_g0_GG2H_2017_WStest_13TeV,frac_g0_GG2H_2017_WStest_13TeV,hggpdfsmrel_GG2H_2017_WStest_13TeV_recursive_fraction_gaus_g1_GG2H_2017_WStest_13TeV,frac_g1_GG2H_2017_WStest_13TeV,hggpdfsmrel_GG2H_2017_WStest_13TeV_recursive_fraction_gaus_g2_GG2H_2017_WStest_13TeV,frac_g2_GG2H_2017_WStest_13TeV,gaus_g3_GG2H_2017_WStest_13TeV,mean_g3_GG2H_2017_WStest_13TeV,dm_g3_GG2H_2017_WStest_13TeV,sigma_g3_GG2H_2017_WStest_13TeV,sigma_fit_g3_GG2H_2017_WStest_13TeV,hggpdfsmrel_GG2H_2017_WStest_13TeV_recursive_fraction_gaus_g3_GG2H_2017_WStest_13TeV,fxs_GG2H_13TeV,fea_GG2H_2017_WStest_13TeV,rate_GG2H_2017_WStest_13TeV,fbr_13TeV,gaus_g0_VBF_2017_WStest_13TeV,mean_g0_VBF_2017_WStest_13TeV,dm_g0_VBF_2017_WStest_13TeV,sigma_g0_VBF_2017_WStest_13TeV,sigma_fit_g0_VBF_2017_WStest_13TeV,gaus_g1_VBF_2017_WStest_13TeV,mean_g1_VBF_2017_WStest_13TeV,dm_g1_VBF_2017_WStest_13TeV,sigma_g1_VBF_2017_WStest_13TeV,sigma_fit_g1_VBF_2017_WStest_13TeV,frac_g0_VBF_2017_WStest_13TeV,hggpdfsmrel_VBF_2017_WStest_13TeV_recursive_fraction_gaus_g1_VBF_2017_WStest_13TeV,fxs_VBF_13TeV,fea_VBF_2017_WStest_13TeV,rate_VBF_2017_WStest_13TeV,gaus_g1_VH_2017_WStest_13TeV,mean_g1_VH_2017_WStest_13TeV,dm_g1_VH_2017_WStest_13TeV,sigma_g1_VH_2017_WStest_13TeV,sigma_fit_g1_VH_2017_WStest_13TeV,gaus_g2_VH_2017_WStest_13TeV,mean_g2_VH_2017_WStest_13TeV,dm_g2_VH_2017_WStest_13TeV,sigma_g2_VH_2017_WStest_13TeV,sigma_fit_g2_VH_2017_WStest_13TeV,gaus_g0_VH_2017_WStest_13TeV,mean_g0_VH_2017_WStest_13TeV,dm_g0_VH_2017_WStest_13TeV,sigma_g0_VH_2017_WStest_13TeV,sigma_fit_g0_VH_2017_WStest_13TeV,frac_g0_VH_2017_WStest_13TeV,hggpdfsmrel_VH_2017_WStest_13TeV_recursive_fraction_gaus_g1_VH_2017_WStest_13TeV,frac_g1_VH_2017_WStest_13TeV,hggpdfsmrel_VH_2017_WStest_13TeV_recursive_fraction_gaus_g2_VH_2017_WStest_13TeV,fxs_VH_13TeV,fea_VH_2017_WStest_13TeV,rate_VH_2017_WStest_13TeV,gaus_g0_TTH_2017_WStest_13TeV,mean_g0_TTH_2017_WStest_13TeV,dm_g0_TTH_2017_WStest_13TeV,sigma_g0_TTH_2017_WStest_13TeV,sigma_fit_g0_TTH_2017_WStest_13TeV,gaus_g2_TTH_2017_WStest_13TeV,mean_g2_TTH_2017_WStest_13TeV,dm_g2_TTH_2017_WStest_13TeV,sigma_g2_TTH_2017_WStest_13TeV,sigma_fit_g2_TTH_2017_WStest_13TeV,frac_g0_TTH_2017_WStest_13TeV,gaus_g1_TTH_2017_WStest_13TeV,mean_g1_TTH_2017_WStest_13TeV,dm_g1_TTH_2017_WStest_13TeV,sigma_g1_TTH_2017_WStest_13TeV,sigma_fit_g1_TTH_2017_WStest_13TeV,hggpdfsmrel_TTH_2017_WStest_13TeV_recursive_fraction_gaus_g1_TTH_2017_WStest_13TeV,frac_g1_TTH_2017_WStest_13TeV,hggpdfsmrel_TTH_2017_WStest_13TeV_recursive_fraction_gaus_g2_TTH_2017_WStest_13TeV,frac_g2_TTH_2017_WStest_13TeV,gaus_g3_TTH_2017_WStest_13TeV,mean_g3_TTH_2017_WStest_13TeV,dm_g3_TTH_2017_WStest_13TeV,sigma_g3_TTH_2017_WStest_13TeV,sigma_fit_g3_TTH_2017_WStest_13TeV,hggpdfsmrel_TTH_2017_WStest_13TeV_recursive_fraction_gaus_g3_TTH_2017_WStest_13TeV,frac_g3_TTH_2017_WStest_13TeV,gaus_g4_TTH_2017_WStest_13TeV,mean_g4_TTH_2017_WStest_13TeV,dm_g4_TTH_2017_WStest_13TeV,sigma_g4_TTH_2017_WStest_13TeV,sigma_fit_g4_TTH_2017_WStest_13TeV,hggpdfsmrel_TTH_2017_WStest_13TeV_recursive_fraction_gaus_g4_TTH_2017_WStest_13TeV,fxs_TTH_13TeV,fea_TTH_2017_WStest_13TeV,rate_TTH_2017_WStest_13TeV,pdf_binWStest_2017_nuis,n_exp_final_binWStest_2017_proc_ggH_2017_hgg,n_exp_final_binWStest_2017_proc_qqH_2017_hgg,n_exp_final_binWStest_2017_proc_vH_2017_hgg,n_exp_final_binWStest_2017_proc_ttH_2017_hgg)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_binWStest_2017) directly selected PDF components: (shapeBkg_bkg_mass_WStest_2017)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_binWStest_2017) indirectly selected PDF components: (env_pdf_0_2017_13TeV_bern5,env_pdf_0_2017_13TeV_bern5_p0_sq,env_pdf_0_2017_13TeV_bern5_p1_sq,env_pdf_0_2017_13TeV_bern5_p2_sq,env_pdf_0_2017_13TeV_bern5_p3_sq,env_pdf_0_2017_13TeV_bern5_p4_sq,env_pdf_0_2017_13TeV_exp3,env_pdf_0_2017_13TeV_exp3_e1,env_pdf_0_2017_13TeV_exp3_e2,env_pdf_0_2017_13TeV_exp3_recursive_fraction_env_pdf_0_2017_13TeV_exp3_e2,env_pdf_0_2017_13TeV_pow1,env_pdf_0_2017_13TeV_pow1_e1,env_pdf_0_2017_13TeV_pow1_recursive_fraction_env_pdf_0_2017_13TeV_pow1_e1,env_pdf_0_2017_13TeV_lau1,env_pdf_0_2017_13TeV_lau1_pow0,env_pdf_0_2017_13TeV_lau1_powl1,env_pdf_0_2017_13TeV_lau1_recursive_fraction_env_pdf_0_2017_13TeV_lau1_powl1,pdf_binWStest_2017_nuis)
+[utils::makePlots] Number of events for pdf in WStest_2017_CMS_hgg_mass, pdf pdf_binWStest_2017 = 320381
+SimNLL created with 1 channels, 0 generic constraints, 1 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+do first Minimization 
+Running pre-fit with Minuit2,Migrad and tolerance 10
+Set default minimizer to Minuit2, algorithm Migrad, tolerance 10
+Minuit2Minimizer: Minimize with max-calls 6500 convergence for edm < 10 strategy 0
+Minuit2Minimizer::Minuit  - Changing default options
+             StorageLevel :               0
+MnSeedGenerator: for initial parameters FCN = 0
+MnSeedGenerator: Initial state:   - FCN =                0 Edm =  0.000374039 NCalls =     53
+MnSeedGenerator: Negative G2 found - new state:   - FCN =                0 Edm =  0.000374039 NCalls =     53
+VariableMetric: start iterating until Edm is < 0.00988946
+VariableMetric: Initial state   - FCN =                0 Edm =  0.000374039 NCalls =     53
+VariableMetric: Iteration #   0 - FCN =                0 Edm =  0.000374039 NCalls =     53
+VariableMetric: Iteration #   1 - FCN = -0.0003070363739184 Edm =  0.000143509 NCalls =     83
+Number of iterations 3
+----------> Iteration 0
+            FVAL = 0 Edm = 0.000374038574097 Nfcn = 53
+            Error matrix change = 1
+            Parameters :  p0 = 125 p1 = 0.503314 p2 = 0.573492 p3 = 0.258121 p4 = 0.350928 p5 = 0.248835 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = 0 p12 = 318710
+----------> Iteration 1
+            FVAL = -0.000307036373918 Edm = 0.000143509256839 Nfcn = 83
+            Error matrix change = 0.5
+            Parameters :  p0 = 125 p1 = 0.503426 p2 = 0.573511 p3 = 0.258135 p4 = 0.350938 p5 = 0.248837 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = 0 p12 = 318710
+----------> Iteration 2
+            FVAL = -0.000307036373918 Edm = 0.000143509256839 Nfcn = 83
+            Error matrix change = 0.5
+            Parameters :  p0 = 125 p1 = 0.503426 p2 = 0.573511 p3 = 0.258135 p4 = 0.350938 p5 = 0.248837 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = 0 p12 = 318710
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -0.000307036373918379013
+Edm   = 0.000143509256838752575
+Nfcn  = 83
+MH	  = 125	 +/-  4.19232	(limited)
+env_pdf_0_2017_13TeV_bern5_p0	  = 0.503426	 +/-  0.00602241	(limited)
+env_pdf_0_2017_13TeV_bern5_p1	  = 0.573511	 +/-  0.0024203	(limited)
+env_pdf_0_2017_13TeV_bern5_p2	  = 0.258135	 +/-  0.00437201	(limited)
+env_pdf_0_2017_13TeV_bern5_p3	  = 0.350938	 +/-  0.00235287	(limited)
+env_pdf_0_2017_13TeV_bern5_p4	  = 0.248837	 +/-  0.00186843	(limited)
+env_pdf_0_2017_13TeV_exp3_f1	  = 0.279014	 +/-  0.37597	(limited)
+env_pdf_0_2017_13TeV_exp3_p1	  = -0.0679454	 +/-  0.211001	(limited)
+env_pdf_0_2017_13TeV_exp3_p2	  = -0.0264914	 +/-  0.215467	(limited)
+env_pdf_0_2017_13TeV_lau1_l1	  = 0.409632	 +/-  0.412327	(limited)
+env_pdf_0_2017_13TeV_pow1_p1	  = -4.57694	 +/-  4.16432	(limited)
+lumi_13TeV	  = 0	 +/-  0.994458
+shapeBkg_bkg_mass_WStest_2017__norm	  = 318710	 +/-  561.415	(limited)
+Minuit2Minimizer: Minimize with max-calls 6500 convergence for edm < 0.1 strategy 0
+Minuit2Minimizer::Minuit  - Changing default options
+             StorageLevel :               0
+MnSeedGenerator: for initial parameters FCN = 0
+MnSeedGenerator: Initial state:   - FCN =                0 Edm =  0.000143548 NCalls =     53
+MnSeedGenerator: Negative G2 found - new state:   - FCN =                0 Edm =  0.000143548 NCalls =     53
+VariableMetric: start iterating until Edm is < 9.88947e-05
+VariableMetric: Initial state   - FCN =                0 Edm =  0.000143548 NCalls =     53
+VariableMetric: Iteration #   0 - FCN =                0 Edm =  0.000143548 NCalls =     53
+VariableMetric: Iteration #   1 - FCN = -0.0001443047514442 Edm =  9.46814e-05 NCalls =     80
+VariableMetric: Iteration #   2 - FCN = -0.0003485401712879 Edm =  4.24651e-05 NCalls =    108
+Number of iterations 4
+----------> Iteration 0
+            FVAL = 0 Edm = 0.000143548397688 Nfcn = 53
+            Error matrix change = 1
+            Parameters :  p0 = 125 p1 = 0.503426 p2 = 0.573511 p3 = 0.258135 p4 = 0.350938 p5 = 0.248837 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = 0 p12 = 318710
+----------> Iteration 1
+            FVAL = -0.000144304751444 Edm = 9.4681419816e-05 Nfcn = 80
+            Error matrix change = 0.5
+            Parameters :  p0 = 125 p1 = 0.503446 p2 = 0.573472 p3 = 0.258108 p4 = 0.350951 p5 = 0.248849 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = 0 p12 = 318710
+----------> Iteration 2
+            FVAL = -0.000348540171288 Edm = 4.24650907479e-05 Nfcn = 108
+            Error matrix change = 0.25
+            Parameters :  p0 = 125 p1 = 0.503608 p2 = 0.573429 p3 = 0.258112 p4 = 0.350995 p5 = 0.248858 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = 0 p12 = 318710
+----------> Iteration 3
+            FVAL = -0.000348540171288 Edm = 4.24650907479e-05 Nfcn = 108
+            Error matrix change = 0.25
+            Parameters :  p0 = 125 p1 = 0.503608 p2 = 0.573429 p3 = 0.258112 p4 = 0.350995 p5 = 0.248858 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = 0 p12 = 318710
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -0.000348540171287936573
+Edm   = 4.24650907479328101e-05
+Nfcn  = 108
+MH	  = 125	 +/-  4.19232	(limited)
+env_pdf_0_2017_13TeV_bern5_p0	  = 0.503608	 +/-  0.0090795	(limited)
+env_pdf_0_2017_13TeV_bern5_p1	  = 0.573429	 +/-  0.00413808	(limited)
+env_pdf_0_2017_13TeV_bern5_p2	  = 0.258112	 +/-  0.00432069	(limited)
+env_pdf_0_2017_13TeV_bern5_p3	  = 0.350995	 +/-  0.00313388	(limited)
+env_pdf_0_2017_13TeV_bern5_p4	  = 0.248858	 +/-  0.00175375	(limited)
+env_pdf_0_2017_13TeV_exp3_f1	  = 0.279014	 +/-  0.37597	(limited)
+env_pdf_0_2017_13TeV_exp3_p1	  = -0.0679454	 +/-  0.211001	(limited)
+env_pdf_0_2017_13TeV_exp3_p2	  = -0.0264914	 +/-  0.215467	(limited)
+env_pdf_0_2017_13TeV_lau1_l1	  = 0.409632	 +/-  0.412327	(limited)
+env_pdf_0_2017_13TeV_pow1_p1	  = -4.57694	 +/-  4.16432	(limited)
+lumi_13TeV	  = 0	 +/-  0.994458
+shapeBkg_bkg_mass_WStest_2017__norm	  = 318710	 +/-  561.425	(limited)
+  [WARNING] Found [env_pdf_0_2017_13TeV_exp3_f1] at boundary. 
+       RooRealVar::env_pdf_0_2017_13TeV_exp3_f1 = 0.279014 +/- 0.37597  L(0.0001 - 0.9999) 
+  [WARNING] Found [env_pdf_0_2017_13TeV_exp3_p1] at boundary. 
+       RooRealVar::env_pdf_0_2017_13TeV_exp3_p1 = -0.0679454 +/- 0.211001  L(-1 - 0) 
+  [WARNING] Found [env_pdf_0_2017_13TeV_exp3_p2] at boundary. 
+       RooRealVar::env_pdf_0_2017_13TeV_exp3_p2 = -0.0264914 +/- 0.215467  L(-1 - 0) 
+  [WARNING] Found [env_pdf_0_2017_13TeV_lau1_l1] at boundary. 
+       RooRealVar::env_pdf_0_2017_13TeV_lau1_l1 = 0.409632 +/- 0.412327  L(1e-06 - 0.999999) 
+  [WARNING] Found [pdfindex_WStest_2017_13TeV] at boundary. 
+       RooCategory::pdfindex_WStest_2017_13TeV = _pdf0(idx = 0)
+
+ [WARNING] After the fit some parameters are at their boundary.
+ [WARNING] Are you sure your model is correct?
+Minimized in : Real time 0:00:00, CP time 0.010
+FINAL NLL - NLL0 VALUE = -0.0006555765452
+Minuit2Minimizer::Hesse  - State returned from Hesse 
+
+# of function calls: 113
+function Value: -0.0003485401712879
+expected distance to the Minimum (edm): 4.246509074793e-05
+external parameters: 
+# ext. ||   Name    ||   type  ||     Value     ||  Error +/- 
+
+   0   ||        MH ||  free   ||                 125 ||          no
+   1   ||env_pdf_0_2017_13TeV_bern5_p0 ||  free   ||     0.5036077121394 ||          no
+   2   ||env_pdf_0_2017_13TeV_bern5_p1 ||  free   ||     0.5734291712117 ||          no
+   3   ||env_pdf_0_2017_13TeV_bern5_p2 ||  free   ||     0.2581119821255 ||          no
+   4   ||env_pdf_0_2017_13TeV_bern5_p3 ||  free   ||     0.3509945812822 ||          no
+   5   ||env_pdf_0_2017_13TeV_bern5_p4 ||  free   ||     0.2488580149877 ||          no
+   6   ||env_pdf_0_2017_13TeV_exp3_f1 ||  free   ||     0.2790140660555 ||          no
+   7   ||env_pdf_0_2017_13TeV_exp3_p1 ||  free   ||   -0.06794542603801 ||          no
+   8   ||env_pdf_0_2017_13TeV_exp3_p2 ||  free   ||   -0.02649143657464 ||          no
+   9   ||env_pdf_0_2017_13TeV_lau1_l1 ||  free   ||     0.4096315847123 ||          no
+  10   ||env_pdf_0_2017_13TeV_pow1_p1 ||  free   ||      -4.57694459992 ||          no
+  11   ||lumi_13TeV ||  free   ||                   0 ||          no
+  12   ||shapeBkg_bkg_mass_WStest_2017__norm ||  free   ||      318709.9930092 ||          no
+
+
+
+covariance matrix status: 0
+covariance matrix is not present or not valid 
+
+
+
+  RooFitResult: minimized FCN value: -0.00034854, estimated distance to minimum: 4.24651e-05
+                covariance matrix quality: Not calculated at all
+                Status : MINIMIZE=0 MINIMIZE=0 HESSE=300 
+
+    Constant Parameter    Value     
+  --------------------  ------------
+         lumi_13TeV_In    0.0000e+00
+  n_exp_binWStest_2017_proc_bkg_mass    1.0000e+00
+                     r    0.0000e+00
+
+    Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
+  --------------------  ------------  --------------------------  --------
+                    MH    1.2500e+02    1.2500e+02 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_bern5_p0    5.0331e-01    5.0361e-01 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_bern5_p1    5.7349e-01    5.7343e-01 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_bern5_p2    2.5812e-01    2.5811e-01 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_bern5_p3    3.5093e-01    3.5099e-01 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_bern5_p4    2.4884e-01    2.4886e-01 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_exp3_f1    2.7901e-01    2.7901e-01 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_exp3_p1   -6.7945e-02   -6.7945e-02 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_exp3_p2   -2.6491e-02   -2.6491e-02 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_lau1_l1    4.0963e-01    4.0963e-01 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_pow1_p1   -4.5769e+00   -4.5769e+00 +/-  0.00e+00  <none>
+            lumi_13TeV    0.0000e+00    0.0000e+00 +/-  0.00e+00  <none>
+  shapeBkg_bkg_mass_WStest_2017__norm    3.1871e+05    3.1871e+05 +/-  0.00e+00  <none>
+
+
+  RooFitResult: minimized FCN value: -0.00034854, estimated distance to minimum: 4.24651e-05
+                covariance matrix quality: Not calculated at all
+                Status : MINIMIZE=0 MINIMIZE=0 HESSE=300 
+
+    Constant Parameter    Value     
+  --------------------  ------------
+         lumi_13TeV_In    0.0000e+00
+  n_exp_binWStest_2017_proc_bkg_mass    1.0000e+00
+                     r    0.0000e+00
+
+    Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
+  --------------------  ------------  --------------------------  --------
+                    MH    1.2500e+02    1.2500e+02 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_bern5_p0    5.0331e-01    5.0361e-01 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_bern5_p1    5.7349e-01    5.7343e-01 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_bern5_p2    2.5812e-01    2.5811e-01 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_bern5_p3    3.5093e-01    3.5099e-01 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_bern5_p4    2.4884e-01    2.4886e-01 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_exp3_f1    2.7901e-01    2.7901e-01 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_exp3_p1   -6.7945e-02   -6.7945e-02 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_exp3_p2   -2.6491e-02   -2.6491e-02 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_lau1_l1    4.0963e-01    4.0963e-01 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_pow1_p1   -4.5769e+00   -4.5769e+00 +/-  0.00e+00  <none>
+            lumi_13TeV    0.0000e+00    0.0000e+00 +/-  0.00e+00  <none>
+  shapeBkg_bkg_mass_WStest_2017__norm    3.1871e+05    3.1871e+05 +/-  0.00e+00  <none>
+
+[#0] ERROR:Plotting -- RooAbsPdf::plotOn(pdf_binWStest_2017_bonly) ERROR: component selection expression 'shapeSig*' does not select any components of p.d.f.
+[#0] ERROR:Plotting -- RooAbsPdf::plotOn(pdf_binWStest_2017_bonly) ERROR: component selection expression 'shapeSig*' does not select any components of p.d.f.
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_binWStest_2017_bonly) directly selected PDF components: (shapeBkg_bkg_mass_WStest_2017)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_binWStest_2017_bonly) indirectly selected PDF components: (env_pdf_0_2017_13TeV_bern5,env_pdf_0_2017_13TeV_bern5_p0_sq,env_pdf_0_2017_13TeV_bern5_p1_sq,env_pdf_0_2017_13TeV_bern5_p2_sq,env_pdf_0_2017_13TeV_bern5_p3_sq,env_pdf_0_2017_13TeV_bern5_p4_sq,env_pdf_0_2017_13TeV_exp3,env_pdf_0_2017_13TeV_exp3_e1,env_pdf_0_2017_13TeV_exp3_e2,env_pdf_0_2017_13TeV_exp3_recursive_fraction_env_pdf_0_2017_13TeV_exp3_e2,env_pdf_0_2017_13TeV_pow1,env_pdf_0_2017_13TeV_pow1_e1,env_pdf_0_2017_13TeV_pow1_recursive_fraction_env_pdf_0_2017_13TeV_pow1_e1,env_pdf_0_2017_13TeV_lau1,env_pdf_0_2017_13TeV_lau1_pow0,env_pdf_0_2017_13TeV_lau1_powl1,env_pdf_0_2017_13TeV_lau1_recursive_fraction_env_pdf_0_2017_13TeV_lau1_powl1,pdf_binWStest_2017_bonly_nuis)
+[utils::makePlots] Number of events for pdf in WStest_2017_CMS_hgg_mass, pdf pdf_binWStest_2017_bonly = 318710
+do first Minimization 
+Running pre-fit with Minuit2,Migrad and tolerance 10
+Set default minimizer to Minuit2, algorithm Migrad, tolerance 10
+Minuit2Minimizer: Minimize with max-calls 7000 convergence for edm < 10 strategy 0
+Minuit2Minimizer::Minuit  - Changing default options
+             StorageLevel :               0
+MnSeedGenerator: for initial parameters FCN = 0
+MnSeedGenerator: Initial state:   - FCN =                0 Edm =      26.8895 NCalls =     57
+MnSeedGenerator: Negative G2 found - new state:   - FCN =                0 Edm =      26.8895 NCalls =     57
+VariableMetric: start iterating until Edm is < 0.00988946
+VariableMetric: Initial state   - FCN =                0 Edm =      26.8895 NCalls =     57
+VariableMetric: Iteration #   0 - FCN =                0 Edm =      26.8895 NCalls =     57
+VariableMetric: Iteration #   1 - FCN =  -14.65737564105 Edm =      2.44376 NCalls =     89
+VariableMetric: Iteration #   2 - FCN =  -16.54589468419 Edm =     0.446929 NCalls =    119
+VariableMetric: Iteration #   3 - FCN =  -16.94936442735 Edm =     0.235925 NCalls =    149
+VariableMetric: Iteration #   4 - FCN =  -17.22515536569 Edm =    0.0646711 NCalls =    179
+VariableMetric: Iteration #   5 - FCN =  -17.32155086989 Edm =    0.0395169 NCalls =    209
+VariableMetric: Iteration #   6 - FCN =   -17.5251678045 Edm =    0.0657427 NCalls =    240
+VariableMetric: Iteration #   7 - FCN =  -17.64527455432 Edm =    0.0269754 NCalls =    270
+VariableMetric: Iteration #   8 - FCN =  -17.95653621128 Edm =     0.124145 NCalls =    301
+VariableMetric: Iteration #   9 - FCN =  -18.23772940353 Edm =    0.0313695 NCalls =    331
+VariableMetric: Iteration #  10 - FCN =  -18.26264366959 Edm =   0.00397897 NCalls =    361
+Number of iterations 12
+----------> Iteration 0
+            FVAL = 0 Edm = 26.8895111212 Nfcn = 57
+            Error matrix change = 1
+            Parameters :  p0 = 125 p1 = 0.503314 p2 = 0.573492 p3 = 0.258121 p4 = 0.350928 p5 = 0.248835 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = 0 p12 = 1 p13 = 318710
+----------> Iteration 1
+            FVAL = -14.657375641 Edm = 2.44375771652 Nfcn = 89
+            Error matrix change = 0.501814
+            Parameters :  p0 = 125.679 p1 = 0.49236 p2 = 0.570628 p3 = 0.259743 p4 = 0.35253 p5 = 0.249717 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = -0.376043 p12 = 0.750481 p13 = 317796
+----------> Iteration 2
+            FVAL = -16.5458946842 Edm = 0.446928649031 Nfcn = 119
+----------> Iteration 3
+            FVAL = -16.9493644273 Edm = 0.235925265676 Nfcn = 149
+----------> Iteration 4
+            FVAL = -17.2251553657 Edm = 0.0646711184292 Nfcn = 179
+----------> Iteration 5
+            FVAL = -17.3215508699 Edm = 0.0395169145298 Nfcn = 209
+----------> Iteration 6
+            FVAL = -17.5251678045 Edm = 0.0657426652824 Nfcn = 240
+----------> Iteration 7
+            FVAL = -17.6452745543 Edm = 0.0269753612332 Nfcn = 270
+----------> Iteration 8
+            FVAL = -17.9565362113 Edm = 0.124145343369 Nfcn = 301
+----------> Iteration 9
+            FVAL = -18.2377294035 Edm = 0.0313695407398 Nfcn = 331
+----------> Iteration 10
+            FVAL = -18.2626436696 Edm = 0.00397897405233 Nfcn = 361
+            Error matrix change = 0.00737839
+            Parameters :  p0 = 126.106 p1 = 0.497924 p2 = 0.552543 p3 = 0.297527 p4 = 0.338036 p5 = 0.250831 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = -0.0326997 p12 = 0.917811 p13 = 317203
+----------> Iteration 11
+            FVAL = -18.2626436696 Edm = 0.00397897405233 Nfcn = 361
+            Error matrix change = 0.00737839
+            Parameters :  p0 = 126.106 p1 = 0.497924 p2 = 0.552543 p3 = 0.297527 p4 = 0.338036 p5 = 0.250831 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = -0.0326997 p12 = 0.917811 p13 = 317203
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -18.2626436695918137
+Edm   = 0.00397897405232863245
+Nfcn  = 361
+MH	  = 126.106	 +/-  0.328311	(limited)
+env_pdf_0_2017_13TeV_bern5_p0	  = 0.497924	 +/-  0.0136205	(limited)
+env_pdf_0_2017_13TeV_bern5_p1	  = 0.552543	 +/-  0.0141194	(limited)
+env_pdf_0_2017_13TeV_bern5_p2	  = 0.297527	 +/-  0.0219604	(limited)
+env_pdf_0_2017_13TeV_bern5_p3	  = 0.338036	 +/-  0.00807352	(limited)
+env_pdf_0_2017_13TeV_bern5_p4	  = 0.250831	 +/-  0.00323024	(limited)
+env_pdf_0_2017_13TeV_exp3_f1	  = 0.279014	 +/-  0.37597	(limited)
+env_pdf_0_2017_13TeV_exp3_p1	  = -0.0679454	 +/-  0.211001	(limited)
+env_pdf_0_2017_13TeV_exp3_p2	  = -0.0264914	 +/-  0.215467	(limited)
+env_pdf_0_2017_13TeV_lau1_l1	  = 0.409632	 +/-  0.412327	(limited)
+env_pdf_0_2017_13TeV_pow1_p1	  = -4.57694	 +/-  4.16432	(limited)
+lumi_13TeV	  = -0.0326997	 +/-  0.992806
+r	  = 0.917811	 +/-  0.136576	(limited)
+shapeBkg_bkg_mass_WStest_2017__norm	  = 317203	 +/-  608.155	(limited)
+Minuit2Minimizer: Minimize with max-calls 7000 convergence for edm < 0.1 strategy 0
+Minuit2Minimizer::Minuit  - Changing default options
+             StorageLevel :               0
+MnSeedGenerator: for initial parameters FCN = 0
+MnSeedGenerator: Initial state:   - FCN =                0 Edm =   0.00175729 NCalls =     57
+MnSeedGenerator: Negative G2 found - new state:   - FCN =                0 Edm =   0.00175729 NCalls =     57
+VariableMetric: start iterating until Edm is < 9.88947e-05
+VariableMetric: Initial state   - FCN =                0 Edm =   0.00175729 NCalls =     57
+VariableMetric: Iteration #   0 - FCN =                0 Edm =   0.00175729 NCalls =     57
+VariableMetric: Iteration #   1 - FCN = -0.001650358592272 Edm =  0.000229809 NCalls =     87
+VariableMetric: Iteration #   2 - FCN = -0.00179585919593 Edm =  7.30107e-05 NCalls =    117
+VariableMetric: Iteration #   3 - FCN = -0.002001020591279 Edm =  0.000141291 NCalls =    147
+VariableMetric: Iteration #   4 - FCN = -0.002343695401549 Edm =  0.000134648 NCalls =    177
+VariableMetric: Iteration #   5 - FCN = -0.002482486069438 Edm =  8.55414e-05 NCalls =    206
+VariableMetric: Iteration #   6 - FCN = -0.00280553650565 Edm =  0.000102147 NCalls =    237
+VariableMetric: Iteration #   7 - FCN = -0.003363896665976 Edm =  0.000140137 NCalls =    268
+VariableMetric: Iteration #   8 - FCN = -0.00377820034481 Edm =  4.25947e-05 NCalls =    298
+Number of iterations 10
+----------> Iteration 0
+            FVAL = 0 Edm = 0.00175729438204 Nfcn = 57
+            Error matrix change = 1
+            Parameters :  p0 = 126.106 p1 = 0.497924 p2 = 0.552543 p3 = 0.297527 p4 = 0.338036 p5 = 0.250831 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = -0.0326997 p12 = 0.917811 p13 = 317203
+----------> Iteration 1
+            FVAL = -0.00165035859227 Edm = 0.000229809084253 Nfcn = 87
+            Error matrix change = 0.507672
+            Parameters :  p0 = 126.11 p1 = 0.497918 p2 = 0.552567 p3 = 0.297583 p4 = 0.338033 p5 = 0.250838 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = -0.0048429 p12 = 0.916682 p13 = 317179
+----------> Iteration 2
+            FVAL = -0.00179585919593 Edm = 7.30106546013e-05 Nfcn = 117
+----------> Iteration 3
+            FVAL = -0.00200102059128 Edm = 0.000141290632871 Nfcn = 147
+----------> Iteration 4
+            FVAL = -0.00234369540155 Edm = 0.000134647888944 Nfcn = 177
+----------> Iteration 5
+            FVAL = -0.00248248606944 Edm = 8.55414435825e-05 Nfcn = 206
+----------> Iteration 6
+            FVAL = -0.00280553650565 Edm = 0.000102146620206 Nfcn = 237
+----------> Iteration 7
+            FVAL = -0.00336389666598 Edm = 0.000140136895946 Nfcn = 268
+----------> Iteration 8
+            FVAL = -0.00377820034481 Edm = 4.25947269388e-05 Nfcn = 298
+            Error matrix change = 0.0116298
+            Parameters :  p0 = 126.113 p1 = 0.498411 p2 = 0.551721 p3 = 0.299059 p4 = 0.337416 p5 = 0.251018 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = -0.0044259 p12 = 0.919359 p13 = 317173
+----------> Iteration 9
+            FVAL = -0.00377820034481 Edm = 4.25947269388e-05 Nfcn = 298
+            Error matrix change = 0.0116298
+            Parameters :  p0 = 126.113 p1 = 0.498411 p2 = 0.551721 p3 = 0.299059 p4 = 0.337416 p5 = 0.251018 p6 = 0.279014 p7 = -0.0679454 p8 = -0.0264914 p9 = 0.409632 p10 = -4.57694 p11 = -0.0044259 p12 = 0.919359 p13 = 317173
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -0.00377820034480965631
+Edm   = 4.2594726938792533e-05
+Nfcn  = 298
+MH	  = 126.113	 +/-  0.315876	(limited)
+env_pdf_0_2017_13TeV_bern5_p0	  = 0.498411	 +/-  0.0136897	(limited)
+env_pdf_0_2017_13TeV_bern5_p1	  = 0.551721	 +/-  0.0153236	(limited)
+env_pdf_0_2017_13TeV_bern5_p2	  = 0.299059	 +/-  0.0243386	(limited)
+env_pdf_0_2017_13TeV_bern5_p3	  = 0.337416	 +/-  0.00950495	(limited)
+env_pdf_0_2017_13TeV_bern5_p4	  = 0.251018	 +/-  0.00336444	(limited)
+env_pdf_0_2017_13TeV_exp3_f1	  = 0.279014	 +/-  0.37597	(limited)
+env_pdf_0_2017_13TeV_exp3_p1	  = -0.0679454	 +/-  0.211001	(limited)
+env_pdf_0_2017_13TeV_exp3_p2	  = -0.0264914	 +/-  0.215467	(limited)
+env_pdf_0_2017_13TeV_lau1_l1	  = 0.409632	 +/-  0.412327	(limited)
+env_pdf_0_2017_13TeV_pow1_p1	  = -4.57694	 +/-  4.16432	(limited)
+lumi_13TeV	  = -0.0044259	 +/-  0.97642
+r	  = 0.919359	 +/-  0.136454	(limited)
+shapeBkg_bkg_mass_WStest_2017__norm	  = 317173	 +/-  602.569	(limited)
+  [WARNING] Found [env_pdf_0_2017_13TeV_exp3_f1] at boundary. 
+       RooRealVar::env_pdf_0_2017_13TeV_exp3_f1 = 0.279014 +/- 0.37597  L(0.0001 - 0.9999) 
+  [WARNING] Found [env_pdf_0_2017_13TeV_exp3_p1] at boundary. 
+       RooRealVar::env_pdf_0_2017_13TeV_exp3_p1 = -0.0679454 +/- 0.211001  L(-1 - 0) 
+  [WARNING] Found [env_pdf_0_2017_13TeV_exp3_p2] at boundary. 
+       RooRealVar::env_pdf_0_2017_13TeV_exp3_p2 = -0.0264914 +/- 0.215467  L(-1 - 0) 
+  [WARNING] Found [env_pdf_0_2017_13TeV_lau1_l1] at boundary. 
+       RooRealVar::env_pdf_0_2017_13TeV_lau1_l1 = 0.409632 +/- 0.412327  L(1e-06 - 0.999999) 
+ [WARNING] After the fit some parameters are at their boundary.
+ [WARNING] Are you sure your model is correct?
+Minimized in : Real time 0:00:00, CP time 0.020
+FINAL NLL - NLL0 VALUE = -18.26642187
+Minuit2Minimizer::Hesse  - State returned from Hesse 
+
+# of function calls: 315
+function Value: -0.00377820034481
+expected distance to the Minimum (edm): 4.259472693879e-05
+external parameters: 
+# ext. ||   Name    ||   type  ||     Value     ||  Error +/- 
+
+   0   ||        MH ||  free   ||      126.1128712439 ||          no
+   1   ||env_pdf_0_2017_13TeV_bern5_p0 ||  free   ||     0.4984107410037 ||          no
+   2   ||env_pdf_0_2017_13TeV_bern5_p1 ||  free   ||     0.5517212259879 ||          no
+   3   ||env_pdf_0_2017_13TeV_bern5_p2 ||  free   ||     0.2990591518237 ||          no
+   4   ||env_pdf_0_2017_13TeV_bern5_p3 ||  free   ||     0.3374155426372 ||          no
+   5   ||env_pdf_0_2017_13TeV_bern5_p4 ||  free   ||     0.2510178222795 ||          no
+   6   ||env_pdf_0_2017_13TeV_exp3_f1 ||  free   ||     0.2790140660555 ||          no
+   7   ||env_pdf_0_2017_13TeV_exp3_p1 ||  free   ||   -0.06794542603801 ||          no
+   8   ||env_pdf_0_2017_13TeV_exp3_p2 ||  free   ||   -0.02649143657464 ||          no
+   9   ||env_pdf_0_2017_13TeV_lau1_l1 ||  free   ||     0.4096315847123 ||          no
+  10   ||env_pdf_0_2017_13TeV_pow1_p1 ||  free   ||      -4.57694459992 ||          no
+  11   ||lumi_13TeV ||  free   ||  -0.004425896085713 ||          no
+  12   ||         r ||  free   ||     0.9193594723515 ||          no
+  13   ||shapeBkg_bkg_mass_WStest_2017__norm ||  free   ||      317172.8241881 ||          no
+
+
+
+covariance matrix status: 0
+covariance matrix is not present or not valid 
+
+
+
+  RooFitResult: minimized FCN value: -0.0037782, estimated distance to minimum: 4.25947e-05
+                covariance matrix quality: Not calculated at all
+                Status : MINIMIZE=0 MINIMIZE=0 HESSE=300 
+
+    Constant Parameter    Value     
+  --------------------  ------------
+         lumi_13TeV_In    0.0000e+00
+  n_exp_binWStest_2017_proc_bkg_mass    1.0000e+00
+
+    Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
+  --------------------  ------------  --------------------------  --------
+                    MH    1.2500e+02    1.2611e+02 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_bern5_p0    5.0331e-01    4.9841e-01 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_bern5_p1    5.7349e-01    5.5172e-01 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_bern5_p2    2.5812e-01    2.9906e-01 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_bern5_p3    3.5093e-01    3.3742e-01 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_bern5_p4    2.4884e-01    2.5102e-01 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_exp3_f1    2.7901e-01    2.7901e-01 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_exp3_p1   -6.7945e-02   -6.7945e-02 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_exp3_p2   -2.6491e-02   -2.6491e-02 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_lau1_l1    4.0963e-01    4.0963e-01 +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_pow1_p1   -4.5769e+00   -4.5769e+00 +/-  0.00e+00  <none>
+            lumi_13TeV    0.0000e+00   -4.4259e-03 +/-  0.00e+00  <none>
+                     r    1.0000e+00    9.1936e-01 +/-  0.00e+00  <none>
+  shapeBkg_bkg_mass_WStest_2017__norm    3.1871e+05    3.1717e+05 +/-  0.00e+00  <none>
+
+Running Minos for POI 
+Run Minos in  Real time 0:00:00, CP time 0.030
+
+[#1] INFO:Eval -- RooRealVar::setRange(r) new range named 'err68' created with bounds [0.783113,1.05756]
+
+  RooFitResult: minimized FCN value: -0.0037782, estimated distance to minimum: 4.25947e-05
+                covariance matrix quality: Not calculated at all
+                Status : MINIMIZE=0 MINIMIZE=0 HESSE=300 
+
+    Constant Parameter    Value     
+  --------------------  ------------
+         lumi_13TeV_In    0.0000e+00
+  n_exp_binWStest_2017_proc_bkg_mass    1.0000e+00
+
+    Floating Parameter  InitialValue    FinalValue (+HiError,-LoError)    GblCorr.
+  --------------------  ------------  ----------------------------------  --------
+                    MH    1.2500e+02    1.2611e+02         +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_bern5_p0    5.0331e-01    4.9841e-01         +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_bern5_p1    5.7349e-01    5.5172e-01         +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_bern5_p2    2.5812e-01    2.9906e-01         +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_bern5_p3    3.5093e-01    3.3742e-01         +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_bern5_p4    2.4884e-01    2.5102e-01         +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_exp3_f1    2.7901e-01    2.7901e-01         +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_exp3_p1   -6.7945e-02   -6.7945e-02         +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_exp3_p2   -2.6491e-02   -2.6491e-02         +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_lau1_l1    4.0963e-01    4.0963e-01         +/-  0.00e+00  <none>
+  env_pdf_0_2017_13TeV_pow1_p1   -4.5769e+00   -4.5769e+00         +/-  0.00e+00  <none>
+            lumi_13TeV    0.0000e+00   -4.4259e-03         +/-  0.00e+00  <none>
+                     r    1.0000e+00    9.1936e-01 (+1.38e-01,-1.36e-01)  <none>
+  shapeBkg_bkg_mass_WStest_2017__norm    3.1871e+05    3.1717e+05         +/-  0.00e+00  <none>
+
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_binWStest_2017) directly selected PDF components: (shapeSig_ggH_2017_hgg_WStest_2017,shapeSig_ggH_2017_hgg_WStest_2017__norm,shapeSig_qqH_2017_hgg_WStest_2017,shapeSig_qqH_2017_hgg_WStest_2017__norm,shapeSig_vH_2017_hgg_WStest_2017,shapeSig_vH_2017_hgg_WStest_2017__norm,shapeSig_ttH_2017_hgg_WStest_2017,shapeSig_ttH_2017_hgg_WStest_2017__norm)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_binWStest_2017) indirectly selected PDF components: (gaus_g1_GG2H_2017_WStest_13TeV,mean_g1_GG2H_2017_WStest_13TeV,dm_g1_GG2H_2017_WStest_13TeV,sigma_g1_GG2H_2017_WStest_13TeV,sigma_fit_g1_GG2H_2017_WStest_13TeV,gaus_g2_GG2H_2017_WStest_13TeV,mean_g2_GG2H_2017_WStest_13TeV,dm_g2_GG2H_2017_WStest_13TeV,sigma_g2_GG2H_2017_WStest_13TeV,sigma_fit_g2_GG2H_2017_WStest_13TeV,gaus_g0_GG2H_2017_WStest_13TeV,mean_g0_GG2H_2017_WStest_13TeV,dm_g0_GG2H_2017_WStest_13TeV,sigma_g0_GG2H_2017_WStest_13TeV,sigma_fit_g0_GG2H_2017_WStest_13TeV,frac_g0_GG2H_2017_WStest_13TeV,hggpdfsmrel_GG2H_2017_WStest_13TeV_recursive_fraction_gaus_g1_GG2H_2017_WStest_13TeV,frac_g1_GG2H_2017_WStest_13TeV,hggpdfsmrel_GG2H_2017_WStest_13TeV_recursive_fraction_gaus_g2_GG2H_2017_WStest_13TeV,frac_g2_GG2H_2017_WStest_13TeV,gaus_g3_GG2H_2017_WStest_13TeV,mean_g3_GG2H_2017_WStest_13TeV,dm_g3_GG2H_2017_WStest_13TeV,sigma_g3_GG2H_2017_WStest_13TeV,sigma_fit_g3_GG2H_2017_WStest_13TeV,hggpdfsmrel_GG2H_2017_WStest_13TeV_recursive_fraction_gaus_g3_GG2H_2017_WStest_13TeV,fxs_GG2H_13TeV,fea_GG2H_2017_WStest_13TeV,rate_GG2H_2017_WStest_13TeV,fbr_13TeV,gaus_g0_VBF_2017_WStest_13TeV,mean_g0_VBF_2017_WStest_13TeV,dm_g0_VBF_2017_WStest_13TeV,sigma_g0_VBF_2017_WStest_13TeV,sigma_fit_g0_VBF_2017_WStest_13TeV,gaus_g1_VBF_2017_WStest_13TeV,mean_g1_VBF_2017_WStest_13TeV,dm_g1_VBF_2017_WStest_13TeV,sigma_g1_VBF_2017_WStest_13TeV,sigma_fit_g1_VBF_2017_WStest_13TeV,frac_g0_VBF_2017_WStest_13TeV,hggpdfsmrel_VBF_2017_WStest_13TeV_recursive_fraction_gaus_g1_VBF_2017_WStest_13TeV,fxs_VBF_13TeV,fea_VBF_2017_WStest_13TeV,rate_VBF_2017_WStest_13TeV,gaus_g1_VH_2017_WStest_13TeV,mean_g1_VH_2017_WStest_13TeV,dm_g1_VH_2017_WStest_13TeV,sigma_g1_VH_2017_WStest_13TeV,sigma_fit_g1_VH_2017_WStest_13TeV,gaus_g2_VH_2017_WStest_13TeV,mean_g2_VH_2017_WStest_13TeV,dm_g2_VH_2017_WStest_13TeV,sigma_g2_VH_2017_WStest_13TeV,sigma_fit_g2_VH_2017_WStest_13TeV,gaus_g0_VH_2017_WStest_13TeV,mean_g0_VH_2017_WStest_13TeV,dm_g0_VH_2017_WStest_13TeV,sigma_g0_VH_2017_WStest_13TeV,sigma_fit_g0_VH_2017_WStest_13TeV,frac_g0_VH_2017_WStest_13TeV,hggpdfsmrel_VH_2017_WStest_13TeV_recursive_fraction_gaus_g1_VH_2017_WStest_13TeV,frac_g1_VH_2017_WStest_13TeV,hggpdfsmrel_VH_2017_WStest_13TeV_recursive_fraction_gaus_g2_VH_2017_WStest_13TeV,fxs_VH_13TeV,fea_VH_2017_WStest_13TeV,rate_VH_2017_WStest_13TeV,gaus_g0_TTH_2017_WStest_13TeV,mean_g0_TTH_2017_WStest_13TeV,dm_g0_TTH_2017_WStest_13TeV,sigma_g0_TTH_2017_WStest_13TeV,sigma_fit_g0_TTH_2017_WStest_13TeV,gaus_g2_TTH_2017_WStest_13TeV,mean_g2_TTH_2017_WStest_13TeV,dm_g2_TTH_2017_WStest_13TeV,sigma_g2_TTH_2017_WStest_13TeV,sigma_fit_g2_TTH_2017_WStest_13TeV,frac_g0_TTH_2017_WStest_13TeV,gaus_g1_TTH_2017_WStest_13TeV,mean_g1_TTH_2017_WStest_13TeV,dm_g1_TTH_2017_WStest_13TeV,sigma_g1_TTH_2017_WStest_13TeV,sigma_fit_g1_TTH_2017_WStest_13TeV,hggpdfsmrel_TTH_2017_WStest_13TeV_recursive_fraction_gaus_g1_TTH_2017_WStest_13TeV,frac_g1_TTH_2017_WStest_13TeV,hggpdfsmrel_TTH_2017_WStest_13TeV_recursive_fraction_gaus_g2_TTH_2017_WStest_13TeV,frac_g2_TTH_2017_WStest_13TeV,gaus_g3_TTH_2017_WStest_13TeV,mean_g3_TTH_2017_WStest_13TeV,dm_g3_TTH_2017_WStest_13TeV,sigma_g3_TTH_2017_WStest_13TeV,sigma_fit_g3_TTH_2017_WStest_13TeV,hggpdfsmrel_TTH_2017_WStest_13TeV_recursive_fraction_gaus_g3_TTH_2017_WStest_13TeV,frac_g3_TTH_2017_WStest_13TeV,gaus_g4_TTH_2017_WStest_13TeV,mean_g4_TTH_2017_WStest_13TeV,dm_g4_TTH_2017_WStest_13TeV,sigma_g4_TTH_2017_WStest_13TeV,sigma_fit_g4_TTH_2017_WStest_13TeV,hggpdfsmrel_TTH_2017_WStest_13TeV_recursive_fraction_gaus_g4_TTH_2017_WStest_13TeV,fxs_TTH_13TeV,fea_TTH_2017_WStest_13TeV,rate_TTH_2017_WStest_13TeV,pdf_binWStest_2017_nuis,n_exp_final_binWStest_2017_proc_ggH_2017_hgg,n_exp_final_binWStest_2017_proc_qqH_2017_hgg,n_exp_final_binWStest_2017_proc_vH_2017_hgg,n_exp_final_binWStest_2017_proc_ttH_2017_hgg)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_binWStest_2017) directly selected PDF components: (shapeSig_ggH_2017_hgg_WStest_2017,shapeSig_ggH_2017_hgg_WStest_2017__norm,shapeSig_qqH_2017_hgg_WStest_2017,shapeSig_qqH_2017_hgg_WStest_2017__norm,shapeSig_vH_2017_hgg_WStest_2017,shapeSig_vH_2017_hgg_WStest_2017__norm,shapeSig_ttH_2017_hgg_WStest_2017,shapeSig_ttH_2017_hgg_WStest_2017__norm)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_binWStest_2017) indirectly selected PDF components: (gaus_g1_GG2H_2017_WStest_13TeV,mean_g1_GG2H_2017_WStest_13TeV,dm_g1_GG2H_2017_WStest_13TeV,sigma_g1_GG2H_2017_WStest_13TeV,sigma_fit_g1_GG2H_2017_WStest_13TeV,gaus_g2_GG2H_2017_WStest_13TeV,mean_g2_GG2H_2017_WStest_13TeV,dm_g2_GG2H_2017_WStest_13TeV,sigma_g2_GG2H_2017_WStest_13TeV,sigma_fit_g2_GG2H_2017_WStest_13TeV,gaus_g0_GG2H_2017_WStest_13TeV,mean_g0_GG2H_2017_WStest_13TeV,dm_g0_GG2H_2017_WStest_13TeV,sigma_g0_GG2H_2017_WStest_13TeV,sigma_fit_g0_GG2H_2017_WStest_13TeV,frac_g0_GG2H_2017_WStest_13TeV,hggpdfsmrel_GG2H_2017_WStest_13TeV_recursive_fraction_gaus_g1_GG2H_2017_WStest_13TeV,frac_g1_GG2H_2017_WStest_13TeV,hggpdfsmrel_GG2H_2017_WStest_13TeV_recursive_fraction_gaus_g2_GG2H_2017_WStest_13TeV,frac_g2_GG2H_2017_WStest_13TeV,gaus_g3_GG2H_2017_WStest_13TeV,mean_g3_GG2H_2017_WStest_13TeV,dm_g3_GG2H_2017_WStest_13TeV,sigma_g3_GG2H_2017_WStest_13TeV,sigma_fit_g3_GG2H_2017_WStest_13TeV,hggpdfsmrel_GG2H_2017_WStest_13TeV_recursive_fraction_gaus_g3_GG2H_2017_WStest_13TeV,fxs_GG2H_13TeV,fea_GG2H_2017_WStest_13TeV,rate_GG2H_2017_WStest_13TeV,fbr_13TeV,gaus_g0_VBF_2017_WStest_13TeV,mean_g0_VBF_2017_WStest_13TeV,dm_g0_VBF_2017_WStest_13TeV,sigma_g0_VBF_2017_WStest_13TeV,sigma_fit_g0_VBF_2017_WStest_13TeV,gaus_g1_VBF_2017_WStest_13TeV,mean_g1_VBF_2017_WStest_13TeV,dm_g1_VBF_2017_WStest_13TeV,sigma_g1_VBF_2017_WStest_13TeV,sigma_fit_g1_VBF_2017_WStest_13TeV,frac_g0_VBF_2017_WStest_13TeV,hggpdfsmrel_VBF_2017_WStest_13TeV_recursive_fraction_gaus_g1_VBF_2017_WStest_13TeV,fxs_VBF_13TeV,fea_VBF_2017_WStest_13TeV,rate_VBF_2017_WStest_13TeV,gaus_g1_VH_2017_WStest_13TeV,mean_g1_VH_2017_WStest_13TeV,dm_g1_VH_2017_WStest_13TeV,sigma_g1_VH_2017_WStest_13TeV,sigma_fit_g1_VH_2017_WStest_13TeV,gaus_g2_VH_2017_WStest_13TeV,mean_g2_VH_2017_WStest_13TeV,dm_g2_VH_2017_WStest_13TeV,sigma_g2_VH_2017_WStest_13TeV,sigma_fit_g2_VH_2017_WStest_13TeV,gaus_g0_VH_2017_WStest_13TeV,mean_g0_VH_2017_WStest_13TeV,dm_g0_VH_2017_WStest_13TeV,sigma_g0_VH_2017_WStest_13TeV,sigma_fit_g0_VH_2017_WStest_13TeV,frac_g0_VH_2017_WStest_13TeV,hggpdfsmrel_VH_2017_WStest_13TeV_recursive_fraction_gaus_g1_VH_2017_WStest_13TeV,frac_g1_VH_2017_WStest_13TeV,hggpdfsmrel_VH_2017_WStest_13TeV_recursive_fraction_gaus_g2_VH_2017_WStest_13TeV,fxs_VH_13TeV,fea_VH_2017_WStest_13TeV,rate_VH_2017_WStest_13TeV,gaus_g0_TTH_2017_WStest_13TeV,mean_g0_TTH_2017_WStest_13TeV,dm_g0_TTH_2017_WStest_13TeV,sigma_g0_TTH_2017_WStest_13TeV,sigma_fit_g0_TTH_2017_WStest_13TeV,gaus_g2_TTH_2017_WStest_13TeV,mean_g2_TTH_2017_WStest_13TeV,dm_g2_TTH_2017_WStest_13TeV,sigma_g2_TTH_2017_WStest_13TeV,sigma_fit_g2_TTH_2017_WStest_13TeV,frac_g0_TTH_2017_WStest_13TeV,gaus_g1_TTH_2017_WStest_13TeV,mean_g1_TTH_2017_WStest_13TeV,dm_g1_TTH_2017_WStest_13TeV,sigma_g1_TTH_2017_WStest_13TeV,sigma_fit_g1_TTH_2017_WStest_13TeV,hggpdfsmrel_TTH_2017_WStest_13TeV_recursive_fraction_gaus_g1_TTH_2017_WStest_13TeV,frac_g1_TTH_2017_WStest_13TeV,hggpdfsmrel_TTH_2017_WStest_13TeV_recursive_fraction_gaus_g2_TTH_2017_WStest_13TeV,frac_g2_TTH_2017_WStest_13TeV,gaus_g3_TTH_2017_WStest_13TeV,mean_g3_TTH_2017_WStest_13TeV,dm_g3_TTH_2017_WStest_13TeV,sigma_g3_TTH_2017_WStest_13TeV,sigma_fit_g3_TTH_2017_WStest_13TeV,hggpdfsmrel_TTH_2017_WStest_13TeV_recursive_fraction_gaus_g3_TTH_2017_WStest_13TeV,frac_g3_TTH_2017_WStest_13TeV,gaus_g4_TTH_2017_WStest_13TeV,mean_g4_TTH_2017_WStest_13TeV,dm_g4_TTH_2017_WStest_13TeV,sigma_g4_TTH_2017_WStest_13TeV,sigma_fit_g4_TTH_2017_WStest_13TeV,hggpdfsmrel_TTH_2017_WStest_13TeV_recursive_fraction_gaus_g4_TTH_2017_WStest_13TeV,fxs_TTH_13TeV,fea_TTH_2017_WStest_13TeV,rate_TTH_2017_WStest_13TeV,pdf_binWStest_2017_nuis,n_exp_final_binWStest_2017_proc_ggH_2017_hgg,n_exp_final_binWStest_2017_proc_qqH_2017_hgg,n_exp_final_binWStest_2017_proc_vH_2017_hgg,n_exp_final_binWStest_2017_proc_ttH_2017_hgg)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_binWStest_2017) directly selected PDF components: (shapeBkg_bkg_mass_WStest_2017)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_binWStest_2017) indirectly selected PDF components: (env_pdf_0_2017_13TeV_bern5,env_pdf_0_2017_13TeV_bern5_p0_sq,env_pdf_0_2017_13TeV_bern5_p1_sq,env_pdf_0_2017_13TeV_bern5_p2_sq,env_pdf_0_2017_13TeV_bern5_p3_sq,env_pdf_0_2017_13TeV_bern5_p4_sq,env_pdf_0_2017_13TeV_exp3,env_pdf_0_2017_13TeV_exp3_e1,env_pdf_0_2017_13TeV_exp3_e2,env_pdf_0_2017_13TeV_exp3_recursive_fraction_env_pdf_0_2017_13TeV_exp3_e2,env_pdf_0_2017_13TeV_pow1,env_pdf_0_2017_13TeV_pow1_e1,env_pdf_0_2017_13TeV_pow1_recursive_fraction_env_pdf_0_2017_13TeV_pow1_e1,env_pdf_0_2017_13TeV_lau1,env_pdf_0_2017_13TeV_lau1_pow0,env_pdf_0_2017_13TeV_lau1_powl1,env_pdf_0_2017_13TeV_lau1_recursive_fraction_env_pdf_0_2017_13TeV_lau1_powl1,pdf_binWStest_2017_nuis)
+[utils::makePlots] Number of events for pdf in WStest_2017_CMS_hgg_mass, pdf pdf_binWStest_2017 = 318709
+
+ --- FitDiagnostics ---
+Best fit r: 0.919359  -0.136246/+0.138201  (68% CL)
+Done in 0.02 min (cpu), 0.03 min (real)
+Printing Message Summary From ... combine_logger.out
+----------------------------------------------
+Messages of type INFO : 30
+Messages of type DEBUG : 2
+Messages of type ERROR : 2
+----------------------------------------------
+INFO: (function: improveOnce) CascadeMinimizer.cc: 184 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=10
+INFO: (function: improveOnce) CascadeMinimizer.cc: 207 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 212 -- Minimization success! status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 184 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=0.1
+INFO: (function: improveOnce) CascadeMinimizer.cc: 207 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 212 -- Minimization success! status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 184 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=10
+INFO: (function: improveOnce) CascadeMinimizer.cc: 207 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 212 -- Minimization success! status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 184 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=0.1
+INFO: (function: improveOnce) CascadeMinimizer.cc: 207 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 212 -- Minimization success! status=0
+INFO: (function: anyParameterAtBoundaries) utils.cc: 1040 -- Found parameter env_pdf_0_2017_13TeV_exp3_f1 at boundary (within ~1sigma): 0.279014+/-0.37597
+INFO: (function: anyParameterAtBoundaries) utils.cc: 1040 -- Found parameter env_pdf_0_2017_13TeV_exp3_p1 at boundary (within ~1sigma): -0.0679454+/-0.211001
+INFO: (function: anyParameterAtBoundaries) utils.cc: 1040 -- Found parameter env_pdf_0_2017_13TeV_exp3_p2 at boundary (within ~1sigma): -0.0264914+/-0.215467
+INFO: (function: anyParameterAtBoundaries) utils.cc: 1040 -- Found parameter env_pdf_0_2017_13TeV_lau1_l1 at boundary (within ~1sigma): 0.409632+/-0.412327
+INFO: (function: anyParameterAtBoundaries) utils.cc: 1040 -- Found parameter pdfindex_WStest_2017_13TeV at boundary (within ~1sigma): 8.7434e+227+/-0
+INFO: (function: minimize) CascadeMinimizer.cc: 462 -- After fit, some parameters are found at the boundary (within ~1sigma)
+ERROR: (function: runSpecific) [WARNING]: Unable to determine uncertainties on all fit parameters in b-only fit. Have a look at https://cms-analysis.github.io/HiggsAnalysis-CombinedLimit/part3/nonstandard/#fit-parameter-uncertainties for more information.
+DEBUG: (function: runSpecific) FitDiagnostics.cc: 305 -- Fit B-only, status = 300, numBadNLL = 0, covariance quality = 0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 184 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=10
+INFO: (function: improveOnce) CascadeMinimizer.cc: 207 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 212 -- Minimization success! status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 184 -- Minimisation configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=0.1
+INFO: (function: improveOnce) CascadeMinimizer.cc: 207 -- Minimisation finished with status=0
+INFO: (function: improveOnce) CascadeMinimizer.cc: 212 -- Minimization success! status=0
+INFO: (function: anyParameterAtBoundaries) utils.cc: 1040 -- Found parameter env_pdf_0_2017_13TeV_exp3_f1 at boundary (within ~1sigma): 0.279014+/-0.37597
+INFO: (function: anyParameterAtBoundaries) utils.cc: 1040 -- Found parameter env_pdf_0_2017_13TeV_exp3_p1 at boundary (within ~1sigma): -0.0679454+/-0.211001
+INFO: (function: anyParameterAtBoundaries) utils.cc: 1040 -- Found parameter env_pdf_0_2017_13TeV_exp3_p2 at boundary (within ~1sigma): -0.0264914+/-0.215467
+INFO: (function: anyParameterAtBoundaries) utils.cc: 1040 -- Found parameter env_pdf_0_2017_13TeV_lau1_l1 at boundary (within ~1sigma): 0.409632+/-0.412327
+INFO: (function: minimize) CascadeMinimizer.cc: 462 -- After fit, some parameters are found at the boundary (within ~1sigma)
+INFO: (function: doFit) FitterAlgoBase.cc: 343 -- Running Minos for POI r
+ERROR: (function: runSpecific) [WARNING]: Unable to determine uncertainties on all fit parameters in s+b fit. Have a look at https://cms-analysis.github.io/HiggsAnalysis-CombinedLimit/part3/nonstandard/#fit-parameter-uncertainties for more information.
+DEBUG: (function: runSpecific) FitDiagnostics.cc: 414 -- Fit S+B, status = 300, numBadNLL = 0, covariance quality = 0
