@@ -1,0 +1,105 @@
+[
+  {
+    "step": "GEN",
+    "comments": [
+      "ref: https://cmsweb.cern.ch/couchdb/reqmgr_config_cache/7288aa87afc682a7e420d57e0590f269/configFile"
+    ],
+    "SCRAM_ARCH": "slc7_amd64_gcc10",
+    "CMSSW_RELEASE": "CMSSW_12_4_11_patch3",
+    "cmssw_setup_commands": [
+      "mkdir -p Configuration/GenProductions/python",
+      "sed \"s|__GRIDPACK__|^^GRIDPACK_FILEPATH^^|g\" ^^FRAGMENT_FILEPATH^^ > ^^FRAGMENT_FILEPATH_REL_CMSSW^^"
+    ],
+    "cmsDriver": "cmsDriver.py ^^FRAGMENT_FILEPATH_REL_CMSSW^^ --fileout file:GEN.root --mc --eventcontent RAWSIM,LHE --datatier GEN,LHE --conditions 124X_mcRun3_2022_realistic_v12 --beamspot Realistic25ns13p6TeVEarly2022Collision --step LHE,GEN --geometry DB:Extended --era Run3 --no_exec -n ^^NUM_EVENTS^^ --customise Configuration/DataProcessing/Utils.addMonitoring --customise_commands \"process.RandomNumberGeneratorService.externalLHEProducer.initialSeed = 0\\nprocess.source.numberEventsInLuminosityBlock = cms.untracked.uint32(^^NUM_EVENTS^^)\\nprocess.source.firstLuminosityBlock = cms.untracked.uint32(1)\\nprocess.source.firstEvent = cms.untracked.uint32(1)\\n\"",
+    "job_commands": [
+      "cmsRun ${OUTPUT_DIR}/../GEN_configDump.py maxEvents=${NUM_EVENTS} luminosityBlock=${NUM_LUMIBLOCK} lheSeed=-1"
+    ]
+  },
+  {
+    "step": "NANOGEN",
+    "SCRAM_ARCH": "slc7_amd64_gcc10",
+    "CMSSW_RELEASE": "CMSSW_12_6_0_patch1",
+    "cmsDriver": "cmsDriver.py step0 --filein file:GEN.root --fileout file:NANOGEN.root --step NANOGEN --eventcontent NANOAODGEN --datatier NANOAODSIM --mc --conditions auto:mc --nThreads ^^NUM_CPUS^^ --customise Configuration/DataProcessing/Utils.addMonitoring --customise_commands \"process.add_(cms.Service('InitRootHandlers', EnableIMT = cms.untracked.bool(False)))\\n\\nprocess.genWeightsTable.preferredPDFs = cms.VPSet(cms.PSet(name = cms.string('NNPDF31_nnlo_as_0118_nf_4_mc_hessian'), lhaid = cms.uint32(325500)), cms.PSet(name = cms.string('NNPDF31_nnlo_as_0118_nf_4'), lhaid = cms.uint32(320900)), cms.PSet(name = cms.string('NNPDF31_nlo_as_0118_nf_4'), lhaid = cms.uint32(320500)), cms.PSet(name = cms.string('CT14nnlo_NF4'), lhaid = cms.uint32(13091)), cms.PSet(name = cms.string('CT14nlo_NF4'), lhaid = cms.uint32(13191)))\\n\" --no_exec -n ^^NUM_EVENTS^^",
+    "job_commands": [
+      "cmsRun ${OUTPUT_DIR}/../NANOGEN_configDump.py maxEvents=${NUM_EVENTS}"
+    ]
+  },
+  {
+    "step": "SIM",
+    "comments": [
+      "ref: https://cms-pdmv.cern.ch/mcm/public/restapi/requests/get_setup/HIG-RunIISummer19UL18SIM-00282"
+    ],
+      "SCRAM_ARCH": "slc7_amd64_gcc10",
+      "CMSSW_RELEASE": "CMSSW_12_4_11_patch3",
+      "cmsDriver": "cmsDriver.py step1 --filein file:GEN.root --fileout file:SIM.root --mc --eventcontent RAWSIM --runUnscheduled --datatier GEN-SIM --conditions 124X_mcRun3_2022_realistic_v12 --beamspot Realistic25ns13p6TeVEarly2022Collision --step SIM --nThreads ^^NUM_CPUS^^ --geometry DB:Extended --era Run3 --customise Configuration/DataProcessing/Utils.addMonitoring --no_exec -n ^^NUM_EVENTS^^",
+    "job_commands": [
+      "cmsRun ${OUTPUT_DIR}/../SIM_configDump.py maxEvents=${NUM_EVENTS}",
+      "#rm -f GEN.root GEN_inLHE.root"
+    ]
+  },
+  {
+    "step": "DIGI",
+    "comments": [
+      "ref: https://cmsweb.cern.ch/couchdb/reqmgr_config_cache/0a88954f11ee1a04b12f17054203981e/configFile [modified to use standard mixing instead of pre-mixing]"
+    ],
+    "SCRAM_ARCH": "slc7_amd64_gcc10",
+    "CMSSW_RELEASE": "CMSSW_12_4_11_patch3",
+    "cmsDriver": "cmsDriver.py step1 --filein file:SIM.root --fileout file:DIGI.root --pileup_input dbs:/Neutrino_E-10_gun/Run3Summer21PrePremix-Summer22_124X_mcRun3_2022_realistic_v11-v2/PREMIX --era Run3 --mc --eventcontent RAWSIM --runUnscheduled --datatier GEN-SIM-DIGI --conditions 124X_mcRun3_2022_realistic_v12 --step DIGI,DATAMIX,L1,DIGI2RAW --nThreads ^^NUM_CPUS^^ --geometry DB:Extended --customise Configuration/DataProcessing/Utils.addMonitoring --no_exec -n ^^NUM_EVENTS^^ --procModifiers premix_stage2,siPixelQualityRawToDigi",
+    "job_commands": [
+      "cmsRun ${OUTPUT_DIR}/../DIGI_configDump.py maxEvents=${NUM_EVENTS}",
+      "rm -f SIM.root"
+    ]
+  },
+  {
+    "step": "HLT",
+    "comments": [
+      "ref: https://cmsweb.cern.ch/couchdb/reqmgr_config_cache/0a88954f11ee1a04b12f17054203981e/configFile"
+    ],
+    "SCRAM_ARCH": "slc7_amd64_gcc10",
+    "CMSSW_RELEASE": "CMSSW_12_4_11_patch3",
+    "cmsDriver": "cmsDriver.py step1 --filein file:DIGI.root --fileout file:HLT.root --mc --eventcontent RAWSIM --datatier GEN-SIM-RAW --conditions 124X_mcRun3_2022_realistic_v12 --customise_commands \"process.source.bypassVersionCheck = cms.untracked.bool(True)\\n\" --step HLT:2022v12 --nThreads ^^NUM_CPUS^^ --geometry DB:Extended --era Run3 --customise Configuration/DataProcessing/Utils.addMonitoring --no_exec -n ^^NUM_EVENTS^^ --procModifiers premix_stage2,siPixelQualityRawToDigi",
+    "job_commands": [
+      "cmsRun ${OUTPUT_DIR}/../HLT_configDump.py maxEvents=${NUM_EVENTS}",
+      "rm -f DIGI.root"
+    ]
+  },
+  {
+    "step": "RECO",
+    "comments": [
+      "ref: https://cmsweb.cern.ch/couchdb/reqmgr_config_cache/0a88954f11ee1a04b12f170542039be5/configFile"
+    ],
+    "SCRAM_ARCH": "slc7_amd64_gcc10",
+    "CMSSW_RELEASE": "CMSSW_12_4_11_patch3",
+    "cmsDriver": "cmsDriver.py step1 --filein file:HLT.root --fileout file:RECO.root --mc --eventcontent AODSIM --runUnscheduled --datatier AODSIM --conditions 124X_mcRun3_2022_realistic_v12 --step RAW2DIGI,L1Reco,RECO,RECOSIM --nThreads ^^NUM_CPUS^^ --geometry DB:Extended --era Run3 --customise Configuration/DataProcessing/Utils.addMonitoring --no_exec -n ^^NUM_EVENTS^^",
+    "job_commands": [
+      "cmsRun ${OUTPUT_DIR}/../RECO_configDump.py maxEvents=${NUM_EVENTS}",
+      "rm -f HLT.root"
+    ]
+  },
+  {
+    "step": "MINIAOD",
+    "comments": [
+      "ref: https://cmsweb.cern.ch/couchdb/reqmgr_config_cache/0a88954f11ee1a04b12f17054203a6b7/configFile"
+    ],
+    "SCRAM_ARCH": "slc7_amd64_gcc10",
+    "CMSSW_RELEASE": "CMSSW_12_4_11_patch3",
+    "cmsDriver": "cmsDriver.py step1 --filein file:RECO.root --fileout file:MINIAOD.root --mc --eventcontent MINIAODSIM --runUnscheduled --datatier MINIAODSIM --conditions 124X_mcRun3_2022_realistic_v12 --step PAT --nThreads ^^NUM_CPUS^^ --geometry DB:Extended --era Run3 --customise Configuration/DataProcessing/Utils.addMonitoring --no_exec -n ^^NUM_EVENTS^^",
+    "job_commands": [
+      "cmsRun ${OUTPUT_DIR}/../MINIAOD_configDump.py maxEvents=${NUM_EVENTS}",
+      "#rm -f RECO.root"
+    ]
+  },
+  {
+    "step": "NANOAOD",
+    "comments": [
+      "ref: https://cmsweb.cern.ch/couchdb/reqmgr_config_cache/471da6a30cb790c46b6544d640ca0bcd/configFile"
+    ],
+    "SCRAM_ARCH": "slc7_amd64_gcc10",
+    "CMSSW_RELEASE": "CMSSW_12_6_0_patch1",
+    "cmsDriver": "cmsDriver.py step1 --filein file:MINIAOD.root --fileout file:NANOAOD.root --step NANO --eventcontent NANOEDMAODSIM --datatier NANOAODSIM --mc --conditions 126X_mcRun3_2022_realistic_v2 --nThreads ^^NUM_CPUS^^ --era Run3,run3_nanoAOD_124  --customise Configuration/DataProcessing/Utils.addMonitoring --scenario pp --customise_commands \"process.add_(cms.Service('InitRootHandlers', EnableIMT = cms.untracked.bool(False)))\\n\\nprocess.genWeightsTable.preferredPDFs = cms.VPSet(cms.PSet(name = cms.string('NNPDF31_nnlo_as_0118_nf_4_mc_hessian'), lhaid = cms.uint32(325500)), cms.PSet(name = cms.string('NNPDF31_nnlo_as_0118_nf_4'), lhaid = cms.uint32(320900)), cms.PSet(name = cms.string('NNPDF31_nlo_as_0118_nf_4'), lhaid = cms.uint32(320500)), cms.PSet(name = cms.string('CT14nnlo_NF4'), lhaid = cms.uint32(13091)), cms.PSet(name = cms.string('CT14nlo_NF4'), lhaid = cms.uint32(13191)))\\n\" --no_exec -n ^^NUM_EVENTS^^",
+    "job_commands": [
+      "cmsRun ${OUTPUT_DIR}/../NANOAOD_configDump.py maxEvents=${NUM_EVENTS}",
+      "#rm -f MINIAOD.root"
+    ]
+  }
+]
