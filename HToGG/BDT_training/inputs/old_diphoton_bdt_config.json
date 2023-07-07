@@ -1,0 +1,27 @@
+{
+    "features": [
+        "sigmaMrv", "sigmaMwv", "vtxProb", "PV_score", "PV_chi2", "nPV", "dZ_1",  "dZ_2",  "dZ_3", 
+        "LeadPhoton_pt_mgg", "LeadPhoton_eta", "LeadPhoton_mvaID", "SubleadPhoton_pt_mgg", "SubleadPhoton_eta", "SubleadPhoton_mvaID",
+        "Diphoton_cos_dPhi"
+    ],
+    "signal": [
+        "ttH_M125", "ggH_M125", "VH_M125", "VBFH_M125"
+    ],
+    "background": [
+       "QCD", "GJets_HT-40To100", "GJets_HT-100To200", "GJets_HT-200To400", "GJets_HT-400To600", "GJets_HT-600ToInf" ,"DiPhoton_M40_80" ,"DiPhoton_MGG-80-inf"       
+    ],
+    "mva":{
+        "param": {
+            "eta": 0.05,
+            "max_depth":4,
+            "subsample": 1,
+            "colsample_bytree": 1,
+            "min_child_weight": 25,
+            "gamma": 100,
+            "objective": "binary:logistic",
+            "eval_metric": "auc"
+        },
+        "n_trees": 2000,
+        "early_stopping_rounds": 20
+    }
+}

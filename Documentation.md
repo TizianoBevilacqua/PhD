@@ -59,6 +59,12 @@ To dump information about what is called during execution with cmsRun
 open('tmptmp.py', 'w').write(process.dumpPython())
 ```
 
+to use cmsenv from sshell script:
+```
+eval `scram runtime -sh`
+```
+
+
 ### CRAB 
 After setting up the CMSSW environment, it is possible to use CRAB from any directory. One can check that the crab command is indeed available and the version being used by executing: `which crab`
 Check if you can write to the `/store/user/` area:
@@ -79,6 +85,7 @@ dataset file=/store/relval/CMSSW_10_6_14/RelValZMM_13/MINIAODSIM/106X_mc2017_rea
 from command line:
 ```
 dasgoclient --query="dataset=/DoubleMuon/Run2018A-12Nov2019_UL2018-v2/MINIAOD" --format=plain
+dasgoclient -query="run dataset=/Muon/Run2022D-SiPixelCalSingleMuonTight-PromptReco-v2/ALCARECO" # to check for run numbers in a dataset 
 ```
 * [CMS OMS](https://cmsoms.cern.ch/cms/index/index) find informations on runs 
 * [CMS McM](https://cms-pdmv.cern.ch/mcm/) find mc samples 
@@ -300,3 +307,145 @@ process.tightPatJetsPFlow = cms.EDFilter("PFJetIDSelectionFunctorFilter",
                                          )
 ```                                         
 It is also possible to use the PFJetIDSelectionFunctor C++ selector (actually, either in C++ or python), but this was primarily developed in the days before PF when applying CaloJet ID was not possible very easily. Nevertheless, the functionality of more complicated selection still exists for PFJets, but is almost never used other than the few lines above. If you would still like to use that C++ class, it is documented as an example here.
+
+# BASH
+
+## Find file in filesystem
+
+`find` command
+```
+find [path where you want to start the search] -name [name (wildcard are accepted)] -type [file: f, dir: d]
+```
+a lot of other nice options are available:
+```
+-exec CMD: The file being searched which meets the above criteria and returns 0 for as its exit status for successful command execution.
+-ok CMD : It works same as -exec except the user is prompted first.
+-inum N : Search for files with inode number ‘N’.
+-links N : Search for files with ‘N’ links.
+-name demo : Search for files that are specified by ‘demo’.
+-newer file : Search for files that were modified/created after ‘file’.
+-perm octal : Search for the file if permission is ‘octal’.
+-print : Display the path name of the files found by using the rest of the criteria.
+-empty : Search for empty files and directories.
+-size +N/-N : Search for files of ‘N’ blocks; ‘N’ followed by ‘c’can be used to measure size in characters; ‘+N’ means size > ‘N’ blocks and ‘-N’ means size < ‘N’ blocks.
+-user name : Search for files owned by user name or ID ‘name’.
+\(expr \) : True if ‘expr’ is true; used for grouping criteria combined with OR or AND.
+! expr : True if ‘expr’ is false.
+```
+working example 
+```
+find /pnfs/psi.ch/cms/trivcat/store/user/bevila_t/test2/phys/xpluscharm/pixel2022/ntuples/Run2022G/ -name '*.root' -type f
+```
+
+## `sort` command
+Sort content of file:
+```
+sort filename
+
+options:
+-n : numerical order,
+-nr: reverse numerical order,
+-o [filename]: redirect output to new file,
+-k [#numer of the column]: order according to the selected column of the file
+-c: check if the file is already sorted
+-u: sort and remove duplicate
+etc etc
+```
+
+## if statements c++
+
+here is also a short-hand if else, which is known as the ternary operator because it consists of three operands. It can be used to replace multiple lines of code with a single line. It is often used to replace simple if else statements:
+```
+Syntax
+variable = (condition) ? expressionTrue : expressionFalse;
+```
+
+## squeue with longer jobname
+
+squeue -o "%.10i %.9P %.48j %.8u %.8T %.10M %.9l %.6D %R" -u bevila_t
+
+## CERN personal website 
+
+https://tiziano-bevilacqua.web.cern.ch/
+
+## Jupyter notebooks 
+```
+ssh -L 8765:localhost:8765 -Y bevila_t@t3ui03.psi.ch
+```
+then go to the proper CMSSW area and do 
+```
+nohup jupyter notebook --no-browser --port=8765 &
+```
+## PixelNtupliser get run numbers from logs
+
+```
+grep cmsRun *.out | sed "s;_; ;g" | grep run3 | awk '{print $2, $(NF-3)}'
+```
+
+Suvankar:
+In the Ntuple making code, if names of triggers are passed, the ntuplizer checks if those triggers have fired and saves the info in the zerobias branch
+if no trigger names are passed - the default triggers which are checked are ""HLT_ZeroBias_v",  "HLT_Random_v"
+
+## Pixel EOS common area
+
+`/eos/cms/store/group/dpg_tracker_pixel/comm_pixel/PU_MCs`
+
+## Chanhge color in the terminal
+
+Color in the terminal are stored in the `LS_COLOR` variable the syntax is `type of file =(are) number (text type); number (color); number (background?) :(and)` an example: `*.py=0;36:*.sh=4;35:`
+
+* Some color codes: Black: 30, Blue: 34, Cyan: 36, Green: 32, Purple: 35, Red: 31, White: 37, Yellow: 33
+* Some text types: Normal Text: 0, Bold or Light Text: 1 (It depends on the terminal emulator.), Dim Text: 2, Underlined Text: 4, Blinking Text: 5 (This does not work in most terminal emulators.), Reversed Text: 7 (This inverts the foreground and background colors, so you’ll see black text on a white background if the current text is white text on a black background.), Hidden Text: 8
+
+## Luminosity measurement talk 
+
+https://docs.google.com/presentation/d/1f6Dq2tx1jWPgKRXDAPq_eBFhQzI2JZ4mp5X2eSIrXqU/
+
+## To know path of the current running file in python 
+
+```
+import inspect
+print (inspect.getfile(inspect.currentframe())) # script filename (usually with path)
+print (os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))) # script directory
+```
+
+## Renaming file using terminal
+
+syntax
+```
+rename [options] expression replacement file...
+
+Options:
+ -v, --verbose    explain what is being done
+ -s, --symlink    act on symlink target
+
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+```
+
+example 
+```
+rename -v .root _2017.root *.root
+```
+
+## Git stuff
+
+```
+ git remote add upstream ssh://git@gitlab.cern.ch:7999/HiggsDNA-project/HiggsDNA.git
+ git checkout -b tmp upstream/master
+ git fetch upstream
+ git branch -D master 
+ git checkout -b master upstream/master
+ git branch -d tmp
+ git push -f origin master
+ git checkout -b private_nano_development upstream/private_nano_development
+ git push -u origin private_nano_development
+```
+
+One has to be careful to not push to the upstream afterwards
+```
+git remote rm upstream
+```
+
+
+
