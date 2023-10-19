@@ -25,5 +25,7 @@ python3 my_batch_sub_script.py --input configs/2017/QCD_2017_v11.json --create
 As it is now the `slurm_template.sh` file is the job that will be launched and will create a `CMSSW_12_6_0_patch1` environment, merge my private branch `TizianoBevilacqua:devel-nAOD-v11` to introduce the changes to calculate the HoE of the Photons correctly and then run the NANO step with v11.
 
 The Jobs in this particular config file split the miniAOD samples in 5 files at a time, with running times of 6-12 hours.
+
 The log files are stored in a directory under `/work/username/test/.slurm`, if you don't have it they might not be created.
+
 If you're not me you might want to change the output directory in the config files, in principle it's ok if you put them there but I don't know about writing permissions.
