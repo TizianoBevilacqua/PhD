@@ -74,14 +74,12 @@ def EXE(cmd, suspend=True, verbose=False, dry_run=False):
 usage = "Usage: python %prog filelists [options]"
 parser = OptionParser(usage=usage)
 parser.add_option("--slurm_file",  dest="job_template",type="string",       default="slurm_template.sh", help="Slurm job template")
-parser.add_option("--input",       dest="input",       type="string",       default="",    help="input filelist")
-parser.add_option("--create",      dest="create",      action="store_true", default=False, help="create taskdir under PHM_PHASE1_out/ and prepare submission scripts, it divide the input filelist (provided with --input) according to the number of file for each job (specified with --nfile)")
+parser.add_option("--input",       dest="input",       type="string",       default="",    help="input configuration file")
+parser.add_option("--create",      dest="create",      action="store_true", default=False, help="create taskdir and prepare submission scripts, it divide the input filelist (provided from the dataset within the config file) according to the number of file for each job (specified with --nfile)")
 parser.add_option("--submit",      dest="submit",      action="store_true", default=False, help="submit jobs from task")
 parser.add_option("--resubmit",    dest="resubmit",    action="store_true", default=False, help="prepare resubmit script with missing jobs")
 parser.add_option("--status",      dest="status",      action="store_true", default=False, help="check status of submitted jobs (R, PD, Completed")
 parser.add_option("--missing",     dest="missing",     action="store_true", default=False, help="look for missing jobs")
-parser.add_option("--hadd",        dest="hadd",        action="store_true", default=False, help="Submit hadding job")
-parser.add_option("--step_two",    dest="step_2",      action="store_true", default=False, help="Option to merge merged outputs")
 parser.add_option("--queue",       dest="queue",       type="string",       default="standard", help="slurm queue to submit jobs to, default: standard, if this needs to be changed one should also have a look at the --time option")
 parser.add_option("--time",        dest="time",        type="string",       default="12:00:00", help="slurm job time limit, default: 12:00:00, make sure not to exceed time limit for each partition (for limits ref to https://wiki.chipp.ch/twiki/bin/view/CmsTier3/SlurmUsage) ")
 parser.add_option("--debug",       dest="debug",       action="store_true", default=False, help="Debug verbosity and skip removing of some intermediate files")
@@ -303,62 +301,3 @@ elif opt.resubmit:
     else:    
         print("No jobs to resubmit")
     print ("-"*80) 
-
-# Submit hadd job for files in the output directory !!! TO BE FIXED, old version, in principle should not be needed !!! FIXME !!!
-elif opt.hadd:
-    print ("-"*80)
-    with open(EXEC_PATH+"/summary.txt") as fl:
-        lines = fl.readlines()
-        for line in lines:
-            fields = re.split(": |\n", line)
-            if fields[0] == "Number of jobs":
-                njobs = int(fields[1])
-            elif fields[0] == "Task name":
-                TASKNAME = fields[1]
-            elif fields[0] == "Output dir":
-                OUT_PATH = fields[1]
-            elif fields[0] == "Program to run":
-                PROG = fields[1]
-
-    os.chdir(EXEC_PATH) 
-    EXEC_PATH = os.getcwd()
-    nfile_pj = 10
-    if opt.step_2:
-        merged_dir = "/merged"
-        merg = "merged | grep "  
-        os.system("rm filelists/merging* ")
-        njobs = int(njobs/10)
-        nfile_pj = 10
-    else:
-        merg = ""  
-        merged_dir = ""   
-    if njobs > 10:
-        os.system("ls -l "+OUT_PATH+"/"+TASKNAME+merged_dir+" | grep "+merg+".root | awk '{ print \"/\" $9}' | sed \"s:^:"+OUT_PATH+"/"+TASKNAME+merged_dir+":\" | sed \"s:/pnfs/psi.ch/cms/trivcat/:root\://cms-xrd-global.cern.ch//:\" > filelists/tmp")
-    else:
-        os.system("ls -l "+OUT_PATH+"/"+TASKNAME+merged_dir+" | grep "+merg+".root | awk '{ print \"/\" $9}' | sed \"s:^:"+OUT_PATH+"/"+TASKNAME+merged_dir+":\" | sed \"s:/pnfs/psi.ch/cms/trivcat/:root\://cms-xrd-global.cern.ch//:\" > filelists/tmp")
-    for i in range(int(njobs/nfile_pj) if int(njobs/nfile_pj) >= 1 else 1):
-        os.system("tail -n "+str(nfile_pj)+" filelists/tmp > filelists/merging_"+str(i))
-        os.system("head -n -"+str(nfile_pj)+" filelists/tmp > tmptmp")
-        os.system("mv tmptmp filelists/tmp")
-    os.system("rm filelists/tmp")
-
-    os.system("ls -l filelists | grep merging | grep -v merging_job_list.txt | awk '{ print $NF }' > filelists/merging_job_list.txt")
-                                           #$1              $2      $3      $4     $5       $6
-    #sbatch jobname .out .log slurm.sh jobname(redundant) job_ID filelist outdir program --hadd
-    os.system("cat -n filelists/merging_job_list.txt | awk '{ printf \"%.4d %s\\n\", $1, $2 }' | awk `{ print \"sbatch --job-name="+TASKNAME+"_MERGING_\"$1\" -o /work/%u/test/.slurm/%x_%A_\"$1\".out -e /work/%u/test/.slurm/%x_%A_\"$1\".err slurm_jobscript.sh "+TASKNAME+"_JOBMERGING\"$1\" \"$1\" "+EXEC_PATH+"/filelists/\"$2\" "+OUT_PATH+"/"+TASKNAME+merged_dir+" "+PROG+" --hadd\"}` | sed \"s;*;\';g\" > merging_alljobs.sh")
-    os.system("head -1 merging_alljobs.sh | sed \"s;0001;test;g;\" > merging_test.sh")
-    
-    answ = input(color_dict["green"]+"Do you want to directly submit the jobs to slurm (all jobs or 1 test job)? (y/n/test) \n"+color_dict["end"])
-    if str(answ) == "y":
-        os.system("wc -l merging_alljobs.sh | awk '{print \"submitting \"$1\" jobs from \"$2\" ...\"}'")
-        EXE("sh merging_alljobs.sh")   
-        os.system("wc -l merging_alljobs.sh | awk '{print \"submitted \"$1\" jobs from \"$2\" ...\"}'")
-    elif str(answ) == "test":
-        os.system("wc -l merging_test.sh | awk '{print \"submitting \"$1\" jobs from \"$2\" ...\"}'")
-        EXE("sh merging_test.sh") 
-
-    if not opt.debug:
-        os.system("rm filelists/merging_job_list.txt")
-        #os.system("rm filelists/merging*")
-
-    print ("-"*80)
