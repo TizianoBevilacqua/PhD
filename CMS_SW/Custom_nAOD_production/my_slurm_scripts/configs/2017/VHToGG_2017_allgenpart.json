@@ -1,0 +1,13 @@
+{
+    "taskname": "VHToGG_2017_allgenpart",
+    "job_template": "slurm_template.sh",
+    "sample": "/VHToGG_M125_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM",
+    "nfile": 1,
+    "outdir": "/pnfs/psi.ch/cms/trivcat/store/user/bevila_t/test2/phys/xpluscharm/Out_nAODs/Private_MC_production", 
+    "customise_commands": "",
+    "customise": "PhysicsTools/NanoAOD/V10/nano_cff.nanoAOD_customizeV10",
+    "era": "Run2_2017,run2_nanoAOD_106Xv2",
+    "conditions": "123X_mc2017_realistic_v2",
+    "type": "--mc",
+    "step": "NANOAODSIM"
+}

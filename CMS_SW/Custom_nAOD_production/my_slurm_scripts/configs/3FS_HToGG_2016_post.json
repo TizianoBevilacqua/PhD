@@ -1,0 +1,13 @@
+{
+    "taskname": "3FS_HToGG_2016_post",
+    "job_template": "slurm_template.sh",
+    "sample": "/HPlusCharm_3FS_MuRFScaleDynX0p50_HToGG_M125_TuneCP5_13TeV_amcatnlo_pythia8/RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v2/MINIAODSIM",
+    "nfile": 2,
+    "outdir": "/pnfs/psi.ch/cms/trivcat/store/user/bevila_t/test2/phys/xpluscharm/Out_nAODs/Private_MC_production", 
+    "customise_commands":  "\\\"process.add_(cms.Service(*InitRootHandlers*, EnableIMT = cms.untracked.bool(False)))\\\\n\\\\nprocess.genWeightsTable.preferredPDFs = cms.VPSet(cms.PSet(name = cms.string(*NNPDF31_nnlo_pch_as_0118_nf_3*), lhaid = cms.uint32(321900)), cms.PSet(name = cms.string(*NNPDF31_nlo_pch_as_0118_nf_3*), lhaid = cms.uint32(321300)))\\\\n\\\"",
+    "customise": "PhysicsTools/NanoAOD/V10/nano_cff.nanoAOD_customizeV10",
+    "era": "Run2_2016,run2_nanoAOD_106Xv2",
+    "conditions": "123X_mcRun2_asymptotic_v1",
+    "type": "--mc",
+    "step": "NANOAODSIM"
+}
