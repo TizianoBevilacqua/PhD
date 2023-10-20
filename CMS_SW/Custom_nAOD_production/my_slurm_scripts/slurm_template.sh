@@ -128,7 +128,6 @@ if [ ! -f ${step}_cfg.py ]; then
     fi
 
     chmod 755 ${step}_cfg.py
-    cp ${step}_cfg.py /work/bevila_t
 fi
 
 echo
