@@ -1,7 +1,7 @@
 {
-    "taskname": "GJets_HT-600ToInf_2017_v11",
+    "taskname": "GJets_HT-40To100_2017_v11",
     "job_template": "slurm_template.sh",
-    "sample": "/GJets_HT-600ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM",
+    "sample": "/GJets_HT-40To100_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM",
     "nfile": 5,
     "outdir": "/pnfs/psi.ch/cms/trivcat/store/user/lange_c/4tbevilac/", 
     "customise_commands": "",
