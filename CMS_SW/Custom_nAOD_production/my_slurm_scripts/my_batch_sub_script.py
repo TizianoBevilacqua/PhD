@@ -298,6 +298,17 @@ elif opt.resubmit:
     os.system("rm Seq jobnums output resubmit")
     if len(files) > 0:
         print("\nDone: "+color_dict["blue"]+"resubmit.sh"+color_dict["end"]+" file created at "+color_dict["blue"]+EXEC_PATH+"/resubmit.sh"+color_dict["end"])
+        # Option to submit jobs right away
+        answ = input(color_dict["green"]+"Do you want to directly resubmit the jobs to slurm? (y/n) \n"+color_dict["end"])
+        if str(answ) == "y":
+            return_dir = os.getcwd()
+            os.chdir(EXEC_PATH) 
+            os.system("pwd")
+            os.system("wc -l resubmit.sh | awk '{print \"submitting \"$1\" jobs from \"$2\" ...\"}'")
+            EXE("sh resubmit.sh")   
+            os.system(f"cd {return_dir}")
+        else:
+            os.system("echo 'ok, nothing to be done then.'")
     else:    
         print("No jobs to resubmit")
     print ("-"*80) 
