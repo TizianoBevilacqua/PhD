@@ -8,26 +8,28 @@
 
 ## Sample used up to now:
 ### Signal
-* ttHJetToGG_M125_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2_MINIAODSIM :       Xsec (0.5071)
-* GluGluHToGG_M125_TuneCP5_13TeV-amcatnloFXFX-pythia8_storeWeights_RunIISummer19UL17MiniAODv2-106X_mc2017_realistic_v9-v1_MINIAODSIM : Xsec (48.58)
-* VBFHToGG_M125_TuneCP5_13TeV-amcatnlo-pythia8_storeWeights_RunIISummer19UL17MiniAODv2-106X_mc2017_realistic_v9-v1_MINIAODSIM :        Xsec (3.782) 
-* VHToGG_M125_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2_MINIAODSIM :           Xsec (1.896)
+* `/ttHJetToGG_M125_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM`:        Xsec (0.5071)
+* `/GluGluHToGG_M125_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM`:               Xsec (48.58)
+* `/VBFHToGG_M125_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM`:                      Xsec (3.782) 
+* `/VHToGG_M125_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM`:            Xsec (1.896)
 ### Background
-* DiPhotonJetsBox_M40_80-sherpa/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM :                                    Xsec (303.2)
-* DiPhotonJetsBox_MGG-80toInf_13TeV-sherpa/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/MINIAODSIM :             Xsec (84.4)
-* GJets_HT-40To100_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer19UL17MiniAODv2-106X_mc2017_realistic_v9-v1_MINIAODSIM :               Xsec (23100)
-* GJets_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer19UL17MiniAODv2-4cores5k_106X_mc2017_realistic_v9-v1_MINIAODSIM :     Xsec (9110)
-* GJets_HT-200To400_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer19UL17MiniAODv2-106X_mc2017_realistic_v9-v1_MINIAODSIM :              Xsec (2280)
-* GJets_HT-400To600_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer19UL17MiniAODv2-106X_mc2017_realistic_v9-v1_MINIAODSIM :              Xsec (273)
-* GJets_HT-600ToInf_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer19UL17MiniAODv2-106X_mc2017_realistic_v9-v1_MINIAODSIM :              Xsec (94.5)
-* DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM :                Xsec (6225.42)
-* QCD_Pt-40ToInf_DoubleEMEnriched_MGG-80ToInf_TuneCP5_13TeV-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM: Xsec (118100)
+* `/DiPhotonJetsBox_M40_80-sherpa/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM`:                                     Xsec (303.2)
+* `/DiPhotonJetsBox_MGG-80toInf_13TeV-sherpa/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM`:                          Xsec (84.4)
+* `/GJets_HT-40To100_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM`:                Xsec (18640.0)
+* `/GJets_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL17MiniAODv2-4cores5k_106X_mc2017_realistic_v9-v2/MINIAODSIM`:      Xsec (8631.0)
+* `/GJets_HT-200To400_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM`:               Xsec (2185.0)
+* `/GJets_HT-400To600_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM`:               Xsec (257.7)
+* `/GJets_HT-600ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM`:               Xsec (85.4)
+* `/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM`:                 Xsec (6225.42)
+* `/QCD_Pt-40ToInf_DoubleEMEnriched_MGG-80ToInf_TuneCP5_13TeV-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM`: Xsec (118100.0)
+* `/QCD_Pt-30to40_DoubleEMEnriched_MGG-80toInf_TuneCP5_13TeV-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM`:  Xsec (24810.0)
+* `/QCD_Pt-30toInf_DoubleEMEnriched_MGG-40to80_TuneCP5_13TeV-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM`:  Xsec (241400.0)
 ### Data
-* DoubleEG_Run2017B-UL2017_MiniAODv2-v1_MINIAOD
-* DoubleEG_Run2017C-UL2017_MiniAODv2-v1_MINIAOD
-* DoubleEG_Run2017D-UL2017_MiniAODv2-v1_MINIAOD
-* DoubleEG_Run2017E-UL2017_MiniAODv2-v1_MINIAOD
-* DoubleEG_Run2017F-UL2017_MiniAODv2-v1_MINIAOD
+* `/DoubleEG/Run2017B-UL2017_MiniAODv2-v1/MINIAOD`
+* `/DoubleEG/Run2017C-UL2017_MiniAODv2-v1/MINIAOD`
+* `/DoubleEG/Run2017D-UL2017_MiniAODv2-v1/MINIAOD`
+* `/DoubleEG/Run2017E-UL2017_MiniAODv2-v1/MINIAOD`
+* `/DoubleEG/Run2017F-UL2017_MiniAODv2-v1/MINIAOD`
 
 ## Completely converted samples:
 ### Data 2017:
