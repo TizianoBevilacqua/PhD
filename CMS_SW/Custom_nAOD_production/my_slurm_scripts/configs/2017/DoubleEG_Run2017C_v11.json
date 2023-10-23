@@ -1,0 +1,13 @@
+{
+    "taskname": "DoubleEG_Run2017C_v11",
+    "job_template": "slurm_template.sh",
+    "sample": "/DoubleEG/Run2017C-UL2017_MiniAODv2-v2/MINIAOD",
+    "nfile": 5,
+    "outdir": "/pnfs/psi.ch/cms/trivcat/store/user/lange_c/4tbevilac/", 
+    "customise_commands": "",
+    "customise": "",
+    "era": "Run2_2017,run2_nanoAOD_106Xv2",
+    "conditions": "106X_dataRun2_v37",
+    "type": "--data",
+    "step": "NANOAOD"
+}

@@ -88,7 +88,7 @@ cd src
 
 git cms-addpkg PhysicsTools/NanoAOD
 git cms-addpkg FWCore
-git cms-merge-topic TizianoBevilacqua:devel-nAOD-v11
+git cms-merge-topic TizianoBevilacqua:devel-nAOD-v11_ParticleNET
 
 output="nAOD_"$2".root"
 
