@@ -302,9 +302,8 @@ elif opt.resubmit:
         answ = input(color_dict["green"]+"Do you want to directly resubmit the jobs to slurm? (y/n) \n"+color_dict["end"])
         if str(answ) == "y":
             return_dir = os.getcwd()
-            os.chdir(EXEC_PATH) 
-            os.system("pwd")
-            os.system("wc -l resubmit.sh | awk '{print \"submitting \"$1\" jobs from \"$2\" ...\"}'")
+            os.chdir(EXEC_PATH)
+            os.system("wc -l resubmit.sh | awk '{print \"submitting \"$1\" jobs from \"$2\"...\"}'")
             EXE("sh resubmit.sh")   
             os.system(f"cd {return_dir}")
         else:
