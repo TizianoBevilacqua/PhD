@@ -7,7 +7,7 @@ It has different running option that are summarised inside the file itself:
 * `--create`: create a task directory here and prepare the submission jobs according to what is set in the config file. It also asks if you want to directly submit all the jobs, only one test job or none.
 * `--submit`: self explanatory.
 * `--resubmit`: self explanatory.
-* `--submit`: query to `squeue` to check the status of the jobs, Pendant (PD), Running (R) or Completed.
+* `--status`: query to `squeue` to check the status of the jobs, Pendant (PD), Running (R) or Completed.
 * `--missing`: looks for missing jobs.
 
 there are some other additional options that can be used together with the oter to change some settings of the jobs:
