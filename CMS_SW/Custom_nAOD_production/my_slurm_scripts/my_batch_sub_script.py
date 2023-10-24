@@ -83,6 +83,7 @@ parser.add_option("--missing",     dest="missing",     action="store_true", defa
 parser.add_option("--queue",       dest="queue",       type="string",       default="standard", help="slurm queue to submit jobs to, default: standard, if this needs to be changed one should also have a look at the --time option")
 parser.add_option("--time",        dest="time",        type="string",       default="12:00:00", help="slurm job time limit, default: 12:00:00, make sure not to exceed time limit for each partition (for limits ref to https://wiki.chipp.ch/twiki/bin/view/CmsTier3/SlurmUsage) ")
 parser.add_option("--debug",       dest="debug",       action="store_true", default=False, help="Debug verbosity and skip removing of some intermediate files")
+parser.add_option("--redirector",  dest="redirector",  type="string",       default="root://cms-xrd-global.cern.ch:/", help="Redirector to use when trying to open the files")
 (opt,args) = parser.parse_args()
 
 # --------------------- Proxy check ----------------------
@@ -180,7 +181,7 @@ if opt.create:
     os.system("ls -l filelists | awk '{ print $NF }' | tail -n +2 | head -n -1 > filelists/job_list.txt")
     if metadata["customise_commands"] == "": metadata["customise_commands"] = "skip"
     if metadata["customise"] == "": metadata["customise"] = "skip"
-    os.system("cat -n filelists/job_list.txt | awk '{ printf \"%.4d %s\\n\", $1, $2 }' | awk '{ print \"sbatch --job-name="+metadata["taskname"]+"_\"$1\" -o /work/%u/test/.slurm/%x_%A_\"$1\".out -e /work/%u/test/.slurm/%x_%A_\"$1\".err slurm_jobscript.sh "+EXEC_PATH+"/Cert_294927-306462_13TeV_UL2017_Collisions17_GoldenJSON.json \"$1\" "+EXEC_PATH+"/filelists/\"$2\" "+OUT_PATH+"/"+metadata["taskname"]+" "+metadata["customise"]+" "+metadata["customise_commands"]+" "+metadata["era"]+" "+metadata["conditions"]+" "+metadata["type"]+" "+metadata["step"]+"\"}' > alljobs.sh")
+    os.system("cat -n filelists/job_list.txt | awk '{ printf \"%.4d %s\\n\", $1, $2 }' | awk '{ print \"sbatch --job-name="+metadata["taskname"]+"_\"$1\" -o /work/%u/test/.slurm/%x_%A_\"$1\".out -e /work/%u/test/.slurm/%x_%A_\"$1\".err slurm_jobscript.sh "+EXEC_PATH+"/Cert_294927-306462_13TeV_UL2017_Collisions17_GoldenJSON.json \"$1\" "+EXEC_PATH+"/filelists/\"$2\" "+OUT_PATH+"/"+metadata["taskname"]+" "+metadata["customise"]+" "+metadata["customise_commands"]+" "+metadata["era"]+" "+metadata["conditions"]+" "+metadata["type"]+" "+metadata["step"]+" "+opt.redirector+"\"}' > alljobs.sh")
     os.system("head -1 alljobs.sh | sed \"s;0001;test;g;\" > test.sh")
 
     print ("Jobs prepared at:", color_dict["blue"]+os.getcwd()+color_dict["end"], "as: "+color_dict["blue"]+"alljobs.sh"+color_dict["end"]) 

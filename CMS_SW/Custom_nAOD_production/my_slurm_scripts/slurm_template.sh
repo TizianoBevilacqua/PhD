@@ -69,7 +69,7 @@ era=$7
 conditions=$8
 sample_type=$9
 step=${10}
-
+redirector=${11}
 source /cvmfs/cms.cern.ch/cmsset_default.sh
 
 echo
@@ -115,7 +115,7 @@ if [ ! -f ${step}_cfg.py ]; then
     fi
 
     cp $1 .      #copy the GoodLumi.json list to working directory
-    cat $3 | sed "s;^;root://cms-xrd-global.cern.ch:/;" > tmp.sh
+    cat $3 | sed "s;^;${redirector};" > tmp.sh
     cat tmp.sh
     chmod 755 tmp.sh  
 
