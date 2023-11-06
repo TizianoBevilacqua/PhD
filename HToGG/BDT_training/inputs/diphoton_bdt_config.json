@@ -2,7 +2,7 @@
     "features": [
         "sigmaMrv", "sigmaMwv", "PV_score", "nPV", "PV_chi2",
         "LeadPhoton_pt_mgg", "LeadPhoton_eta", "LeadPhoton_mvaID", "SubleadPhoton_pt_mgg", "SubleadPhoton_eta", 
-        "SubleadPhoton_mvaID", "Diphoton_cos_dPhi", "vtxProb"
+        "SubleadPhoton_mvaID", "Diphoton_cos_dPhi", "vtxProb", "dZ_1", "dZ_2"
     ],
     "signal": [
         "ttH_M125", "ggH_M125", "VH_M125", "VBFH_M125"
@@ -14,17 +14,17 @@
     "mva":{
         "param": {
             "eta": 0.4,
-            "max_depth": 4,
-            "subsample": 0.3,
+            "max_depth": 6,
+            "subsample": 0.4,
             "sampling_method": "uniform",
             "tree_method": "auto",
             "colsample_bytree": 1,
-            "min_child_weight": 25,
+            "min_child_weight": 20,
             "gamma": 100,
             "objective": "binary:logistic",
             "eval_metric": "auc"
         },
         "n_trees": 1000,
-        "early_stopping_rounds": 1
+        "early_stopping_rounds": 2
     }
 }
