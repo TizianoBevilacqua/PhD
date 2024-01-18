@@ -1,6 +1,6 @@
 import FWCore.ParameterSet.Config as cms
 
-# https://cms-pdmv.cern.ch/mcm/public/restapi/requests/get_fragment/HIG-Run3Summer22EEwmLHEGS-00010/0
+# https://cms-pdmv.cern.ch/mcm/public/restapi/requests/get_fragment/HIG-RunIISummer19UL17wmLHEGEN-00105/0
 
 externalLHEProducer = cms.EDProducer('ExternalLHEProducer',
     args = cms.vstring('__GRIDPACK__'),
@@ -11,17 +11,16 @@ externalLHEProducer = cms.EDProducer('ExternalLHEProducer',
 )
 
 from Configuration.Generator.Pythia8CommonSettings_cfi import *
-from Configuration.Generator.MCTunesRun3ECM13p6TeV.PythiaCP5Settings_cfi import * # this is changed
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
 from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
 from Configuration.Generator.Pythia8aMCatNLOSettings_cfi import *
 
-# generator = cms.EDFilter('Pythia8HadronizerFilter',      !!! used to be like this !!!
-generator = cms.EDFilter('Pythia8ConcurrentHadronizerFilter',
+generator = cms.EDFilter('Pythia8HadronizerFilter',
     maxEventsToPrint = cms.untracked.int32(1),
     pythiaPylistVerbosity = cms.untracked.int32(1),
     filterEfficiency = cms.untracked.double(1.0),
     pythiaHepMCVerbosity = cms.untracked.bool(False),
-    comEnergy = cms.double(13600.),
+    comEnergy = cms.double(13000.),
     PythiaParameters = cms.PSet(
         pythia8CommonSettingsBlock,
         pythia8CP5SettingsBlock,
@@ -54,5 +53,3 @@ generator = cms.EDFilter('Pythia8ConcurrentHadronizerFilter',
         )
     )
 )
-
-ProductionFilterSequence = cms.Sequence(generator) # To be added? before it wasn't here
