@@ -1,0 +1,10 @@
+import model loop_sm_MSbar_yb_yc-yc4FS
+
+define p = g u u~ d d~ s s~ c c~
+define j = g u u~ d d~ s s~ c c~
+define lj = g u u~ d d~ s s~
+
+generate g g > h [QCD]
+add process lj lj > h lj [QCD]
+
+output HPlusCharm_4FS_loopind_mlm_MuRFScaleDynX0p50_HToGG_M125_TuneCP5_13TeV_amcatnlo_pythia8 -nojpeg
