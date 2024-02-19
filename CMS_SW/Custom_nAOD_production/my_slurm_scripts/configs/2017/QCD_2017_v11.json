@@ -3,7 +3,7 @@
     "job_template": "slurm_template.sh",
     "sample": "/QCD_Pt-40ToInf_DoubleEMEnriched_MGG-80ToInf_TuneCP5_13TeV-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM",
     "nfile": 5,
-    "outdir": "/pnfs/psi.ch/cms/trivcat/store/user/bevila_t/test2/phys/xpluscharm/Out_nAODs/Private_MC_production", 
+    "outdir": "/pnfs/psi.ch/cms/trivcat/store/user/clange/4tbevilac", 
     "customise_commands": "",
     "customise": "",
     "era": "Run2_2017,run2_nanoAOD_106Xv2",

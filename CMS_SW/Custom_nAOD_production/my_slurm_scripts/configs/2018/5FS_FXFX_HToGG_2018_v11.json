@@ -1,0 +1,13 @@
+{
+    "taskname": "5FS_FXFX_HToGG_2018_v11",
+    "job_template": "slurm_template.sh",
+    "sample": "/HPlusBottom_5FS_MuRFScaleDynX0p50_HToGG_M125_TuneCP5_13TeV_amcatnloFXFX_pythia8/RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2/MINIAODSIM",
+    "nfile": 5,
+    "outdir": "/pnfs/psi.ch/cms/trivcat/store/user/bevila_t/test2/phys/xpluscharm/Out_nAODs/Private_MC_production/v11/", 
+    "customise_commands": "\\\"process.add_(cms.Service(*InitRootHandlers*, EnableIMT = cms.untracked.bool(False)))\\\\n\\\\nprocess.genWeightsTable.preferredPDFs = cms.VPSet(cms.PSet(name = cms.string(*NNPDF31_nnlo_as_0118_mc_hessian_pdfas*), lhaid = cms.uint32(325300)), cms.PSet(name = cms.string(*NNPDF31_nnlo_as0118_mc*), lhaid = cms.uint32(316200)), cms.PSet(name = cms.string(*NNPDF31_nnlo_hessian_pdfas*), lhaid = cms.uint32(306000)))\\\\n\\\"",
+    "customise": "",
+    "era": "Run2_2018,run2_nanoAOD_106Xv2",
+    "conditions": "106X_upgrade2018_realistic_v16_L1v1",
+    "type": "--mc",
+    "step": "NANOAODSIM"
+}

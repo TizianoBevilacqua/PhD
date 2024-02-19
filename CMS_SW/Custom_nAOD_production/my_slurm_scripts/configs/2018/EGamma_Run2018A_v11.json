@@ -1,0 +1,13 @@
+{
+    "taskname": "EGamma_Run2018A_v11",
+    "job_template": "slurm_template.sh",
+    "sample": "/EGamma/Run2018A-UL2018_MiniAODv2-v1/MINIAOD",
+    "nfile": 5,
+    "outdir": "/pnfs/psi.ch/cms/trivcat/store/user/bevila_t/test2/phys/xpluscharm/Out_nAODs/Private_MC_production", 
+    "customise_commands": "",
+    "customise": "",
+    "era": "Run2_2018,run2_nanoAOD_106Xv2",
+    "conditions": "106X_dataRun2_v37",
+    "type": "--data",
+    "step": "NANOAOD"
+}

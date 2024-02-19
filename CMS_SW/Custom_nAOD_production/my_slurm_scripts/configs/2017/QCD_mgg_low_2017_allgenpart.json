@@ -1,8 +1,8 @@
 {
-    "taskname": "DiPhotonJetsBox_MGG-80toInf_2017_allgenpart",
+    "taskname": "QCD_2017_mgg_low",
     "job_template": "slurm_template.sh",
-    "sample": "/DiPhotonJetsBox_MGG-80toInf_13TeV-sherpa/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM",
-    "nfile": 3,
+    "sample": "/QCD_Pt-30toInf_DoubleEMEnriched_MGG-40to80_TuneCP5_13TeV-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM",
+    "nfile": 5,
     "outdir": "/pnfs/psi.ch/cms/trivcat/store/user/bevila_t/test2/phys/xpluscharm/Out_nAODs/Private_MC_production", 
     "customise_commands": "",
     "customise": "PhysicsTools/NanoAOD/V10/nano_cff.nanoAOD_customizeV10",
@@ -11,4 +11,3 @@
     "type": "--mc",
     "step": "NANOAODSIM"
 }
-

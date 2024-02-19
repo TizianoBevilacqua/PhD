@@ -1,0 +1,13 @@
+{
+    "taskname": "ttHJetToGG_2018_v11",
+    "job_template": "slurm_template.sh",
+    "sample": "/ttHJetToGG_M125_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2/MINIAODSIM",
+    "nfile": 3,
+    "outdir": "/pnfs/psi.ch/cms/trivcat/store/user/bevila_t/test2/phys/xpluscharm/Out_nAODs/Private_MC_production/v11/", 
+    "customise_commands": "",
+    "customise": "",
+    "era": "Run2_2018,run2_nanoAOD_106Xv2",
+    "conditions": "106X_upgrade2018_realistic_v16_L1v1",
+    "type": "--mc",
+    "step": "NANOAODSIM"
+}
