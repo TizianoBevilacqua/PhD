@@ -1,0 +1,9 @@
+nanoAOD conversion process for EGamma_Run2018B_v13 summary
+
+Task name: EGamma_Run2018B_v13
+Output dir: /pnfs/psi.ch/cms/trivcat/store/user/bevila_t/test2/phys/xpluscharm/Out_nAODs/Private_MC_production/v13/
+Input filelist: all_input.txt
+Slurm jobs template: slurm_jobscript.sh
+Number of files per job: 5
+Number of jobs: 430
+Total number of input files: 2152
