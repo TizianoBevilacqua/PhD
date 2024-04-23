@@ -8,7 +8,7 @@ The installation procedure consists in the following steps:
   
 **1. Clone this repository**  
 ```  
-git clone ssh://git@gitlab.cern.ch:7999/tbevilac/higgs-dna-tiziano-bevilacqua.git  
+git clone -b HpC_merge ssh://git@gitlab.cern.ch:7999/tbevilac/higgs-dna-tiziano-bevilacqua.git 
 cd HiggsDNA  
 ```  
 **2. Install dependencies**  
