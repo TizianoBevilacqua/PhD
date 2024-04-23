@@ -127,6 +127,12 @@ a full blown option command example to run on the cluster:
 run_analysis.py --json-analysis runnerJSON.json --dump output_test --skipCQR --executor dask/slurm -m 22GB --chunk 100000 -j 1 --scaleout 2 --max-scaleout 80
 ```
 
+### Postprocessing
+
+After running HiggsDNA some postprocessing is helpful to manage the output and normalise it to `XSec x Acceptance`. This can be made wit a set of scripts than can be found in `scripts/postprocessing`.
+Instructions on how to use them are in the [HiggsDNA guide](https://higgs-dna.readthedocs.io/en/latest/output_grooming.html), but there recently was an update that is not documented there yet.
+The only difference is that now the category and systematic `json`s have to be fed to the script "externally".
+
 
 
 
