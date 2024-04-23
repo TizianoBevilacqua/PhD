@@ -134,6 +134,10 @@ brilcalc lumi --normtag /cvmfs/cms-bril.cern.ch/cms-lumi-pog/Normtags/normtag_BR
 ```
 where `begin` and `end` are fill numbers
 
+#### Certification Jsons
+
+file can be downloaded from https://cms-service-dqmdc.web.cern.ch/CAF/certification/
+
 ### FWLite ANALYSIS
 Adding FWLite to CMSSW:
 ```
