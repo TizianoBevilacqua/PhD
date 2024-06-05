@@ -3,7 +3,7 @@
     "job_template": "slurm_template.sh",
     "sample": "/DoubleEG/Run2016G-UL2016_MiniAODv2-v1/MINIAOD",
     "nfile": 3,
-    "outdir": "/pnfs/psi.ch/cms/trivcat/store/user/bevila_t/test2/phys/xpluscharm/Out_nAODs/Private_MC_production/v13", 
+    "outdir": "/pnfs/psi.ch/cms/trivcat/store/user/lange_c/4tbevilac/", 
     "customise_commands": "",
     "customise": "",
     "era": "Run2_2016,run2_nanoAOD_106Xv2",
