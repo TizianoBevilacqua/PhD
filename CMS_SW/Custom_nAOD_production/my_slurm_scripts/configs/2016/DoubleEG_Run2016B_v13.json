@@ -1,0 +1,13 @@
+{
+    "taskname": "DoubleEG_Run2016B_v13",
+    "job_template": "slurm_template.sh",
+    "sample": "/DoubleEG/Run2016B-ver2_HIPM_UL2016_MiniAODv2-v3/MINIAOD",
+    "nfile": 3,
+    "outdir": "/pnfs/psi.ch/cms/trivcat/store/user/bevila_t/test2/phys/xpluscharm/Out_nAODs/Private_MC_production/v13", 
+    "customise_commands": "",
+    "customise": "",
+    "era": "Run2_2016,run2_nanoAOD_106Xv2",
+    "conditions": "106X_dataRun2_v37",
+    "type": "--data",
+    "step": "NANOAOD"
+}

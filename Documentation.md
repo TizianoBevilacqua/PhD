@@ -64,6 +64,18 @@ to use cmsenv from sshell script:
 eval `scram runtime -sh`
 ```
 
+### RUCIO
+
+To request dataset to be moved on `T2_CERN_CH` with autoapproval (granted if you ask for less than 6 months) follow this procedure:
+```
+source /cvmfs/cms.cern.ch/cmsset_default.sh
+source /cvmfs/cms.cern.ch/rucio/setup-py3.sh
+export RUCIO_ACCOUNT=tbevilac
+
+rucio add-rule cms:/DoubleEG/Run2016B-ver2_HIPM_UL2016_MiniAODv2-v3/MINIAOD 1 T2_CH_CERN --lifetime 2592000 --activity "User AutoApprove" --ask-approval --comment "MiniAOD needed for private nAOD production"
+```
+
+more information can be found in the [RUCIO webpage](https://cmsdmops.docs.cern.ch/Users/Subscribe%20data/)
 
 ### CRAB 
 After setting up the CMSSW environment, it is possible to use CRAB from any directory. One can check that the crab command is indeed available and the version being used by executing: `which crab`
@@ -133,6 +145,12 @@ or
 brilcalc lumi --normtag /cvmfs/cms-bril.cern.ch/cms-lumi-pog/Normtags/normtag_BRIL.json -u /fb  --begin 7920 --end  8210 
 ```
 where `begin` and `end` are fill numbers
+
+more info can be found here: https://twiki.cern.ch/twiki/bin/viewauth/CMS/BrilcalcQuickStart
+
+the command to calculate luminosity for PixelOffline stuff is this:
+```
+brilcalc lumi --byls -u /nb --normtag /cvmfs/cms-bril.cern.ch/cms-lumi-pog/Normtags/normtag_BRIL.json --begin "01/01/22 00:00:00" --end "12/31/25 23:59:59" |& tee brilcalc_Run3.log
 
 #### Certification Jsons
 
