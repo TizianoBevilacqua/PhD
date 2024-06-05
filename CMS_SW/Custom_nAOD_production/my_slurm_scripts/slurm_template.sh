@@ -1,7 +1,7 @@
 #!/bin/bash -e
 #SBATCH --account=t3
 #SBATCH --partition=long
-#SBATCH --cpus-per-task=4
+#SBATCH --cpus-per-task=1
 #SBATCH --mem=8000
 #SBATCH --time=23:00:00
 #SBATCH --nodes=1
@@ -62,14 +62,20 @@ NUM_LUMIBLOCK=${SLURM_ARRAY_TASK_ID}
 cd ${TMPDIR}
 
 #ARG parsing
+filelist=$3
 customise=$5
+echo "customise line ${customise}"
 customise_commands=`echo $6 | sed "s;*;';g"`
-echo $customise_commands
+echo "customise command line ${customise_commands}"
 era=$7
 conditions=$8
 sample_type=$9
 step=${10}
 redirector=${11}
+redirector_alt=${12}
+problematic_files=${13}
+echo "redirector ${redirector}"
+echo "alternative redirector ${redirector_alt}"
 source /cvmfs/cms.cern.ch/cmsset_default.sh
 
 echo
@@ -79,55 +85,91 @@ echo "                          Creating JOB ["$2"]"
 echo
 
 #export SCRAM_ARCH=el8_amd64_gcc10
+
+CMSSW_VER="13_3_1_patch1"
+if [ ! -d "/work/${USER}/SLURM_CMSSW/CMSSW_${CMSSW_VER}" ]; then
+  echo "/work/${USER}/SLURM_CMSSW/CMSSW_${CMSSW_VER} does not exist."
+  echo "creating a new release area, this might take a while..."
+  mkdir /work/${USER}/SLURM_CMSSW
+  cd /work/${USER}/SLURM_CMSSW
+
+  scramv1 project CMSSW CMSSW_$CMSSW_VER
+  cd CMSSW_$CMSSW_VER
+  eval `scram runtime -sh`
+  cd src
+
+  git cms-addpkg PhysicsTools/NanoAOD
+  git cms-addpkg FWCore
+  git cms-merge-topic TizianoBevilacqua:devel-naod-v13
+
+  echo
+  echo "--------------------------------------------------------------------------------"
+  echo "                                JOB ["$2"] ready"
+  echo "                                  Compiling..."
+  echo
+
+  scram b -j 4
+else
+  echo "/work/${USER}/SLURM_CMSSW/CMSSW_${CMSSW_VER} already exist."
+  echo "setting up environment here."
+
+  echo
+  echo "--------------------------------------------------------------------------------"
+  echo "                                JOB ["$2"] ready"
+  echo "                                Alredy compiled!"
+  echo
+
+  cd /work/${USER}/SLURM_CMSSW/CMSSW_$CMSSW_VER/src
+  eval `scram runtime -sh`
+
+fi
+
 cd ${TMPDIR}
-
-scramv1 project CMSSW CMSSW_12_6_0_patch1
-cd CMSSW_12_6_0_patch1
-eval `scram runtime -sh`
-cd src
-
-git cms-addpkg PhysicsTools/NanoAOD
-git cms-addpkg FWCore
-git cms-merge-topic TizianoBevilacqua:devel-nAOD-v11_ParticleNET
 
 output="nAOD_"$2".root"
 
-echo
-echo "--------------------------------------------------------------------------------"
-echo "                                JOB ["$2"] ready"
-echo "                                  Compiling..."
-echo
 
-#scramv1 b
-scram b -j 4
 if [ ! -f ${step}_cfg.py ]; then
-    if [ ${customise_commands} == "skip" ]; then
-        if [ ${customise} == "skip" ]; then
+    if [ "${customise_commands}" == "skip" ]; then
+        if [ "${customise}" == "skip" ]; then
             echo cmsDriver.py NANO -s NANO --python_filename ${step}_cfg.py --eventcontent $step --datatier $step --era $era --conditions $conditions  $sample_type --no_exec
             cmsDriver.py NANO -s NANO --python_filename ${step}_cfg.py --eventcontent $step --datatier $step --era $era --conditions $conditions  $sample_type --no_exec -n -1
         else
             echo cmsDriver.py NANO -s NANO --python_filename ${step}_cfg.py --eventcontent $step --datatier $step --era $era --conditions $conditions --customise \"$customise\"  $sample_type --no_exec
             cmsDriver.py NANO -s NANO --python_filename ${step}_cfg.py --eventcontent $step --datatier $step --era $era --conditions $conditions --customise "$customise"  $sample_type --no_exec -n -1
         fi
+    elif [ "${customise}" == "skip" ]; then
+        echo cmsDriver.py NANO -s NANO --python_filename ${step}_cfg.py --eventcontent $step --datatier $step --era $era --conditions $conditions --customise_commands \"$customise_commands\" $sample_type --no_exec
+        cmsDriver.py NANO -s NANO --python_filename ${step}_cfg.py --eventcontent $step --datatier $step --era $era --conditions $conditions --customise_commands "$customise_commands" $sample_type --no_exec -n -1
     else
         echo cmsDriver.py NANO -s NANO --python_filename ${step}_cfg.py --eventcontent $step --datatier $step --era $era --conditions $conditions --customise \"$customise\" --customise_commands \"$customise_commands\" $sample_type --no_exec
         cmsDriver.py NANO -s NANO --python_filename ${step}_cfg.py --eventcontent $step --datatier $step --era $era --conditions $conditions --customise "$customise" --customise_commands "$customise_commands" $sample_type --no_exec -n -1
     fi
 
     cp $1 .      #copy the GoodLumi.json list to working directory
-    cat $3 | sed "s;^;${redirector};" > tmp.sh
+    cat "$filelist" | sed "s;^;${redirector};" > tmp.sh
     cat tmp.sh
     chmod 755 tmp.sh  
 
     files=`cat tmp.sh | grep .root | awk '{print $NF}' | sed "s;^;file:;" | tr "\n" "," | sed "s:,:\", \":g" | sed 's/.\{3\}$//' | sed 's:^:\":' | sed 's:\":\":g'`
     sed -e "s;'file:NANO_PAT.root';${files};g" ${step}_cfg.py > tmp
     if [ ${sample_type} == "--data" ]; then
-        sed -e "s;\# Other statements;\# Other statements \\nimport FWCore.PythonUtilities.LumiList as LumiList\\nprocess.source.lumisToProcess = LumiList.LumiList(filename = 'Cert_294927-306462_13TeV_UL2017_Collisions17_GoldenJSON.json').getVLuminosityBlockRange()\\n;g" tmp > ${step}_cfg.py
+        if [[ "$USERDIR" =~ .*"2017".* ]]; then
+            sed -e "s;\# Other statements;\# Other statements \\nimport FWCore.PythonUtilities.LumiList as LumiList\\nprocess.source.lumisToProcess = LumiList.LumiList(filename = 'Cert_294927-306462_13TeV_UL2017_Collisions17_GoldenJSON.json').getVLuminosityBlockRange()\\n;g" tmp > ${step}_cfg.py
+        elif [[ "$USERDIR" =~ .*"2018".* ]]; then
+            echo "no good lumi selection, this is already implemented in HiggsDNA" 
+            mv tmp ${step}_cfg.py    
+        elif [[ "$USERDIR" =~ .*"2016".* ]]; then
+            echo "no good lumi selection, this is already implemented in HiggsDNA" 
+            mv tmp ${step}_cfg.py    
+        fi  
     else
         mv tmp ${step}_cfg.py
     fi
 
     chmod 755 ${step}_cfg.py
+    cp ${step}_cfg.py /work/${USER}
+    echo "copied ${step}_cfg.py config script to /work/${USER}"
 fi
 
 echo
@@ -165,8 +207,6 @@ echo
 echo "Output: "
 ls -l $USERDIR/$output
 
-cd ../../
-rm -rf CMSSW CMSSW_12_4_8
 cd .. 
 rm -rf ${SLURM_JOB_NAME}_${SLURM_JOB_ID}_${SLURM_ARRAY_TASK_ID}
 
