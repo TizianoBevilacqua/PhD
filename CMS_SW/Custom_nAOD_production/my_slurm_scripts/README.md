@@ -32,11 +32,13 @@ If you're not me you might want to change the output directory in the config fil
 
 A to Z set of commands for PSI Tier3:
 ```
-cmsrel CMSSW_12_6_0_patch1
-cd CMSSW_12_6_0_patch1/src
+cmsrel CMSSW_13_3_1_patch1
+cd CMSSW_13_3_1_patch1/src
 cmsenv
 git clone git@github.com:TizianoBevilacqua/PhD.git
 cd CMS_SW/Custom_nAOD_production/my_slurm_scripts/
-python3 my_batch_sub_script.py --input configs/2017/GJets_HT-400To600_2017_v11.json --create
+python3 my_batch_sub_script.py --input configs/2016/DoubleEG_Run2016F_v13.json --create
+python3 my_batch_sub_script.py --input configs/2016/DoubleEG_Run2016H_v13.json --create
+python3 my_batch_sub_script.py --input configs/2016/DoubleEG_Run2016G_v13.json --create
 ```
 *Remember to change the output dir in the config*
