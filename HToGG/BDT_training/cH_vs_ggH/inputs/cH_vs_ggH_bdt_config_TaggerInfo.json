@@ -1,0 +1,78 @@
+{
+    "features": [
+        "LeadPhoton_pt_mgg","SubleadPhoton_pt_mgg", "Diphoton_cos_dPhi",
+        "LeadPhoton_eta", "SubleadPhoton_eta",
+        "pt", "eta",
+        "n_jets", 
+        "first_jet_pt", "first_jet_mass", "first_jet_DeepFlavour_CvsL", "first_jet_DeepFlavour_CvsB",
+        "DeltaPhi_gamma1_cjet", "DeltaPhi_gamma2_cjet",
+        "dEta_ljh", "dEta_sljh", "Sv_J_MoM", "dR_ljlp", "lj_ptoM",
+        "first_sv_mass", 
+        "first_sv_pt", 
+        "first_SV_ptoM",
+        "vtxProb"
+    ],
+    "features_norm": {
+        "LeadPhoton_pt_mgg": 20.0,
+        "SubleadPhoton_pt_mgg": 6.0,
+        "Diphoton_cos_dPhi": 1.0,
+        "LeadPhoton_eta":  2.5,
+        "SubleadPhoton_eta": 2.5, 
+        "pt": 2200.0,
+        "eta": 10.0,
+        "n_jets": 20.0, 
+        "first_jet_pt": 2200.0,
+        "first_jet_mass":  300.0,
+        "first_jet_DeepFlavour_CvsL":  1.0,
+        "first_jet_DeepFlavour_CvsB":  1.0,
+        "DeltaPhi_gamma1_cjet": 3.142,
+        "DeltaPhi_gamma2_cjet": 3.142,
+        "dEta_ljh": 13.0,
+        "dEta_sljh": 12.0,
+        "Sv_J_MoM": 50000.0,
+        "dR_ljlp": 6.0,
+        "lj_ptoM": 50000.0,
+        "first_sv_mass": 55.0, 
+        "first_sv_pt": 750.0, 
+        "first_SV_ptoM": 1500.0,
+        "vtxProb": 1.0
+    },
+    "signal": [
+        "cH"
+    ],
+    "background": [
+       "ggH"       
+    ],
+    "mva":{
+        "param": {
+            "eta": 0.1,
+            "max_depth": 5,
+            "subsample": 0.5,
+            "sampling_method": "uniform",
+            "tree_method": "auto",
+            "colsample_by_tree": 1,
+            "min_child_weight": 5,
+            "gamma": 6,
+            "objective": "binary:logistic",
+            "eval_metric": "auc",
+            "alpha": "0.1",
+            "lambda": "0.8"
+        },
+        "best_param":{
+            "alpha": 0.2654959418092787, 
+            "gamma": 8,
+            "lambda": 0.7479001865185362,
+            "max_depth": 6,
+            "min_child_weight": 9,
+            "reg_alpha": 0.3035973237157854,
+            "reg_lambda": 0.47346545748965707,
+            "subsample": 0.6817903925904255,
+            "objective": "binary:logistic",
+            "eval_metric": "auc",
+            "sampling_method": "uniform",
+            "tree_method": "auto"
+        },
+        "n_trees": 10000,
+        "early_stopping_rounds": 5
+    }
+}
