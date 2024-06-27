@@ -3,17 +3,21 @@
 # SetUp
 From(Max Galli)
 This is probably not the most conventional way to do this, but it works:
+```
+cmsrel CMSSW_10_6_26
+cd CMSSW_10_6_26
+cmsenv
 
-* cmsrel CMSSW_10_6_26
-* cd CMSSW_10_6_26
-* cmsenv
-* git cms-merge-topic lgray:topic_hgg_nano_on-10_6_26
-* cd src
-* git remote add origin git@github.com:maxgalli/cmssw.git
-* git fetch origin
-* git checkout -t origin/lindsey_hgg_nanoaod
-* git cms-addpkg hgg_nanoaod_tools
-* scramv1 b
+git cms-merge-topic lgray:topic_hgg_nano_on-10_6_26
+cd src
+
+git remote add origin git@github.com:maxgalli/cmssw.git
+git fetch origin
+git checkout -t origin/lindsey_hgg_nanoaod
+git cms-addpkg hgg_nanoaod_tools
+
+scramv1 b
+```
 
 # What To Do
 
