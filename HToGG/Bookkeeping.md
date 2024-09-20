@@ -89,6 +89,19 @@
 * `/QCD_Pt-30to40_DoubleEMEnriched_MGG-80toInf_TuneCP5_13TeV-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM`:  Xsec (24810.0)
 * `/QCD_Pt-30toInf_DoubleEMEnriched_MGG-40to80_TuneCP5_13TeV-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM`:  Xsec (241400.0)
 
+#### 2018
+* `/DiPhotonJetsBox_M40_80-sherpa/RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2/MINIAODSIM`:                                     Xsec (303.2)
+* `/DiPhotonJetsBox_MGG-80toInf_13TeV-sherpa/RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2/MINIAODSIM`:                          Xsec (84.4)
+* `/GJets_HT-40To100_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2/MINIAODSIM`:                Xsec (18640.0)
+* `/GJets_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL18MiniAODv2-4cores5k_106X_upgrade2018_realistic_v16_L1v1-v2/MINIAODSIM`:      Xsec (8631.0)
+* `/GJets_HT-200To400_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2/MINIAODSIM`:               Xsec (2185.0)
+* `/GJets_HT-400To600_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2/MINIAODSIM`:               Xsec (257.7)
+* `/GJets_HT-600ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2/MINIAODSIM`:               Xsec (85.4)
+* `/QCD_Pt-30toInf_DoubleEMEnriched_MGG-40to80_TuneCP5_13TeV-pythia8/RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2/MINIAODSIM`:  Xsec (241400.0)
+* `/QCD_Pt-30to40_DoubleEMEnriched_MGG-80toInf_TuneCP5_13TeV-pythia8/RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v1/MINIAODSIM`:  Xsec (24810.0)
+* `/QCD_Pt-40ToInf_DoubleEMEnriched_MGG-80ToInf_TuneCP5_13TeV-pythia8/RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2/MINIAODSIM`: Xsec (118100.0)
+* `/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2/MINIAODSIM`:                 Xsec (6225.42)
+
 ### Data
 
 #### 2016
@@ -115,7 +128,21 @@
 * `/EGamma/Run2018C-UL2018_MiniAODv2-v1/MINIAOD`
 * `/EGamma/Run2018D-UL2018_MiniAODv2-v2/MINIAOD`
 
+# globalTags
 
+## MC
+
+* 2016 PreVFP:
+* 2016 PostVFP:
+* 2017: `106X_mc2017_realistic_v10`
+* 2018: `106X_upgrade2018_realistic_v16_L1v1`
+
+# ERAs
+
+* 2016 PreVFP:
+* 2016 PostVFP:
+* 2017: `Run2_2017,run2_nanoAOD_106Xv2`
+* 2018: `Run2_2018,run2_nanoAOD_106Xv2`
 
 # Private samples cross section summary:
 
