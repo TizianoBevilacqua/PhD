@@ -12,8 +12,8 @@ Here are some links to the presentations about the training in the Hgg PAG meeti
 ## Training
 
 The training is done using a jupyter notebook: [Training_v4.ipynb](https://github.com/TizianoBevilacqua/PhD/blob/master/HToGG/BDT_training/DiphotonID/Training_v4.ipynb), this files uses some NTuples as input that are created using HiggsDNA applying the Diphoton selection only.
-Some NTuples to run on 2017 can be found here: `/pnfs/psi.ch/cms/trivcat/store/user/bevila_t/test2/phys/xpluscharm/HiggsDNA_output/` (very messy), 
-for 2018 instead they're a bit more tidy here: `/pnfs/psi.ch/cms/trivcat/store/user/bevila_t/test2/phys/xpluscharm/HiggsDNA_output/for_amrutha`.
+Some NTuples to run on 2017 can be found here: `/pnfs/psi.ch/cms/trivcat/store/user/bevila_t/test2/phys/xpluscharm/HiggsDNA_output/DiphotonID_training_2017`, 
+for 2018 instead they're a bit more tidy here: `/pnfs/psi.ch/cms/trivcat/store/user/bevila_t/test2/phys/xpluscharm/HiggsDNA_output/DiphotonID_training_2018`.
 
 There are some auxiliary files in this directory that contain:
 * the DiphotnID BDT conficuration parameters: [diphoton_bdt_config.json](https://github.com/TizianoBevilacqua/PhD/blob/master/HToGG/BDT_training/DiphotonID/diphoton_bdt_config.json)

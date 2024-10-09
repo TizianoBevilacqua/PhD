@@ -22,8 +22,20 @@
         "xs": 0.5071,
         "bf": 0.00227
     },    
+    "tth_M125_2018": {
+        "year": 2018,
+        "name": "tth",
+        "xs": 0.5071,
+        "bf": 0.00227
+    },    
     "vbf_M125_2017": {
         "year": 2017,
+        "name": "vbf",
+        "xs": 3.782,
+        "bf": 0.00227
+    },   
+    "vbf_M125_2018": {
+        "year": 2018,
         "name": "vbf",
         "xs": 3.782,
         "bf": 0.00227
@@ -34,8 +46,20 @@
         "xs": 2.2555,
         "bf": 0.00227
     },
+    "vh_M125_2018": {
+        "year": 2018,
+        "name": "vh",
+        "xs": 2.2555,
+        "bf": 0.00227
+    },
     "DiphotonBox_low_mass_M125_2017": {
         "year": 2017,
+        "name": "nr_gg_low",
+        "xs": 299.3,
+        "bf": 1
+    },
+    "DiphotonBox_low_mass_M125_2018": {
+        "year": 2018,
         "name": "nr_gg_low",
         "xs": 299.3,
         "bf": 1
@@ -46,8 +70,20 @@
         "xs": 84.4,
         "bf": 1
     },    
+    "DiphotonBox_high_mass_M125_2018": {
+        "year": 2018,
+        "name": "nr_gg_high",
+        "xs": 84.4,
+        "bf": 1
+    },    
     "QCD_M125_2017": {
         "year": 2017,
+        "name": "qcd",
+        "xs": 126092.0,
+        "bf": 1
+    },
+    "QCD_M125_2018": {
+        "year": 2018,
         "name": "qcd",
         "xs": 126092.0,
         "bf": 1
@@ -76,8 +112,20 @@
         "xs": 28245.15,
         "bf": 1
     },
+    "QCD_2018_mgg_high_pt_30To40": {
+        "year": 2018,
+        "name": "qcd",
+        "xs": 28245.15,
+        "bf": 1
+    },
     "QCD_2017_mgg_low": {
         "year": 2017,
+        "name": "qcd",
+        "xs": 241200.0,
+        "bf": 1
+    },
+    "QCD_2018_mgg_low": {
+        "year": 2018,
         "name": "qcd",
         "xs": 241200.0,
         "bf": 1
@@ -88,6 +136,12 @@
         "xs": 5364,
         "bf": 1
     },    
+    "DY_M125_2018": {
+        "year": 2018,
+        "name": "dy",
+        "xs": 5364,
+        "bf": 1
+    }, 
     "GJet": {
         "year": 2017,
         "name": "gjets",
@@ -100,12 +154,24 @@
         "xs": 18650.0,
         "bf": 1
     },   
+    "GJets_HT-40To100_M125_2018": {
+        "year": 2018,
+        "name": "gjets",
+        "xs": 18650.0,
+        "bf": 1
+    },   
     "GJets_HT-100To200_M125_2017": {
         "year": 2017,
         "name": "gjets",
         "xs": 8639.0,
         "bf": 1
     },        
+    "GJets_HT-100To200_M125_2018": {
+        "year": 2018,
+        "name": "gjets",
+        "xs": 8639.0,
+        "bf": 1
+    },       
     "GJets_HT-100To200_M125_2017_v10": {
         "year": 2017,
         "name": "gjets",
@@ -130,8 +196,20 @@
         "xs": 2173.0,
         "bf": 1
     },   
+    "GJets_HT-200To400_M125_2018": {
+        "year": 2018,
+        "name": "gjets",
+        "xs": 2173.0,
+        "bf": 1
+    },   
     "GJets_HT-400To600_M125_2017": {
         "year": 2017,
+        "name": "gjets",
+        "xs": 260.7,
+        "bf": 1
+    },   
+    "GJets_HT-400To600_M125_2018": {
+        "year": 2018,
         "name": "gjets",
         "xs": 260.7,
         "bf": 1
@@ -142,6 +220,12 @@
         "xs": 86.55,
         "bf": 1
     },        
+    "GJets_HT-600ToInf_M125_2018": {
+        "year": 2018,
+        "name": "gjets",
+        "xs": 86.55,
+        "bf": 1
+    },       
     "bH_5FS_FXFX_M125_2017": {
         "year": 2017,
         "name": "bh",
