@@ -4,6 +4,7 @@
         "PV_score",
         "nPV",
         "PV_chi2",
+        "vtxProb",
         "LeadPhoton_pt_mgg",
         "LeadPhoton_eta",
         "LeadPhoton_mvaID",
@@ -13,13 +14,12 @@
         "Diphoton_cos_dPhi",
         "dZ_1",
         "dZ_2"
-
     ],
     "signal": [
         "ttH_M125", "ggH_M125", "VH_M125", "VBFH_M125"
     ],
     "background": [
-       "QCD", "GJets_HT-40To100", "GJets_HT-100To200", "GJets_HT-200To400", "GJets_HT-400To600", "GJets_HT-600ToInf" ,
+       "QCD_M125_2017", "QCD_2017_mgg_low", "QCD_2017_mgg_high_pt_30To40", "GJets_HT-40To100", "GJets_HT-100To200", "GJets_HT-200To400", "GJets_HT-400To600", "GJets_HT-600ToInf" ,
         "DiPhoton_M40_80" ,"DiPhoton_MGG-80-inf"       
     ],
     "mva":{
