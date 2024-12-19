@@ -151,7 +151,7 @@ more info can be found here: https://twiki.cern.ch/twiki/bin/viewauth/CMS/Brilca
 the command to calculate luminosity for PixelOffline stuff is this:
 ```
 brilcalc lumi --byls -u /nb --normtag /cvmfs/cms-bril.cern.ch/cms-lumi-pog/Normtags/normtag_BRIL.json --begin "01/01/22 00:00:00" --end "12/31/25 23:59:59" |& tee brilcalc_Run3.log
-
+```
 #### Certification Jsons
 
 file can be downloaded from https://cms-service-dqmdc.web.cern.ch/CAF/certification/
