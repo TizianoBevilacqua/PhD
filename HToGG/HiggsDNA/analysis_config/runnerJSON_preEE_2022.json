@@ -1,0 +1,30 @@
+{
+    "samplejson": "/work/bevila_t/HpC_Analysis/HiggsDNA/coffea/myfork/master_240821/higgs-dna-tiziano-bevilacqua/config_jsons/filesets/HpC_signal_samples_preEE_2022.json",
+    "workflow": "hpc",
+    "metaconditions": "Era2022_v1",
+    "taggers": [],
+    "year":{
+        "ggh_M-125_preEE_2022": ["2022preEE"],
+        "tth_M-125_preEE_2022": ["2022preEE"],
+        "vbf_M-125_preEE_2022": ["2022preEE"],
+        "vh_M-125_preEE_2022": ["2022preEE"],
+        "cH_4FS_FXFX_M125_preEE_2022": ["2022preEE"],
+        "bH_5FS_FXFX_M125_preEE_2022": ["2022preEE"]
+    },
+    "systematics": {
+        "ggh_M-125_preEE_2022": ["Pileup", "AlphaS", "PartonShower", "LHEScale", "LHEPdf", "FNUF", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing"],
+        "cH_4FS_FXFX_M125_preEE_2022": ["Pileup", "AlphaS", "PartonShower", "LHEScale", "LHEPdf", "FNUF", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing"],
+        "bH_5FS_FXFX_M125_preEE_2022": ["Pileup", "AlphaS", "PartonShower", "LHEScale", "LHEPdf", "FNUF", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing"],
+        "tth_M-125_preEE_2022": ["Pileup", "AlphaS", "PartonShower", "LHEScale", "LHEPdf", "FNUF", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing"],
+        "vbf_M-125_preEE_2022": ["Pileup", "AlphaS", "PartonShower", "LHEScale", "LHEPdf", "FNUF", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing"],
+        "vh_M-125_preEE_2022": ["Pileup", "AlphaS", "PartonShower", "LHEScale", "LHEPdf", "FNUF", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing"]
+    },
+    "corrections": {
+        "ggh_M-125_preEE_2022": ["Pileup", "FNUF", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "NNLOPS"],
+        "cH_4FS_FXFX_M125_preEE_2022": ["Pileup", "FNUF", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing"],
+        "bH_5FS_FXFX_M125_preEE_2022": ["Pileup", "FNUF", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing"],
+        "tth_M-125_preEE_2022": ["Pileup", "FNUF", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing"],
+        "vbf_M-125_preEE_2022": ["Pileup", "FNUF", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing"],
+        "vh_M-125_preEE_2022": ["Pileup", "FNUF", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing"]
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "samplejson": "/work/bevila_t/HpC_Analysis/HiggsDNA/coffea/myfork/master/SYST/higgs-dna-tiziano-bevilacqua/config_jsons/filesets/HpC_signal_samples.json",
+    "workflow": "hpc",
+    "metaconditions": "Era2017_legacy_xgb_v1",
+    "taggers": [],
+    "year":{
+        "ggh_M125_2017": ["2017"],
+        "tth_M125_2017": ["2017"],
+        "vbf_M125_2017": ["2017"],
+        "vh_M125_2017": ["2017"],
+        "DYJetsToLL_M-50_2017": ["2017"],
+        "cH_4FS_FXFX_M125_2017": ["2017"],
+        "bH_5FS_FXFX_M125_2017": ["2017"],
+        "Data_B_2017": ["2017"],
+        "Data_C_2017": ["2017"],
+        "Data_D_2017": ["2017"],
+        "Data_E_2017": ["2017"],
+        "Data_F_2017": ["2017"]
+    },
+    "systematics": {
+        "ggh_M125_2017": ["Pileup", "LooseMvaSF", "AlphaS", "PartonShower", "LHEScale", "LHEPdf", "FNUF", "bTagSF", "ShowerShape", "JES", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "Scale"],
+        "DYJetsToLL_M-50_2017": ["Pileup", "Smearing", "Scale", "Material", "TriggerSF", "PreselSF"],
+        "cH_4FS_FXFX_M125_2017": ["Pileup", "LooseMvaSF", "AlphaS", "PartonShower", "LHEScale", "LHEPdf", "FNUF", "bTagSF", "ShowerShape", "JES", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "Scale"],
+        "bH_5FS_FXFX_M125_2017": ["Pileup", "LooseMvaSF", "AlphaS", "PartonShower", "LHEScale", "LHEPdf", "FNUF", "bTagSF", "ShowerShape", "JES", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "Scale"],
+        "tth_M125_2017": ["Pileup", "LooseMvaSF", "AlphaS", "PartonShower", "LHEScale", "LHEPdf", "FNUF", "bTagSF", "ShowerShape", "JES", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "Scale"],
+        "vbf_M125_2017": ["Pileup", "LooseMvaSF", "AlphaS", "PartonShower", "LHEScale", "LHEPdf", "FNUF", "bTagSF", "ShowerShape", "JES", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "Scale"],
+        "vh_M125_2017": ["Pileup", "LooseMvaSF", "AlphaS", "PartonShower", "LHEScale", "LHEPdf", "FNUF", "bTagSF", "ShowerShape", "JES", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "Scale"]
+    },
+    "corrections": {
+        "ggh_M125_2017": ["Pileup", "LooseMvaSF", "FNUF", "bTagSF", "ShowerShape", "JES", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "Scale", "NNLOPS"],
+        "DYJetsToLL_M-50_2017": ["Pileup", "Smearing", "Scale", "Material", "TriggerSF", "PreselSF"],
+        "cH_4FS_FXFX_M125_2017": ["Pileup", "LooseMvaSF", "FNUF", "bTagSF", "ShowerShape", "JES", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "Scale"],
+        "bH_5FS_FXFX_M125_2017": ["Pileup", "LooseMvaSF", "FNUF", "bTagSF", "ShowerShape", "JES", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "Scale"],
+        "tth_M125_2017": ["Pileup", "LooseMvaSF", "FNUF", "bTagSF", "ShowerShape", "JES", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "Scale"],
+        "vbf_M125_2017": ["Pileup", "LooseMvaSF", "FNUF", "bTagSF", "ShowerShape", "JES", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "Scale"],
+        "vh_M125_2017": ["Pileup", "LooseMvaSF", "FNUF", "bTagSF", "ShowerShape", "JES", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "Scale"]
+    }
+}
+

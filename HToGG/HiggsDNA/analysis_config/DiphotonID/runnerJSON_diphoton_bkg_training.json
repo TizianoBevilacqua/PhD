@@ -1,0 +1,46 @@
+{
+    "samplejson": "/work/bevila_t/HpC_Analysis/HiggsDNA/coffea/myfork/master_240821/higgs-dna-tiziano-bevilacqua/config_jsons/filesets/HpC_background_samples.json",
+    "workflow": "dipho",
+    "metaconditions": "Era2017_legacy_xgb_v1",
+    "taggers": [],
+    "year":{
+        "DiphotonBox_low_mass_M125_2017": ["2017"],
+        "DiphotonBox_high_mass_M125_2017": ["2017"],
+        "DYJetsToLL_M-50_2017": ["2017"],
+        "QCD_M125_2017": ["2017"],
+        "QCD_2017_mgg_low": ["2017"],
+        "QCD_2017_mgg_high_pt_30To40": ["2017"],
+        "GJets_HT-40To100_M125_2017": ["2017"],
+        "GJets_HT-100To200_M125_2017": ["2017"],
+        "GJets_HT-200To400_M125_2017": ["2017"],
+        "GJets_HT-400To600_M125_2017": ["2017"],
+        "GJets_HT-600ToInf_M125_2017": ["2017"]
+    },
+    "systematics": {
+        "DiphotonBox_low_mass_M125_2017": ["Pileup", "LooseMvaSF", "AlphaS", "PartonShower", "LHEScale", "LHEPdf", "FNUF", "cTagSF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "Scale"],
+        "DiphotonBox_high_mass_M125_2017": ["Pileup", "LooseMvaSF", "AlphaS", "PartonShower", "LHEScale", "LHEPdf", "FNUF", "cTagSF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "Scale"],
+        "DYJetsToLL_M-50_2017": ["Pileup", "LooseMvaSF", "AlphaS", "PartonShower", "LHEScale", "LHEPdf", "FNUF", "cTagSF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "Scale"],
+        "QCD_M125_2017": ["Pileup", "LooseMvaSF", "AlphaS", "PartonShower", "LHEScale", "LHEPdf", "FNUF", "cTagSF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "Scale"],
+        "QCD_2017_mgg_low": ["Pileup", "LooseMvaSF", "AlphaS", "PartonShower", "LHEScale", "LHEPdf", "FNUF", "cTagSF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "Scale"],
+        "QCD_2017_mgg_high_pt_30To40": ["Pileup", "LooseMvaSF", "AlphaS", "PartonShower", "LHEScale", "LHEPdf", "FNUF", "cTagSF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "Scale"],
+        "GJets_HT-40To100_M125_2017": ["Pileup", "LooseMvaSF", "AlphaS", "PartonShower", "LHEScale", "LHEPdf", "FNUF", "cTagSF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "Scale"],
+        "GJets_HT-100To200_M125_2017": ["Pileup", "LooseMvaSF", "AlphaS", "PartonShower", "LHEScale", "LHEPdf", "FNUF", "cTagSF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "Scale"],
+        "GJets_HT-200To400_M125_2017": ["Pileup", "LooseMvaSF", "AlphaS", "PartonShower", "LHEScale", "LHEPdf", "FNUF", "cTagSF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "Scale"],
+        "GJets_HT-400To600_M125_2017": ["Pileup", "LooseMvaSF", "AlphaS", "PartonShower", "LHEScale", "LHEPdf", "FNUF", "cTagSF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "Scale"],
+        "GJets_HT-600ToInf_M125_2017": ["Pileup", "LooseMvaSF", "AlphaS", "PartonShower", "LHEScale", "LHEPdf", "FNUF", "cTagSF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "Scale"]
+    },
+    "corrections": {
+        "DiphotonBox_low_mass_M125_2017": ["Pileup", "LooseMvaSF", "FNUF", "cTagSF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "jerc_jet_syst"],
+        "DiphotonBox_high_mass_M125_2017": ["Pileup", "LooseMvaSF", "FNUF", "cTagSF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "jerc_jet_syst"],
+        "DYJetsToLL_M-50_2017": ["Pileup", "LooseMvaSF", "FNUF", "cTagSF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "jerc_jet_syst"],
+        "QCD_M125_2017": ["Pileup", "LooseMvaSF", "FNUF", "cTagSF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "jerc_jet_syst"],
+        "QCD_2017_mgg_low": ["Pileup", "LooseMvaSF", "FNUF", "cTagSF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "jerc_jet_syst"],
+        "QCD_2017_mgg_high_pt_30To40": ["Pileup", "LooseMvaSF", "FNUF", "cTagSF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "jerc_jet_syst"],
+        "GJets_HT-40To100_M125_2017": ["Pileup", "LooseMvaSF", "FNUF", "cTagSF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "jerc_jet_syst"],
+        "GJets_HT-100To200_M125_2017": ["Pileup", "LooseMvaSF", "FNUF", "cTagSF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "jerc_jet_syst"],
+        "GJets_HT-200To400_M125_2017": ["Pileup", "LooseMvaSF", "FNUF", "cTagSF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "jerc_jet_syst"],
+        "GJets_HT-400To600_M125_2017": ["Pileup", "LooseMvaSF", "FNUF", "cTagSF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "jerc_jet_syst"],
+        "GJets_HT-600ToInf_M125_2017": ["Pileup", "LooseMvaSF", "FNUF", "cTagSF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "jerc_jet_syst"]
+    }
+}
+

@@ -1,0 +1,46 @@
+{
+    "samplejson": "/work/bevila_t/HpC_Analysis/HiggsDNA/coffea/myfork/master_240821/higgs-dna-tiziano-bevilacqua/config_jsons/filesets/HpC_background_samples_2018.json",
+    "workflow": "dipho",
+    "metaconditions": "Era2018_legacy_xgb_v1",
+    "taggers": [],
+    "year":{
+        "DiphotonBox_low_mass_M125_2018": ["2018"],
+        "DiphotonBox_high_mass_M125_2018": ["2018"],
+        "DY_M125_2018": ["2018"],
+        "QCD_M125_mgg_high_pt_30To40_2018": ["2018"],
+        "QCD_M125_mgg_high_pt_40ToInf_2018": ["2018"],
+        "QCD_mgg_low_2018": ["2018"],
+        "GJets_HT-40To100_M125_2018": ["2018"],
+        "GJets_HT-100To200_M125_2018": ["2018"],
+        "GJets_HT-200To400_M125_2018": ["2018"],
+        "GJets_HT-400To600_M125_2018": ["2018"],
+        "GJets_HT-600ToInf_M125_2018": ["2018"]
+    },
+    "systematics": {
+        "DiphotonBox_low_mass_M125_2018": ["Pileup", "Smearing", "Scale", "Material", "TriggerSF", "PreselSF"],
+        "DiphotonBox_high_mass_M125_2018": ["Pileup", "Smearing", "Scale", "Material", "TriggerSF", "PreselSF"],
+        "DY_M125_2018": ["Pileup", "Smearing", "Scale", "Material", "TriggerSF", "PreselSF"],
+        "QCD_M125_mgg_high_pt_30To40_2018": ["Pileup", "Smearing", "Scale", "Material", "TriggerSF", "PreselSF"],
+        "QCD_M125_mgg_high_pt_40ToInf_2018": ["Pileup", "Smearing", "Scale", "Material", "TriggerSF", "PreselSF"],
+        "QCD_mgg_low_2018": ["Pileup", "Smearing", "Scale", "Material", "TriggerSF", "PreselSF"],
+        "GJets_HT-40To100_M125_2018": ["Pileup", "Smearing", "Scale", "Material", "TriggerSF", "PreselSF"],
+        "GJets_HT-100To200_M125_2018": ["Pileup", "Smearing", "Scale", "Material", "TriggerSF", "PreselSF"],
+        "GJets_HT-200To400_M125_2018": ["Pileup", "Smearing", "Scale", "Material", "TriggerSF", "PreselSF"],
+        "GJets_HT-400To600_M125_2018": ["Pileup", "Smearing", "Scale", "Material", "TriggerSF", "PreselSF"],
+        "GJets_HT-600ToInf_M125_2018": ["Pileup", "Smearing", "Scale", "Material", "TriggerSF", "PreselSF"]
+    },
+    "corrections": {
+        "DiphotonBox_low_mass_M125_2018": ["Pileup", "LooseMvaSF", "FNUF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing"],
+        "DiphotonBox_high_mass_M125_2018": ["Pileup", "LooseMvaSF", "FNUF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing"],
+        "DY_M125_2018": ["Pileup", "LooseMvaSF", "FNUF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing"],
+        "QCD_M125_mgg_high_pt_30To40_2018": ["Pileup", "LooseMvaSF", "FNUF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing"],
+        "QCD_M125_mgg_high_pt_40ToInf_2018": ["Pileup", "LooseMvaSF", "FNUF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing"],
+        "QCD_mgg_low_2018": ["Pileup", "LooseMvaSF", "FNUF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing"],
+        "GJets_HT-40To100_M125_2018": ["Pileup", "LooseMvaSF", "FNUF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing"],
+        "GJets_HT-100To200_M125_2018": ["Pileup", "LooseMvaSF", "FNUF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing"],
+        "GJets_HT-200To400_M125_2018": ["Pileup", "LooseMvaSF", "FNUF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing"],
+        "GJets_HT-400To600_M125_2018": ["Pileup", "LooseMvaSF", "FNUF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing"],
+        "GJets_HT-600ToInf_M125_2018": ["Pileup", "LooseMvaSF", "FNUF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing"]
+    }
+}
+

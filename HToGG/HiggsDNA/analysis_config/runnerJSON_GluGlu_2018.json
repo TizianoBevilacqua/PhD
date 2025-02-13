@@ -1,0 +1,20 @@
+{
+    "samplejson": "/work/bevila_t/HpC_Analysis/HiggsDNA/coffea/myfork/master_240821/higgs-dna-tiziano-bevilacqua/config_jsons/filesets/GluGluH_samples_2018.json",
+    "workflow": "hpc",
+    "metaconditions": "Era2018_legacy_xgb_v1",
+    "taggers": [],
+    "year":{
+        "ggh_M125_2018": ["2018"],
+        "ggh_M125_2018_powheg": ["2018"]
+        
+    },
+    "systematics": {
+        "ggh_M125_2018": ["Pileup", "LooseMvaSF", "AlphaS", "PartonShower", "LHEScale", "LHEPdf", "FNUF", "cTagSF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "Scale"],
+        "ggh_M125_2018_powheg": ["Pileup", "LooseMvaSF", "AlphaS", "PartonShower", "LHEScale", "LHEPdf", "FNUF", "cTagSF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "Scale"]
+    },
+    "corrections": {
+        "ggh_M125_2018": ["Pileup", "LooseMvaSF", "FNUF", "cTagSF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "NNLOPS"],
+        "ggh_M125_2018_powheg": ["Pileup", "LooseMvaSF", "FNUF", "cTagSF", "ShowerShape", "Material", "TriggerSF", "PreselSF", "ElectronVetoSF", "Smearing", "NNLOPS"]
+    }
+}
+

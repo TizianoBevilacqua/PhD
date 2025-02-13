@@ -1,0 +1,31 @@
+{
+    "samplejson": "/work/bevila_t/HpC_Analysis/HiggsDNA/coffea/myfork/master_240821/higgs-dna-tiziano-bevilacqua/config_jsons/filesets/TnP_2017.json",
+    "workflow": "hpc_tagandprobe",
+    "metaconditions": "Era2017_legacy_xgb_v1",
+    "taggers": [],
+    "year": {
+        "Data_B_2017": ["2017"],
+        "Data_C_2017": ["2017"],
+        "Data_D_2017": ["2017"],
+        "Data_E_2017": ["2017"],
+        "Data_F_2017": ["2017"],
+        "DYJetsToLL_M-50_2017": ["2017"]
+    },
+    "corrections": {
+        "Data_B_2017": [],
+        "Data_C_2017": [],
+        "Data_D_2017": [],
+        "Data_E_2017": [],
+        "Data_F_2017": [],
+        "DYJetsToLL_M-50_2017": ["Pileup", "FNUF", "ShowerShape", "Material", "Smearing", "ElectronVetoSF", "Zpt_reweight_TnP"]
+    },
+    "systematics": {
+        "Data_B_2017": [],
+        "Data_C_2017": [],
+        "Data_D_2017": [],
+        "Data_E_2017": [],
+        "Data_F_2017": [],
+        "DYJetsToLL_M-50_2017": ["Pileup", "FNUF", "ShowerShape", "Material", "Smearing", "Scale", "ElectronVetoSF", "Zpt_reweight_TnP"]
+    }
+}
+
