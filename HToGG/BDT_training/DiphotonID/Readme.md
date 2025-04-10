@@ -23,8 +23,4 @@ There are some auxiliary files in this directory that contain:
 
 ## To do:
 
-* add to the code the cH and bH samples,
-* run 2018 training,
-* run 2016 training,
-* re-run 2017 training.
-* try to combine the 3 years.
+* add to the code the cH and bH samples.
