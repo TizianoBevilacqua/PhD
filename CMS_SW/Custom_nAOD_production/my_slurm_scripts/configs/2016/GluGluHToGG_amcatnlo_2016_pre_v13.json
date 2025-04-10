@@ -1,0 +1,13 @@
+{
+    "taskname": "GluGluHToGG_M125_amcatnlo_2016_pre",
+    "job_template": "slurm_template.sh",
+    "sample": "/GluGluHToGG_M125_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v2/MINIAODSIM",
+    "nfile": 2,
+    "outdir": "/pnfs/psi.ch/cms/trivcat/store/user/bevila_t/test2/phys/xpluscharm/Out_nAODs/Private_MC_production/v13/", 
+    "customise_commands": "",
+    "customise": "",
+    "era": "Run2_2016,run2_nanoAOD_106Xv2",
+    "conditions": "106X_mcRun2_asymptotic_preVFP_v11",
+    "type": "--mc",
+    "step": "NANOAODSIM"
+}

@@ -147,7 +147,12 @@ if [ ! -f ${step}_cfg.py ]; then
     fi
 
     cp $1 .      #copy the GoodLumi.json list to working directory
-    cat "$filelist" | sed "s;^;${redirector};" > tmp.sh
+    
+    if [ "${redirector_alt}" == "root://eospublic.cern.ch//eos/opendata/cms/" ]; then
+        cat "$filelist" | sed "s;/store/;${redirector_alt};" > tmp.sh
+    else
+        cat "$filelist" | sed "s;^;${redirector};" > tmp.sh
+    fi
     cat tmp.sh
     chmod 755 tmp.sh  
 
