@@ -64,6 +64,11 @@ to use cmsenv from sshell script:
 eval `scram runtime -sh`
 ```
 
+###  XSDB
+
+[website](https://xsecdb-xsdb-official.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS%3DDYJetsToLL_M-10to50_TuneCP5_13TeV-amcatnloFXFX-pythia8)
+[gen documentation](https://cms-generators.docs.cern.ch)
+
 ### RUCIO
 
 To request dataset to be moved on `T2_CERN_CH` with autoapproval (granted if you ask for less than 6 months) follow this procedure:
