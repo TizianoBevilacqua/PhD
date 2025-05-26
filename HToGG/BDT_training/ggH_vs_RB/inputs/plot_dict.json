@@ -1,0 +1,1196 @@
+{
+    "mass": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "CMS_hgg_mass",
+        "x_min": 100,
+        "x_max": 180,
+        "n_bins": 80,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+       "data": false,
+        "blind": true,
+        "ratio": false,
+        "title": "$H\\rightarrow\\gamma\\gamma$ mass",
+        "xlabel": "mass [GeV]",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/Mass_ratio.png"
+    },
+    "bdt_score_tth": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "mva_score_tth",
+        "x_min": 0,
+        "x_max": 1,
+        "n_bins": 50,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+        "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "ggH vs H bkg - tth mva score",
+        "xlabel": "mva score",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/MVA_tth_score_ratio.png",
+        "log": true
+    },
+    "bdt_score_vbf": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "mva_score_vbf",
+        "x_min": 0,
+        "x_max": 1,
+        "n_bins": 50,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+        "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "ggH vs H bkg - vbf mva score",
+        "xlabel": "mva score",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/MVA_vbf_score_ratio.png",
+        "log": true
+    },
+    "bdt_score_vh": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "mva_score_vh",
+        "x_min": 0,
+        "x_max": 1,
+        "n_bins": 50,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+        "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "ggH vs H bkg - vh mva score",
+        "xlabel": "mva score",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/MVA_vh_score_ratio.png",
+        "log": true
+    },
+    "bdt_score_sig": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "mva_score_sig",
+        "x_min": 0,
+        "x_max": 1,
+        "n_bins": 50,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+        "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "ggH vs H bkg - sig mva score",
+        "xlabel": "mva score",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/MVA_sig_score_ratio.png",
+        "log": false
+    },
+    "jet_pn_b_plus_c": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "first_jet_jet_pn_b_plus_c",
+        "x_min": 0,
+        "x_max": 1,
+        "n_bins": 50,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+        "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "First Jet PNet (b+c)",
+        "xlabel": "tagger score",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/first_Jet_pn_bpc_score_ratio.png",
+        "log": false
+    },
+    "jet_pn_b_vs_c": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "first_jet_jet_pn_b_vs_c",
+        "x_min": 0,
+        "x_max": 1,
+        "n_bins": 50,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+        "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "First Jet PNet (b vs c)",
+        "xlabel": "tagger score",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/first_Jet_pn_bvc_score_ratio.png",
+        "log": false
+    },
+    "pt_H": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "pt",
+        "x_min": 0,
+        "x_max": 250,
+        "n_bins": 120,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+       "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "H$(\\gamma\\gamma) p_T$",
+        "xlabel": "$p_T$ [GeV]",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/H_pt_ratio.png"
+    },
+    "eta_H": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "eta",
+        "x_min": -6,
+        "x_max": 6,
+        "n_bins": 120,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+       "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "H$(\\gamma\\gamma) p_T$",
+        "xlabel": "$\\eta$",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/H_eta.png"
+    },
+    "pt_mgg_sublead": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "SubleadPhoton_pt_mgg",
+        "x_min": 0.2,
+        "x_max": 1,
+        "n_bins": 40,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+       "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "Sublead Photon $p_T/m_{\\gamma\\gamma}$",
+        "xlabel": "$p_T/m_{\\gamma\\gamma}",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/SubleadPhoton_pt_mgg_ratio.png"
+    },
+    "photon_mva_lead": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "LeadPhoton_mvaID",
+        "x_min": -1,
+        "x_max": 1,
+        "n_bins": 40,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+       "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "Lead Photon MVA ID",
+        "xlabel": "mva score",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/LeadPhoton_mvaID_ratio.png"
+    },
+    "photon_mva_sublead": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "SubleadPhoton_mvaID",
+        "x_min": -1,
+        "x_max": 1,
+        "n_bins": 40,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+       "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "Sublead Photon MVA ID",
+        "xlabel": "mva score",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/SubleadPhoton_mvaID_ratio.png"
+    },
+    "photon_eta_lead": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "LeadPhoton_eta",
+        "x_min": -3,
+        "x_max": 3,
+        "n_bins": 60,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+       "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "Lead Photon $\\eta$",
+        "xlabel": "$\\eta$",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/LeadPhoton_eta_ratio.png"
+    },
+    "photon_eta_sublead": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "SubleadPhoton_eta",
+        "x_min": -3,
+        "x_max": 3,
+        "n_bins": 60,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+       "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "Sublead Photon $\\eta$",
+        "xlabel": "$\\eta$",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/SubleadPhoton_eta_ratio.png"
+    },
+    "first_jet_pt": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "first_jet_pt",
+        "x_min": 0,
+        "x_max": 200,
+        "n_bins": 100,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+       "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "First Jet $p_T$",
+        "xlabel": "$p_T$ [GeV]",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/first_jet_pt.png"
+    },
+    "second_jet_pt": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "second_jet_pt",
+        "x_min": 0,
+        "x_max": 200,
+        "n_bins": 100,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+       "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "Second Jet $p_T$",
+        "xlabel": "$p_T$ [GeV]",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/second_jet_pt.png"
+    },
+    "first_jet_phi": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "first_jet_phi",
+        "x_min": -3,
+        "x_max": 3,
+        "n_bins": 60,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+       "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "First Jet $\\phi$",
+        "xlabel": "$\\phi$",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/first_jet_phi.png"
+    },
+    "second_jet_phi": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "second_jet_phi",
+        "x_min": -3,
+        "x_max": 3,
+        "n_bins": 60,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+       "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "Second Jet $\\phi$",
+        "xlabel": "$\\phi$",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/second_jet_phi.png"
+    },
+    "first_jet_eta": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "first_jet_eta",
+        "x_min": -3,
+        "x_max": 3,
+        "n_bins": 60,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+       "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "First Jet $\\eta$",
+        "xlabel": "$\\eta$",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/first_jet_eta.png"
+    },
+    "second_jet_eta": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "second_jet_eta",
+        "x_min": -3,
+        "x_max": 3,
+        "n_bins": 60,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+       "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "Second Jet $\\eta$",
+        "xlabel": "$\\eta$",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/second_jet_eta.png"
+    },
+    "first_jet_mass": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "first_jet_mass",
+        "x_min": 0,
+        "x_max": 50,
+        "n_bins": 50,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+       "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "First Jet mass",
+        "xlabel": "mass [GeV]",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/first_jet_mass.png"
+    },
+    "second_jet_mass": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "second_jet_mass",
+        "x_min": 0,
+        "x_max": 50,
+        "n_bins": 50,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+       "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "Second Jet mass",
+        "xlabel": "mass [GeV]",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/second_jet_mass.png"
+    },
+    "dijet_pt": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "dijet_pt",
+        "x_min": 0,
+        "x_max": 250,
+        "n_bins": 125,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+       "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "Dijet $p_T$",
+        "xlabel": "$p_T$ [GeV]",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/dijet_pt.png"
+    },
+    "dijet_mass": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "dijet_mass",
+        "x_min": 0,
+        "x_max": 250,
+        "n_bins": 125,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+       "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "Dijet mass",
+        "xlabel": "mass [GeV]",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/dijet_mass.png"
+    },
+    "dijet_eta": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "dijet_eta",
+        "x_min":-3,
+        "x_max": 3,
+        "n_bins": 60,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+       "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "Dijet $\\eta$",
+        "xlabel": "$\\eta$",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/dijet_eta.png"
+    },
+    "dijet_phi": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "dijet_phi",
+        "x_min": -3,
+        "x_max": 3,
+        "n_bins": 60,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+       "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "Dijet $\\phi$",
+        "xlabel": "$\\phi$",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/dijet_phi.png"
+    },
+    "first_muon_pt": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "first_muon_pt",
+        "x_min": 0,
+        "x_max": 250,
+        "n_bins": 125,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+       "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "First muon $p_T$",
+        "xlabel": "$p_T$ [GeV]",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/first_muon_pt.png"
+    },
+    "first_muon_eta": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "first_muon_eta",
+        "x_min": -3,
+        "x_max": 3,
+        "n_bins": 60,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+       "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "First muon $\\eta$",
+        "xlabel": "$\\eta$",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/first_muon_eta.png"
+    },
+    "g1j_dphi": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "DeltaPhi_gamma1_cjet",
+        "x_min": -3,
+        "x_max": 3,
+        "n_bins": 60,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+       "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "$\\Delta\\phi_{\\gamma_1j})$",
+        "xlabel": "$\\Delta\\phi_{\\gamma_1j})$",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/dphi_g1j.png"
+    },
+    "g2j_dphi": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "DeltaPhi_gamma2_cjet",
+        "x_min": -3,
+        "x_max": 3,
+        "n_bins": 60,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+       "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "$\\Delta\\phi_\\{\\gamma_2j\\})$",
+        "xlabel": "$\\Delta\\phi_\\{\\gamma_2j\\})$",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/dphi_g2j.png"
+    },
+    "MET_pt": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "MET_pt",
+        "x_min": 0,
+        "x_max": 300,
+        "n_bins": 150,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+       "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "MET $p_T$",
+        "xlabel": "$p_T$ [GeV]",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/MET_pt.png"
+    },
+    "MET_sumEt": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "MET_sumEt",
+        "x_min": 0,
+        "x_max": 1000,
+        "n_bins": 250,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+       "rescale_signal": false,
+       "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "MET sum $E_T$",
+        "xlabel": "sum $E_T$ [GeV]",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/MET_sumEt.png"
+    },
+    "MET_significance": {
+        "fig_size": [
+            8,
+            8
+        ],
+        "variable": "MET_significance",
+        "x_min": 0,
+        "x_max": 10,
+        "n_bins": 50,
+        "weight": "weight",
+        "err_weight": "square_weight",
+        "processes": {
+            "ch": 6,
+            "bh": 7,
+            "ggh": 0,
+            "t/tth": 1,
+            "vbf": 2,
+            "vh": 3
+        },
+        "errors": true,
+        "fill": "fill",
+        "stack": true,
+        "sig_vs_bkg": false,
+        "rescale_signal": false,
+        "data": false,
+        "blind": false,
+        "ratio": false,
+        "title": "MET significance",
+        "xlabel": "significance",
+        "ratio_ylim": [
+            0,
+            2
+        ],
+        "sidebands": false,
+        "output_path": "plots/{formatted_date}/MET_significance.png"
+    }
+}

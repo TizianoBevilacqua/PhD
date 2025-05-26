@@ -1,13 +1,13 @@
 #!/bin/bash
-#SBATCH --job-name=run_diphoton_bdt_training
-#SBATCH --output=/work/bevila_t/test/.slurm/run_diphoton_bdt_training_%j.out
-#SBATCH --error=/work/bevila_t/test/.slurm/run_diphoton_bdt_training_%j.err
+#SBATCH --job-name=run_rb_bdt_training
+#SBATCH --output=/work/bevila_t/test/.slurm/run_rb_bdt_training_%j.out
+#SBATCH --error=/work/bevila_t/test/.slurm/run_rb_bdt_training_%j.err
 #SBATCH --time=1:00:00
-#SBATCH --mem=36G
-#SBATCH --cpus-per-task=8
+#SBATCH --mem=50G
+#SBATCH --cpus-per-task=6
 #SBATCH --partition=short
 
-SLURM_JOB_NAME="run_diphoton_bdt_training"
+SLURM_JOB_NAME="run_rb_bdt_training"
 # Load required modules (edit these according to your environment)
 echo activating conda
 . "/work/bevila_t/MINICONDA3/envs/higgs-dna/etc/profile.d/conda.sh"
@@ -20,7 +20,7 @@ echo "--------------------------------------------------------------------------
 echo "                          Creating JOB ["BDT_Opt"]"
 echo
 
-USERDIR=/work/bevila_t/HpC_Analysis/DiphotonMVA_training
+USERDIR=/work/bevila_t/HpC_Analysis/ggHvOthers_BDT_training
 python_script=$1
 ARGS=$2
 
