@@ -1,0 +1,22 @@
+{
+    "ttH":{
+        "QCDscale_ttH":[1.058,0.908],
+        "pdf_Higgs_ttH":1.030,
+        "alphaS_ttH":1.020
+    },
+    "tth_c":{
+        "QCDscale_ttH":[1.058,0.908],
+        "pdf_Higgs_ttH":1.030,
+        "alphaS_ttH":1.020
+    },
+    "tth_b":{
+        "QCDscale_ttH":[1.058,0.908],
+        "pdf_Higgs_ttH":1.030,
+        "alphaS_ttH":1.020
+    },
+    "tth_l":{
+        "QCDscale_ttH":[1.058,0.908],
+        "pdf_Higgs_ttH":1.030,
+        "alphaS_ttH":1.020
+    }
+}
